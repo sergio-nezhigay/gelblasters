@@ -1,0 +1,504 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "compact_messages_FRrUMU": {
+      "type": "compact-messages",
+      "blocks": {
+        "message_VTcRXy": {
+          "type": "message",
+          "settings": {
+            "heading": "Message",
+            "subheading": "Add important information here",
+            "link_url": ""
+          }
+        },
+        "message_WzaVGE": {
+          "type": "message",
+          "settings": {
+            "heading": "Message",
+            "subheading": "Add important information here",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "message_VTcRXy",
+        "message_WzaVGE"
+      ],
+      "disabled": true,
+      "name": "Store messages",
+      "settings": {
+        "head_not_col_bg": "#f4f6f8",
+        "head_not_col_txt1": "#171717",
+        "head_not_col_txt2": "#4c4c4b",
+        "head_not_mob_show": true,
+        "head_not_mob_text": "Add important information here",
+        "head_not_mob_url": ""
+      }
+    },
+    "hotspots_VgJx8w": {
+      "type": "hotspots",
+      "blocks": {
+        "hotspot_rEWgUJ": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_x": 28,
+            "hotspot_y": 38,
+            "hotspot_x_mobile": 28,
+            "hotspot_y_mobile": 38,
+            "heading": "Feature name",
+            "text": "<p>Share useful information about your product features.</p>",
+            "icon": "",
+            "icon_width": 32
+          }
+        },
+        "hotspot_zHAJq6": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_x": 60,
+            "hotspot_y": 23,
+            "hotspot_x_mobile": 60,
+            "hotspot_y_mobile": 23,
+            "heading": "Feature name",
+            "text": "<p>Share useful information about your product features.</p>",
+            "icon": "",
+            "icon_width": 32
+          }
+        },
+        "hotspot_jEA3c9": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_x": 73,
+            "hotspot_y": 54,
+            "hotspot_x_mobile": 73,
+            "hotspot_y_mobile": 54,
+            "heading": "Feature name",
+            "text": "<p>Share useful information about your product features.</p>",
+            "icon": "",
+            "icon_width": 32
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_rEWgUJ",
+        "hotspot_zHAJq6",
+        "hotspot_jEA3c9"
+      ],
+      "disabled": true,
+      "name": "Hotspots",
+      "settings": {
+        "hotspot_color": "#070707",
+        "button_content": "plus",
+        "outer_circle": "pulse",
+        "full_width": true,
+        "text_alignment": "top left",
+        "overlay_style": "shadow",
+        "subheading": "",
+        "title": "",
+        "use_h1": false,
+        "heading_max_width": 10,
+        "text": "",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "secondary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "primary"
+      }
+    },
+    "slideshow_yFaybj": {
+      "type": "slideshow",
+      "blocks": {
+        "image_9Wyhwe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_1920_x_500_px.webp",
+            "mobile_image": "shopify://shop_images/MCXGelBlasterTopmodel.png",
+            "slide_link": "",
+            "subheading": "Kid-approved fun, parent-approved safety",
+            "title": "Ready, Aim, Blast Off! 🚀",
+            "heading_max_width": 20,
+            "title_size": 78,
+            "title_size_mobile": 40,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "Shop Gel blasters",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        },
+        "image_E9yfwh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_1_1.webp",
+            "mobile_image": "shopify://shop_images/SuperiorSoakerBlue.png",
+            "slide_link": "",
+            "subheading": "Epic water fights — safe, fun, electric",
+            "title": "Zap! Zoom! Soak!",
+            "heading_max_width": 15,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "Shop Electric Water Guns",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        },
+        "image_hxX6UJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_1_11.webp",
+            "slide_link": "",
+            "subheading": "Soft, safe, and super vibrant — blast your way into endless adventures",
+            "title": "Squishy Gel Balls, Maximum Fun!",
+            "heading_max_width": 28,
+            "title_size": 60,
+            "title_size_mobile": 40,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "Shop Gel balls",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_9Wyhwe",
+        "image_E9yfwh",
+        "image_hxX6UJ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "height": "fixed",
+        "height_desktop": 420,
+        "height_mobile": 300,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "full",
+        "transition": "slide-fade",
+        "navigation": "dots",
+        "autoplay": true,
+        "autoplay_speed": 6,
+        "accessibility_info": ""
+      }
+    },
+    "ss_feature_1_ETyXQr": {
+      "type": "ss-feature-1",
+      "blocks": {
+        "image_jMQtLn": {
+          "type": "image",
+          "settings": {
+            "feature_title": "GRATIS FRAGT",
+            "feature_text": "<p>PÅ KØB OVER 650</p>",
+            "feature_image": "shopify://shop_images/free.png",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_qH43fz": {
+          "type": "image",
+          "settings": {
+            "feature_title": "HURTIG LEVERING",
+            "feature_text": "<p>1-3 HVERDAGE</p>",
+            "feature_image": "shopify://shop_images/delivery.png",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_BPTMTK": {
+          "type": "image",
+          "settings": {
+            "feature_title": "FORTRYDELSESRET",
+            "feature_text": "<p>14 DAGES</p>",
+            "feature_image": "shopify://shop_images/cashback.png",
+            "feature_url": "",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_jMQtLn",
+        "image_qH43fz",
+        "image_BPTMTK"
+      ],
+      "name": "SS - Feature #1",
+      "settings": {
+        "feature_row": 3,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_horizontal": 0,
+        "feature_padding_vertical": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": false,
+        "feature_heading_font": "josefin_sans_n4",
+        "feature_heading_size": 14,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 130,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 12,
+        "feature_text_size_mobile": 12,
+        "feature_text_height": 130,
+        "feature_text_mt": 4,
+        "feature_icon_size": 42,
+        "feature_icon_size_mobile": 42,
+        "feature_bg": "#ffffff",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "collection_list_jRtatE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_Vgbg7c": {
+          "type": "collection",
+          "settings": {
+            "collection": "masker",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_YzWhR3": {
+          "type": "collection",
+          "settings": {
+            "collection": "gel-blaster-kugler",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_FRVGrQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "gel-blaster",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_MXbezD": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "subheading": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_Vgbg7c",
+        "collection_YzWhR3",
+        "collection_FRVGrQ",
+        "collection_MXbezD"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Vælg Din Favorit!",
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "2",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": true,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "product_list_LjQpir": {
+      "type": "product-list",
+      "name": "Product list",
+      "settings": {
+        "title": "Forside produkter",
+        "product_list": [
+          "bland-selv-gelballs",
+          "ak-shark-green-gel-blaster",
+          "2011-grey-gel-blaster",
+          "gel-blaster-kugler-cyan-hvid-mag",
+          "gel-blaster-kugler-danish-mag",
+          "el-blaster-kugler-green",
+          "gel-blaster-kugler-blue",
+          "gel-blaster-kugler-kobenhavn",
+          "gel-blaster-kugler-kobenhavn-mag",
+          "gel-blaster-kugler-white-mag"
+        ],
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "1",
+        "full_width": true
+      }
+    },
+    "1480591889144": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Trending Styles",
+        "collection": "all",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": false,
+        "full_width": true
+      }
+    },
+    "collapsible_tabs_ijfrUg": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_xHF3aG": {
+          "type": "question",
+          "settings": {
+            "title": "What is GelBlasterShop.dk?",
+            "answer": "<p>GelBlasterShop.dk is Denmark’s leading gel blaster shop, offering the largest collection of gel blasters and accessories. We focus on safety, durability, and fun for kids and adults alike. Our store guarantees high quality, great customer service, and fast delivery.</p>"
+          }
+        },
+        "question_jTW6rx": {
+          "type": "question",
+          "settings": {
+            "title": "Why should I choose gel blasters?",
+            "answer": "<p>Gel blasters combine active play with innovation and fun. They use 100% biodegradable water beads, making them safe for children and environmentally friendly. Perfect for outdoor play, they provide hours of entertainment and make fantastic gifts for kids.</p>"
+          }
+        },
+        "question_jWdVGM": {
+          "type": "question",
+          "settings": {
+            "title": "What are the popular gel blaster models?",
+            "answer": "<p>We offer a variety of models including:</p><ul><li>Compact and easy to use for all ages</li><li><a href=\"/products/2011-sort-gel-blaster\" title=\"2011 Black Gel Blaster\">Desert E</a>: Classic, stylish, and beginner-friendly</li><li><a href=\"/products/gel-blaster-kugler-orange\" title=\"Gel Blaster Kugler Orange\">M4</a>: Versatile and durable for tactical play</li><li><a href=\"/products/gel-blaster-kugler-purple-mag\" title=\"Gel Blaster Kugler Purple Mag\">SCAR</a>: Advanced tactical model for serious action</li></ul>"
+          }
+        },
+        "question_hTQGw9": {
+          "type": "question",
+          "settings": {
+            "title": "How do I get started with gel blasters?",
+            "answer": "<p>Follow these simple steps:</p><ol><li>Choose a model that fits your needs.</li><li>Soak the biodegradable gel beads for 3–4 hours.</li><li>Fully charge the rechargeable batteries.</li><li>Always wear protective goggles and play safely.</li></ol>"
+          }
+        },
+        "question_nTcGUz": {
+          "type": "question",
+          "settings": {
+            "title": "Why shop at GelBlasterShop.dk?",
+            "answer": "<p>We only stock the best quality products from trusted manufacturers. You’ll find a broad selection of gel blasters and accessories, fast and free shipping on orders over 650 DKK, and competitive prices — all backed by excellent customer support.</p>"
+          }
+        },
+        "question_gCWrPn": {
+          "type": "question",
+          "settings": {
+            "title": "What is the safety disclaimer?",
+            "answer": "<p>Gel blasters are toys designed for safe, fun play. They are not real weapons, are environmentally friendly, and suitable for all ages.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_xHF3aG",
+        "question_jTW6rx",
+        "question_jWdVGM",
+        "question_hTQGw9",
+        "question_nTcGUz",
+        "question_gCWrPn"
+      ],
+      "name": "Collapsible tabs",
+      "settings": {
+        "title": "GelBlasterShop.dk — Your Ultimate Gel Blaster Shop"
+      }
+    },
+    "1617293273c37b524b": {
+      "type": "rich-text",
+      "blocks": {
+        "ab9dbf1f-cae8-4488-835a-1d27be252dfe": {
+          "type": "heading",
+          "settings": {
+            "title": "GELBLASTERSHOP.DK",
+            "use_h1": false
+          }
+        },
+        "74d4f957-8922-4307-ac16-bee3d887612a": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Welcome to GelBlasterShop.dk – Your Ultimate Gel Blaster Shop!"
+          }
+        },
+        "text_LXTAJm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to GelBlasterShop.dk, the place where fun, action, and high quality meet! Here you will find Denmark’s largest collection of gel blasters and a wide selection of gel blaster accessories. Whether you are looking for child-friendly gel blasters, gift ideas for kids, or the latest tactical models, we have what you’re looking for. Our store is built around safety, durability, and the joy of play – something both kids and adults will love.</p><p>By choosing us, you not only get access to the market’s best gel blasters but also outstanding customer service and fast delivery.</p><p><strong>Gel Blasters – Why Choose Them?</strong><br/><br/>A gel blaster set combines the best of active toys with innovation and fun. Whether you want to improve your tactical skills or just look for great toys for kids, gel blasters are the answer! Here’s what makes them unique:</p><ul><li>Our products use water-based gel beads that are 100% biodegradable. That means they are both safe for children and gentle on the environment.<br/></li><li>Perfect as outdoor toys for kids, providing hours of entertainment in the garden, park, or playground.<br/></li><li>A gel blaster as a gift creates excitement and fun playtimes your kids will remember for a long time.<br/></li></ul><p><strong>Discover Our Popular Gel Blaster Models</strong><br/><br/>At GelBlasterShop.dk, you will find some of the most sought-after models on the market. Here is a small selection from our range to ensure there is something for every taste:</p><ul><li>Perfect for those who want a compact and fast gel blaster. Ideal for both kids and adults who want fun without a steep learning curve.<br/></li><li>A classic that combines style with performance. This model is popular among both beginners and enthusiasts.<br/></li><li>Known for its versatility and durability. A must-have for the tactically oriented player seeking excitement and precision.<br/></li><li>The ultimate tactical gel blaster for those who want to take play to the next level. With its robust design and various features, this model is perfect for action-packed games.<br/></li></ul><p>These models are not only great as fun gifts for children but also as exciting activities for adults who love tactical challenges.</p><p><strong>How to Get Started with a Gel Blaster</strong><br/><br/>Starting your gel blaster adventure is easy! Follow these steps for the best experience:</p><ol><li>Whether it’s a Uz, Desert E, M4, or SCAR, we have a gel blaster to suit your needs.<br/></li><li>Soak the biodegradable water beads for 3–4 hours so they are ready to use.<br/></li><li> Most gel blasters run on rechargeable batteries, so make sure your gel blaster is fully charged before play begins.<br/></li><li>Use protective goggles and respect the surroundings to ensure a fun yet safe experience.<br/></li></ol><p><strong>Gel Blasters Turn Everyday Life into an Adventure</strong><br/><br/>Our products are designed to suit different needs – from simple play at home to bigger events like birthdays, bachelor parties, or social meetups with friends and family. With their perfect balance of fun and safety, gel blasters are an ideal activity for all ages.</p><p><strong>Why Choose GelBlasterShop.dk</strong><br/><br/>We only work with the best manufacturers to ensure you always get products of the highest quality. Our mission is to provide you with access to the best selection on the market and excellent customer service. Here’s what you can expect:</p><ul><li>From classics like the Desert E to advanced models like the SCAR, we have something for everyone.<br/></li><li>We offer extra ammunition, protective gear, and upgrades so you can get the most out of your gel blaster.<br/></li><li>For purchases over 650 DKK, we deliver your order free of charge within 1–3 business days.<br/></li><li>We always strive to offer the best market prices on gel blasters.<br/></li></ul><p><strong>Ready to Start Playing?</strong><br/><br/>Click \"Shop Now\" and discover the perfect gel blaster for you! Whether you’re looking for fun gifts for children or want to try action toys like the Uz or M4, we’ve got you covered. At GelBlasterShop.dk, we promise quality products, fast delivery, and a universe of fun.</p><p>Get ready for hours of fun play for both children and adults. Dive into our range and find your next adventure today!</p><p><strong>Planning Your Gel Blaster Arena</strong></p><p><strong>Tips for Finding Good Locations Near You for Experiences</strong></p><p><strong>Disclaimer:</strong> Gel blasters are toys and are not designed to look or function like real weapons. They are safe, environmentally friendly, and made for fun and entertainment for all ages.</p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "ab9dbf1f-cae8-4488-835a-1d27be252dfe",
+        "74d4f957-8922-4307-ac16-bee3d887612a",
+        "text_LXTAJm"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "newsletter_9CpqKV": {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "settings": {
+        "title": "🎁 Få 10% rabat på din første blaster!",
+        "subheading": "<p>Tilmeld dig vores nyhedsbrev og spar på sjovt og sikkert udstyr til hele familien – perfekt til havekampe og fødselsdage.</p>",
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": [
+    "compact_messages_FRrUMU",
+    "hotspots_VgJx8w",
+    "slideshow_yFaybj",
+    "ss_feature_1_ETyXQr",
+    "collection_list_jRtatE",
+    "product_list_LjQpir",
+    "1480591889144",
+    "collapsible_tabs_ijfrUg",
+    "1617293273c37b524b",
+    "newsletter_9CpqKV"
+  ]
+}
