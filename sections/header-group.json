@@ -82,7 +82,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo": "shopify://shop_images/logo_448a2889-9c94-4391-9a11-a929f91fce6e.webp",
+        "logo": "shopify://shop_images/logo.webp",
         "logo_img_width_int": 160,
         "mobile_logo_img_width_int": 100,
         "logo_h1": true,

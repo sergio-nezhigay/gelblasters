@@ -87,10 +87,10 @@
     "prod_thumb_shape": "shortest",
     "prod_thumb_crop": false,
     "prod_thumb_mob_per_row": "2",
-    "prod_thumb_text_align": "left",
+    "prod_thumb_text_align": "center",
     "prod_thumb_hover_image": true,
     "prod_thumb_show_subtitle": false,
-    "quickbuy_style": "whole",
+    "quickbuy_style": "off",
     "qb_show_app_blocks": true,
     "prod_block_label_loc": "top right",
     "prod_reduction_show": true,
@@ -533,9 +533,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      ".text-overlay__subheading {font-size: 16px; font-weight: 600;}",
-      ".text-overlay__title {text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35); font-weight: 400;}"
-    ]
+    "custom_css": []
   }
 }

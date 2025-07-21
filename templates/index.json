@@ -329,7 +329,7 @@
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Vælg Din Favorit!",
+        "title": "⚔️ Kampkategorier ⚔️",
         "enable_carousel": true,
         "grid": 4,
         "color_scheme": "2",
@@ -345,38 +345,14 @@
         "coll_button_style": "primary"
       }
     },
-    "product_list_LjQpir": {
-      "type": "product-list",
-      "name": "Product list",
-      "settings": {
-        "title": "Forside produkter",
-        "product_list": [
-          "bland-selv-gelballs",
-          "ak-shark-green-gel-blaster",
-          "2011-grey-gel-blaster",
-          "gel-blaster-kugler-cyan-hvid-mag",
-          "gel-blaster-kugler-danish-mag",
-          "el-blaster-kugler-green",
-          "gel-blaster-kugler-blue",
-          "gel-blaster-kugler-kobenhavn",
-          "gel-blaster-kugler-kobenhavn-mag",
-          "gel-blaster-kugler-white-mag"
-        ],
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "1",
-        "full_width": true
-      }
-    },
     "1480591889144": {
       "type": "featured-collection",
       "settings": {
-        "title": "Trending Styles",
-        "collection": "all",
+        "title": "🏆 Superpopulære modeller 🏆",
+        "collection": "top-produkter",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": false,
@@ -386,60 +362,95 @@
     "collapsible_tabs_ijfrUg": {
       "type": "collapsible-tabs",
       "blocks": {
+        "question_8FmbeN": {
+          "type": "question",
+          "settings": {
+            "title": "Hvorfor vælge GelBlasterShop.dk?",
+            "answer": "<p>Vi har de bedste produkter, gode priser, hurtig levering og fantastisk kundeservice!</p>"
+          }
+        },
         "question_xHF3aG": {
           "type": "question",
           "settings": {
-            "title": "What is GelBlasterShop.dk?",
-            "answer": "<p>GelBlasterShop.dk is Denmark’s leading gel blaster shop, offering the largest collection of gel blasters and accessories. We focus on safety, durability, and fun for kids and adults alike. Our store guarantees high quality, great customer service, and fast delivery.</p>"
+            "title": "Hvad er GelBlasterShop.dk?",
+            "answer": "<p>Danmarks største gelblaster-butik med masser af sjove og sikre legetøj til både børn og voksne!</p>"
           }
         },
         "question_jTW6rx": {
           "type": "question",
           "settings": {
-            "title": "Why should I choose gel blasters?",
-            "answer": "<p>Gel blasters combine active play with innovation and fun. They use 100% biodegradable water beads, making them safe for children and environmentally friendly. Perfect for outdoor play, they provide hours of entertainment and make fantastic gifts for kids.</p>"
+            "title": "Er gelblastere sikre for børn?",
+            "answer": "<p>Ja! De skyder med vandbaserede, biologisk nedbrydelige gelkugler — helt sikre og miljøvenlige</p>"
           }
         },
         "question_jWdVGM": {
           "type": "question",
           "settings": {
-            "title": "What are the popular gel blaster models?",
-            "answer": "<p>We offer a variety of models including:</p><ul><li>Compact and easy to use for all ages</li><li><a href=\"/products/2011-sort-gel-blaster\" title=\"2011 Black Gel Blaster\">Desert E</a>: Classic, stylish, and beginner-friendly</li><li><a href=\"/products/gel-blaster-kugler-orange\" title=\"Gel Blaster Kugler Orange\">M4</a>: Versatile and durable for tactical play</li><li><a href=\"/products/gel-blaster-kugler-purple-mag\" title=\"Gel Blaster Kugler Purple Mag\">SCAR</a>: Advanced tactical model for serious action</li></ul>"
+            "title": "Hvilken gelblaster skal jeg vælge?",
+            "answer": "<p>Vælg mellem nemme modeller som <a href=\"/products/weal-maker-elektrisk-vandgevaer\" title=\"Weal Maker Elektrisk Vandgevær\">Uz </a>eller taktiske blasters som <a href=\"/products/gel-blaster-kugler-blue-mag\" title=\"Gel Blaster Kugler Blue Mag\">SCAR </a>— vi har noget for alle!</p>"
           }
         },
         "question_hTQGw9": {
           "type": "question",
           "settings": {
-            "title": "How do I get started with gel blasters?",
-            "answer": "<p>Follow these simple steps:</p><ol><li>Choose a model that fits your needs.</li><li>Soak the biodegradable gel beads for 3–4 hours.</li><li>Fully charge the rechargeable batteries.</li><li>Always wear protective goggles and play safely.</li></ol>"
+            "title": "Hvordan kommer jeg i gang?",
+            "answer": "<p>Læg gelkuglerne i blød i 3-4 timer, oplad batterierne, tag sikkerhedsbriller på, og leg trygt!</p>"
           }
         },
         "question_nTcGUz": {
           "type": "question",
           "settings": {
-            "title": "Why shop at GelBlasterShop.dk?",
-            "answer": "<p>We only stock the best quality products from trusted manufacturers. You’ll find a broad selection of gel blasters and accessories, fast and free shipping on orders over 650 DKK, and competitive prices — all backed by excellent customer support.</p>"
+            "title": "Kan gelblastere være gode gaver?",
+            "answer": "<p>Helt sikkert! Børn elsker dem, og de skaber sjove lege til fødselsdage og højtider.</p>"
           }
         },
         "question_gCWrPn": {
           "type": "question",
           "settings": {
-            "title": "What is the safety disclaimer?",
-            "answer": "<p>Gel blasters are toys designed for safe, fun play. They are not real weapons, are environmentally friendly, and suitable for all ages.</p>"
+            "title": "Sælger I også tilbehør?",
+            "answer": "<p>Ja! Ekstra gelkugler, beskyttelsesudstyr og fede opgraderinger.</p>"
+          }
+        },
+        "question_3xmnMY": {
+          "type": "question",
+          "settings": {
+            "title": "Hvor hurtigt får jeg min ordre?",
+            "answer": "<p>Fri fragt på ordrer over 650 kr., leveret inden for 1-3 hverdage!</p>"
+          }
+        },
+        "question_HhAVzK": {
+          "type": "question",
+          "settings": {
+            "title": "Hvor kan jeg lege med min gelblaster?",
+            "answer": "<p>Overalt hvor det er sikkert — i haven, parken eller til fester med venner!</p>"
+          }
+        },
+        "question_V8qiir": {
+          "type": "question",
+          "settings": {
+            "title": "Ligner gelblastere rigtige våben?",
+            "answer": "<p>Nej! De er sjove legetøj lavet til tryg og spændende leg.</p>"
           }
         }
       },
       "block_order": [
+        "question_8FmbeN",
         "question_xHF3aG",
         "question_jTW6rx",
         "question_jWdVGM",
         "question_hTQGw9",
         "question_nTcGUz",
-        "question_gCWrPn"
+        "question_gCWrPn",
+        "question_3xmnMY",
+        "question_HhAVzK",
+        "question_V8qiir"
+      ],
+      "custom_css": [
+        ".collapsible-tabs__heading {text-align: center;}"
       ],
       "name": "Collapsible tabs",
       "settings": {
-        "title": "GelBlasterShop.dk — Your Ultimate Gel Blaster Shop"
+        "title": "🎉 GelBlasterShop.dk Spørgsmål & Svar 🎉"
       }
     },
     "1617293273c37b524b": {
@@ -495,7 +506,6 @@
     "slideshow_yFaybj",
     "ss_feature_1_ETyXQr",
     "collection_list_jRtatE",
-    "product_list_LjQpir",
     "1480591889144",
     "collapsible_tabs_ijfrUg",
     "1617293273c37b524b",
