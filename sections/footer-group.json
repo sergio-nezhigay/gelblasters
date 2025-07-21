@@ -120,8 +120,8 @@
           "settings": {
             "title": "Information",
             "text": "<p><a href=\"https://gelblastershop.dk/shop/\" title=\"Produktkatalog\">Produktkatalog</a></p>",
-            "image": "shopify://shop_images/logo.webp",
-            "image_width": 160,
+            "image": "shopify://shop_images/logo_448a2889-9c94-4391-9a11-a929f91fce6e.webp",
+            "image_width": 110,
             "show_social_icons": false,
             "soc_icons_large": false,
             "enable_follow_on_shop": false
@@ -145,7 +145,7 @@
       ],
       "settings": {
         "lower_menu": "",
-        "show_powered_by": true,
+        "show_powered_by": false,
         "show_payment_icons": true,
         "enable_country_selector": true,
         "enable_language_selector": true

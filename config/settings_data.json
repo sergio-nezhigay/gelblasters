@@ -71,16 +71,18 @@
     "foot_text_col": "#ffffff",
     "foot_heading_col": "#ffffff",
     "foot_divider_col": "#ececec",
+    "blend_product_images": true,
+    "blend_bg_color": "#f9f8fb",
     "type_heading_font": "montserrat_n2",
-    "capitalize_headings": false,
+    "capitalize_headings": true,
     "letter_spacing_heading": -4,
     "type_base_font": "montserrat_n3",
     "type_nav_font": "montserrat_n4",
-    "bold_mobile_nav": false,
+    "bold_mobile_nav": true,
     "type_logo_font": "jost_n7",
-    "font_size_heading_int": 34,
-    "font_size_base_int": 14,
-    "font_size_nav_int": 14,
+    "font_size_heading_int": 23,
+    "font_size_base_int": 16,
+    "font_size_nav_int": 16,
     "font_size_logo_int": 24,
     "button_style": "caps",
     "button_shape": "fullyround",
@@ -533,6 +535,9 @@
     }
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+      ".navigation__link,.product-block__title,.btn,.price,.h4, .h3, h3 {font-weight: 500;}",
+      ".price__current {color: #ff4757;}"
+    ]
   }
 }
