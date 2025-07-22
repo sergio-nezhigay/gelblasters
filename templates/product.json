@@ -103,7 +103,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "title": "🌟 Du vil måske også kunne lide",
+        "title": "Du vil måske også kunne lide",
         "show_vendor": false,
         "grid": 4
       }

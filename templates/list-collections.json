@@ -12,10 +12,38 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
+        "title": "Katalog",
+        "display_type": "all",
+        "grid": 4,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "over-full image-overlay--bg-shadow",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "featured_collection_x8yKxH": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Superpopulære modeller",
+        "collection": "top-produkter",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": false,
+        "full_width": true
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "featured_collection_x8yKxH"
   ]
 }

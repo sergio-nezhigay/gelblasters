@@ -20,8 +20,8 @@
     "prod_label_pre_text": "#ffa500",
     "btn_color": "#00aeef",
     "btn_color_hover": "#0090c0",
-    "btn_alt_bg": "#f0f0f0",
-    "btn_alt_text": "#201230",
+    "btn_alt_bg": "#ffffff",
+    "btn_alt_text": "#ef25b7",
     "bg_col": "#ffffff",
     "bg_image": "",
     "bg_method": "repeatxy",
@@ -45,7 +45,7 @@
     "color_scheme_1_btn_color_hover": "#5c5c5c",
     "color_scheme_1_btn_alt_bg": "#fbf9f4",
     "color_scheme_1_btn_alt_text": "#201230",
-    "color_scheme_2_col": "#efefef",
+    "color_scheme_2_col": "#fbe9f6",
     "color_scheme_2_head_col": "#201230",
     "color_scheme_2_text_col": "#201230",
     "color_scheme_2_link_col": "#ff1493",
@@ -536,7 +536,9 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".collection-listing {padding-bottom: 12px !important;}"
+      ".collection-listing {padding-bottom: 12px !important;}",
+      ".localization__selector {font-size: 16px;}",
+      "h1 {font-size: 30px; font-weight: 500;}"
     ]
   }
 }

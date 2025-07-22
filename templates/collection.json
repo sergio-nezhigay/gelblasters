@@ -50,7 +50,7 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "🏆 Superpopulære modeller 🏆",
+        "title": "Superpopulære modeller",
         "collection": "top-produkter",
         "show_vendor": false,
         "enable_carousel": true,

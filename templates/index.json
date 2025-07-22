@@ -124,7 +124,7 @@
             "mobile_image": "shopify://shop_images/MCXGelBlasterTopmodel.png",
             "slide_link": "",
             "subheading": "Kid-approved fun, parent-approved safety",
-            "title": "Ready, Aim, Blast Off! 🚀",
+            "title": "Ready, Aim, Blast Off!",
             "heading_max_width": 20,
             "title_size": 78,
             "title_size_mobile": 40,
@@ -132,7 +132,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Shop Gel blasters",
-            "button_url_1": "",
+            "button_url_1": "shopify://collections/gel-blaster",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "center center"
@@ -153,7 +153,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Shop Electric Water Guns",
-            "button_url_1": "",
+            "button_url_1": "shopify://collections/elektriske-vandpistoler",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "center center"
@@ -173,7 +173,7 @@
             "text": "",
             "enlarge_text": false,
             "button_label_1": "Shop Gel balls",
-            "button_url_1": "",
+            "button_url_1": "shopify://collections/gel-blaster-kugler",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "center center"
@@ -188,7 +188,7 @@
       "custom_css": [],
       "settings": {
         "height": "fixed",
-        "height_desktop": 420,
+        "height_desktop": 560,
         "height_mobile": 300,
         "full_width": true,
         "mobile_overlay_under": false,
@@ -311,29 +311,20 @@
             "subheading": "",
             "button_label": ""
           }
-        },
-        "collection_MXbezD": {
-          "type": "collection",
-          "settings": {
-            "collection": "frontpage",
-            "subheading": "",
-            "button_label": ""
-          }
         }
       },
       "block_order": [
         "collection_Vgbg7c",
         "collection_YzWhR3",
-        "collection_FRVGrQ",
-        "collection_MXbezD"
+        "collection_FRVGrQ"
       ],
       "name": "Collection list",
       "settings": {
-        "title": "⚔️ Kampkategorier ⚔️",
+        "title": "Kampkategorier",
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 3,
         "color_scheme": "2",
-        "full_width": true,
+        "full_width": false,
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
@@ -348,7 +339,7 @@
     "1480591889144": {
       "type": "featured-collection",
       "settings": {
-        "title": "🏆 Superpopulære modeller 🏆",
+        "title": "Superpopulære modeller",
         "collection": "top-produkter",
         "show_vendor": false,
         "enable_carousel": true,
@@ -450,7 +441,7 @@
       ],
       "name": "Collapsible tabs",
       "settings": {
-        "title": "❓ BATTLE FAQ ❓"
+        "title": "BATTLE FAQ"
       }
     },
     "1617293273c37b524b": {
@@ -490,13 +481,18 @@
         "color_scheme": "default"
       }
     },
-    "newsletter_9CpqKV": {
-      "type": "newsletter",
-      "name": "Newsletter",
+    "featured_blog_EeeUyD": {
+      "type": "featured-blog",
+      "name": "Blog posts",
       "settings": {
-        "title": "🎁 Få 10% rabat på din første blaster!",
-        "subheading": "<p>Tilmeld dig vores nyhedsbrev og spar på sjovt og sikkert udstyr til hele familien – perfekt til havekampe og fødselsdage.</p>",
-        "color_scheme": "default"
+        "title": "Blog posts",
+        "blog": "nyheder",
+        "post_limit": 3,
+        "show_author": false,
+        "show_date": true,
+        "show_excerpts": true,
+        "crop_ratio": "1.78",
+        "color_scheme": "2"
       }
     }
   },
@@ -509,6 +505,6 @@
     "1480591889144",
     "collapsible_tabs_ijfrUg",
     "1617293273c37b524b",
-    "newsletter_9CpqKV"
+    "featured_blog_EeeUyD"
   ]
 }

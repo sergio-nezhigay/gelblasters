@@ -7,9 +7,10 @@
     {% else %}
       {%- assign form_errors_id = section.id | append: '-error' -%}
       {%- render 'form-errors', form: form, id: form_errors_id -%}
-      <input type="hidden" name="contact[tags]" value="prospect,newsletter"/>
+      <input type="hidden" name="contact[tags]" value="prospect,newsletter">
       <p>
-        <input type="email"
+        <input
+          type="email"
           placeholder="{{ 'newsletter.placeholder' | t }}"
           class="signup-form__email"
           value=""
@@ -20,8 +21,21 @@
             aria-invalid="true"
             aria-describedby="{{ form_errors_id }}"
           {%- endif %}
-          required />
+          required
+        >
       </p>
+
+      <label>
+        <input type="checkbox" name="newsletter_optin" required>
+        Jeg vil gerne tilmeldes nyhedsbrevet
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="privacy_accept" required>
+        Jeg har læst og accepterer privatlivspolitikken.
+      </label>
+      <br>
+      <br>
       <button class="btn btn--{{ block.settings.button_style }} signup-form__button" type="submit">
         {{- 'newsletter.button_label' | t -}}
       </button>

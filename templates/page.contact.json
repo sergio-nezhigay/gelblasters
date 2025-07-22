@@ -12,6 +12,12 @@
     "main": {
       "type": "main-contact",
       "blocks": {
+        "text_UxyXk8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Udfyld nedenstående kontaktformular, og din henvendelse vil på hverdage blive besvaret indenfor 24 timer.  </p><p>Eller skriv på <a href=\"mailto:info@gelblastershop.dk\">info@gelblastershop.dk</a><br/></p>"
+          }
+        },
         "name": {
           "type": "name_input",
           "settings": {
@@ -24,20 +30,67 @@
             "half_width": true
           }
         },
+        "phone_input_PLUxgX": {
+          "type": "phone_input",
+          "settings": {
+            "required": false,
+            "half_width": false
+          }
+        },
         "message": {
           "type": "message_input",
-          "settings": {}
+          "settings": {
+            "half_width": false
+          }
         }
       },
       "block_order": [
+        "text_UxyXk8",
         "name",
         "email",
+        "phone_input_PLUxgX",
         "message"
       ],
-      "settings": {}
+      "settings": {
+        "show_page_title": true,
+        "use_columns": true,
+        "contact_title": "",
+        "contact_text": ""
+      }
+    },
+    "rich_text_VdzdwF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_R3maRw": {
+          "type": "heading",
+          "settings": {
+            "title": "Gelblastershop.dk",
+            "use_h1": false
+          }
+        },
+        "text_FKWzRy": {
+          "type": "text",
+          "settings": {
+            "text": "<p> <a href=\"https://maps.app.goo.gl/eCa2j3h47WiJcH826\" target=\"_blank\">      Bakkedraget 14<br/>      4000 Roskilde, Denmark</a><br/>  </p><p>CVR-nummer: 44084252</p><p>Bankoplysninger: 9070 1637501468</p><p>Telefonnr.: <a href=\"tel:+4581904411\">81 90 44 11</a></p><p>E-mail: <a href=\"mailto:info@gelblastershop.dk\">info@gelblastershop.dk</a></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_R3maRw",
+        "text_FKWzRy"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": false,
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_VdzdwF"
   ]
 }
