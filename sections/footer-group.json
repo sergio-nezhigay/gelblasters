@@ -108,7 +108,7 @@
           "type": "text",
           "settings": {
             "title": "Kontakt",
-            "text": "<ul><li>Gelblastershop.dk</li><li>Bakkedraget 14</li><li>4000 Roskilde</li><li>Denmark</li><li>CVR-nummer: 44084252</li><li>Bankoplysninger: 9070 1637501468</li><li>Telefonnr.: 81904411</li><li>E-mail: <a href=\"mailto:info@gelblastershop.dk\">info@gelblastershop.dk</a></li></ul>",
+            "text": "<p><strong>Gelblastershop.dk</strong></p><p>   <a href=\"https://maps.app.goo.gl/eCa2j3h47WiJcH826\" target=\"_blank\"><br/>      Bakkedraget 14<br/>      4000 Roskilde, Denmark</a><br/>  </p><p>CVR-nummer: 44084252</p><p>Bankoplysninger: 9070 1637501468</p><p>Telefonnr.: <a href=\"tel:+4581904411\">81 90 44 11</a></p><p>E-mail: <a href=\"mailto:info@gelblastershop.dk\">info@gelblastershop.dk</a></p>",
             "image_width": 100,
             "show_social_icons": true,
             "soc_icons_large": true,
@@ -131,7 +131,7 @@
           "type": "newsletter",
           "settings": {
             "title": "🎁 Få 10% rabat på din første blaster!",
-            "text": "<p><br/>Tilmeld dig vores nyhedsbrev og spar på sjovt og sikkert udstyr til hele familien – perfekt til havekampe og fødselsdage.<br/><br/></p>",
+            "text": "<p><br/>Tilmeld dig vores nyhedsbrev og spar på sjovt og sikkert udstyr til hele familien – perfekt til havekampe og fødselsdage.<br/></p><p></p>",
             "button_style": "primary",
             "show_social_icons": false,
             "soc_icons_large": false
@@ -148,7 +148,7 @@
         "show_powered_by": false,
         "show_payment_icons": true,
         "enable_country_selector": true,
-        "enable_language_selector": true
+        "enable_language_selector": false
       }
     }
   },

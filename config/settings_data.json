@@ -536,8 +536,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".navigation__link,.product-block__title,.btn,.price,.h4, .h3, h3 {font-weight: 500;}",
-      ".price__current {color: #ff4757;}"
+      ".collection-listing {padding-bottom: 12px !important;}"
     ]
   }
 }
