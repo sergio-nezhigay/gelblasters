@@ -12041,45 +12041,15 @@ model-viewer .container {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
 }
 
-.text-overlay__subheading {
-  font-size: 20px;
-  font-weight: 600;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
-}
-.text-overlay__title {
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
-  font-weight: 400;
-}
 .product-label.product-label--sale span {
   background: #ff4757;
+  color: #fff;
   border-radius: 6px;
   font-weight: bold;
   font-size: 0.8em;
   opacity: 0.8 !important;
   letter-spacing: 1px;
   box-shadow: 0 3px 10px rgba(255, 71, 87, 0.3);
-  animation: wiggle 4s infinite;
-  transform-origin: center;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-.product-label.product-label--sale:hover span {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.5);
-  animation-play-state: paused;
-}
-
-@keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-2deg);
-  }
-  75% {
-    transform: rotate(2deg);
-  }
 }
 
 .navigation__link,
@@ -12098,4 +12068,15 @@ h3 {
 .collection-listing {
   padding-top: 12px !important;
   padding-bottom: 12px !important;
+}
+
+.collection-listing {
+  padding-bottom: 12px !important;
+}
+.localization__selector {
+  font-size: 16px;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 500;
 }
