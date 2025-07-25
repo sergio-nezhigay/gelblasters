@@ -1,0 +1,167 @@
+{% schema %}
+{
+  "name": "Marquee Banner",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Marquee Banner"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .cu-scroll-bar-info-row {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+  }
+  .cu-scroll-bar-info {
+    display: flex;
+    width: fit-content;
+    animation: scroll 30s linear infinite;
+    position: relative;
+    z-index: 2;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .marquee-banner__inner {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  .marquee-banner__text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .marquee-banner__text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+  .marquee-banner__text img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  .marquee-banner__text-info span {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 4px;
+  }
+  .marquee-banner__text-info p {
+    font-size: 13px;
+    color: #4a5568;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  .cu-scroll-bar-info-row:hover .cu-scroll-bar-info {
+    animation-play-state: paused;
+  }
+</style>
+
+<div class="cu-scroll-bar-info-row">
+  <div class="cu-scroll-bar-info">
+    <div class="marquee-banner__inner" aria-hidden="true">
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon1.svg" alt="Happy Face">
+        <div class="marquee-banner__text-info">
+          <span>Happy Customers</span>
+          <p>Over 15000+ satisfied customers</p>
+        </div>
+      </div>
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon2.svg" alt="Discount">
+        <div class="marquee-banner__text-info">
+          <span>Best Prices</span>
+          <p>Denmark's cheapest selection</p>
+        </div>
+      </div>
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon3.svg" alt="Eco Packaging">
+        <div class="marquee-banner__text-info">
+          <span>Eco Packaging</span>
+          <p>We use recycled cardboard for shipping</p>
+        </div>
+      </div>
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon4.svg" alt="Free Shipping">
+        <div class="marquee-banner__text-info">
+          <span>Free Shipping</span>
+          <p>On all orders over 699,- otherwise only 29,-</p>
+        </div>
+      </div>
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon5.svg" alt="EU Delivery">
+        <div class="marquee-banner__text-info">
+          <span>EU Delivery</span>
+          <p>We deliver to all of EU</p>
+        </div>
+      </div>
+    </div>
+    <div class="marquee-banner__inner" aria-hidden="true">
+      <!-- duplicated for seamless loop -->
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon1.svg" alt="Happy Face">
+        <div class="marquee-banner__text-info">
+          <span>Happy Customers</span>
+          <p>Over 15000+ satisfied customers</p>
+        </div>
+      </div>
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon2.svg" alt="Discount">
+        <div class="marquee-banner__text-info">
+          <span>Best Prices</span>
+          <p>Denmark's cheapest selection</p>
+        </div>
+      </div>
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon3.svg" alt="Eco Packaging">
+        <div class="marquee-banner__text-info">
+          <span>Eco Packaging</span>
+          <p>We use recycled cardboard for shipping</p>
+        </div>
+      </div>
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon4.svg" alt="Free Shipping">
+        <div class="marquee-banner__text-info">
+          <span>Free Shipping</span>
+          <p>On all orders over 699,- otherwise only 29,-</p>
+        </div>
+      </div>
+      <div class="marquee-banner__text">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0001/files/icon5.svg" alt="EU Delivery">
+        <div class="marquee-banner__text-info">
+          <span>EU Delivery</span>
+          <p>We deliver to all of EU</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

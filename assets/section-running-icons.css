@@ -1,0 +1,364 @@
+/* Running Icons Section - Modern Shopify CSS */
+
+.running-icons-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.running-icons-section .page-width {
+  max-width: var(--page-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--page-margin, 2rem);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.section-subheading {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.8;
+}
+
+/* Running Container */
+.running-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.running-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+/* Icon Elements */
+.icon-element {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  will-change: transform, left;
+  isolation: isolate;
+}
+
+.icon-element::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.icon-element:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.icon-element:active {
+  transform: scale(0.95);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 44px; /* Touch target */
+}
+
+.control-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.control-btn:hover::before {
+  opacity: 1;
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.control-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.btn-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.btn-text {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Animation Performance */
+.running-icons-section * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-element {
+    transition: none;
+  }
+
+  .control-btn {
+    transition: none;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 990px) {
+  .running-icons-section .page-width {
+    padding: 0 var(--page-margin, 1.5rem);
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .running-icons-section .page-width {
+    padding: 0 var(--page-margin, 1rem);
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .controls {
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .control-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+    min-width: 44px;
+  }
+
+  .btn-text {
+    display: none;
+  }
+
+  .btn-icon {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .running-icons-section .page-width {
+    padding: 0 var(--page-margin, 0.75rem);
+  }
+
+  .controls {
+    gap: 0.5rem;
+  }
+
+  .control-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icon-element {
+    transform: translateZ(0);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .icon-element::before {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05)
+    );
+  }
+}
+
+/* Print Styles */
+@media print {
+  .running-icons-section {
+    page-break-inside: avoid;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  .icon-element {
+    position: static !important;
+    display: inline-flex !important;
+    margin: 0 1rem 1rem 0 !important;
+    transform: none !important;
+  }
+
+  .running-track {
+    position: static !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Custom Properties for Theme Integration */
+.running-icons-section {
+  --icon-hover-scale: 1.1;
+  --animation-duration: 0.3s;
+  --animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --border-width: 2px;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --backdrop-blur: 10px;
+}
+
+/* Utility Classes */
+.running-icons-section .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Loading State */
+.running-icons-section.is-loading .icon-element {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.running-icons-section.is-loading .icon-element:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.running-icons-section.is-loading .icon-element:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.running-icons-section.is-loading .icon-element:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Browser-specific Optimizations */
+@supports (backdrop-filter: blur(10px)) {
+  .running-container {
+    backdrop-filter: blur(var(--backdrop-blur));
+  }
+
+  .icon-element {
+    backdrop-filter: blur(calc(var(--backdrop-blur) / 2));
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .running-container {
+    background: rgba(255, 255, 255, 0.9) !important;
+  }
+}
+
+/* Performance Optimizations */
+.running-track,
+.icon-element {
+  contain: layout style paint;
+}
+
+.icon-element {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

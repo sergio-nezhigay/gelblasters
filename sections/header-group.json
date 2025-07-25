@@ -81,19 +81,6 @@
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "menu_promotion_small_CmWQyJ": {
-          "type": "menu-promotion-small",
-          "settings": {
-            "dropdown_link_title": "sdfg",
-            "title": "dsfg",
-            "link_url": "shopify://blogs/nyheder"
-          }
-        }
-      },
-      "block_order": [
-        "menu_promotion_small_CmWQyJ"
-      ],
       "settings": {
         "logo": "shopify://shop_images/logo.webp",
         "logo_img_width_int": 160,
