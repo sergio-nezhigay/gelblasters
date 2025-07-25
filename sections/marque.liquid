@@ -1,0 +1,491 @@
+{% comment %} Removed dynamic key assignments {% endcomment %}
+
+<div id="{{ section.id }}" class="running-ticker-section {{ section.settings.custom_classes }}">
+  <div class="running-ticker-container">
+    <div class="running-ticker-track">
+      {% for block in section.blocks %}
+        {% if block.settings.icon_svg != blank or block.settings.title != blank %}
+          <div class="running-ticker-item" {{ block.shopify_attributes }}>
+            {% if block.settings.icon_svg != blank %}
+              <div class="running-ticker-icon">
+                {{ block.settings.icon_svg }}
+              </div>
+            {% endif %}
+            <div class="running-ticker-content">
+              {% if block.settings.title != blank %}
+                <h3 class="running-ticker-title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.subtitle != blank %}
+                <p class="running-ticker-subtitle">{{ block.settings.subtitle }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+      {% for block in section.blocks %}
+        {% if block.settings.icon_svg != blank or block.settings.title != blank %}
+          <div class="running-ticker-item" {{ block.shopify_attributes }}>
+            {% if block.settings.icon_svg != blank %}
+              <div class="running-ticker-icon">
+                {{ block.settings.icon_svg }}
+              </div>
+            {% endif %}
+            <div class="running-ticker-content">
+              {% if block.settings.title != blank %}
+                <h3 class="running-ticker-title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.subtitle != blank %}
+                <p class="running-ticker-subtitle">{{ block.settings.subtitle }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .running-ticker-section {
+    --color-background: {{ section.settings.background_color }};
+    --color-title: {{ section.settings.title_color }};
+    --color-subtitle: {{ section.settings.subtitle_color }};
+    --color-icon: {{ section.settings.icon_color }};
+    --title-size-mobile: {{ section.settings.title_size_mobile | default: 14 }}px;
+    --title-size-desktop: {{ section.settings.title_size_desktop | default: 16 }}px;
+    --subtitle-size-mobile: {{ section.settings.subtitle_size_mobile | default: 12 }}px;
+    --subtitle-size-desktop: {{ section.settings.subtitle_size_desktop | default: 14 }}px;
+    --animation-speed: {{ section.settings.animation_speed | default: 30 }}s;
+    --icon-size-mobile: {{ section.settings.icon_size_mobile | default: 24 }}px;
+    --icon-size-desktop: {{ section.settings.icon_size_desktop | default: 32 }}px;
+    --item-gap-mobile: {{ section.settings.item_gap_mobile | default: 40 }}px;
+    --item-gap-desktop: {{ section.settings.item_gap_desktop | default: 60 }}px;
+  }
+
+  .running-ticker-section {
+    background: var(--color-background);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .running-ticker-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .running-ticker-track {
+    display: flex;
+    align-items: center;
+    gap: var(--item-gap-mobile);
+    animation: scroll var(--animation-speed) linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+  .running-ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    padding: 0 20px;
+  }
+
+  .running-ticker-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: var(--icon-size-mobile);
+    height: var(--icon-size-mobile);
+  }
+
+  .running-ticker-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--color-icon);
+    color: var(--color-icon);
+  }
+
+  .running-ticker-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+  }
+
+  .running-ticker-title {
+    margin: 0;
+    padding: 0;
+    font-size: var(--title-size-mobile);
+    color: var(--color-title);
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .running-ticker-subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: var(--subtitle-size-mobile);
+    color: var(--color-subtitle);
+    font-weight: 400;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .running-ticker-track {
+      gap: var(--item-gap-desktop);
+    }
+
+    .running-ticker-icon {
+      width: var(--icon-size-desktop);
+      height: var(--icon-size-desktop);
+    }
+
+    .running-ticker-title {
+      font-size: var(--title-size-desktop);
+    }
+
+    .running-ticker-subtitle {
+      font-size: var(--subtitle-size-desktop);
+    }
+
+    .running-ticker-item {
+      gap: 16px;
+      padding: 0 30px;
+    }
+  }
+</style>
+
+<style>
+  #{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    padding-left: {{ section.settings.horizontal_padding_mobile }}px;
+    padding-right: {{ section.settings.horizontal_padding_mobile }}px;
+  }
+
+  #{{ section.id }} .running-ticker-container {
+    max-width: {{ section.settings.max_width }};
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+      padding-left: {{ section.settings.horizontal_padding_desktop }}px;
+      padding-right: {{ section.settings.horizontal_padding_desktop }}px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Running Ticker",
+  "tag": "section",
+  "class": "running-ticker-section",
+  "templates": [
+    "404",
+    "article",
+    "blog",
+    "cart",
+    "collection",
+    "list-collections",
+    "customers/account",
+    "customers/activate_account",
+    "customers/addresses",
+    "customers/login",
+    "customers/order",
+    "customers/register",
+    "customers/reset_password",
+    "gift_card",
+    "index",
+    "page",
+    "password",
+    "product",
+    "search"
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "Section Max Width",
+      "default": "1200px",
+      "info": "Enter max width with units (e.g., 1200px, 100%)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding Top Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Padding Top Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding Bottom Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Padding Bottom Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "horizontal_padding_mobile",
+      "label": "Horizontal Padding Mobile",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "horizontal_padding_desktop",
+      "label": "Horizontal Padding Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "text",
+      "id": "custom_classes",
+      "label": "Custom CSS Classes",
+      "info": "Add custom CSS classes separated by spaces"
+    },
+    {
+      "type": "header",
+      "content": "Typography Settings"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title Size Mobile",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Title Size Desktop",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size_mobile",
+      "label": "Subtitle Size Mobile",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size_desktop",
+      "label": "Subtitle Size Desktop",
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "header",
+      "content": "Icon Settings"
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "label": "Icon Size Mobile",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "icon_size_desktop",
+      "label": "Icon Size Desktop",
+      "min": 16,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon Color",
+      "default": "#ff6b35"
+    },
+    {
+      "type": "header",
+      "content": "Animation Settings"
+    },
+    {
+      "type": "range",
+      "id": "animation_speed",
+      "label": "Animation Speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "default": 30,
+      "info": "Lower values = faster animation"
+    },
+    {
+      "type": "range",
+      "id": "item_gap_mobile",
+      "label": "Item Gap Mobile",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "item_gap_desktop",
+      "label": "Item Gap Desktop",
+      "min": 30,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ticker_item",
+      "name": "Ticker Item",
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon_svg",
+          "label": "Icon SVG Code",
+          "info": "Paste SVG code for the icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Running Ticker",
+      "blocks": [
+        {
+          "type": "ticker_item",
+          "settings": {
+            "icon_svg": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z'/></svg>",
+            "title": "Free Shipping",
+            "subtitle": "On all orders over $99"
+          }
+        },
+        {
+          "type": "ticker_item",
+          "settings": {
+            "icon_svg": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/></svg>",
+            "title": "EU Delivery",
+            "subtitle": "We deliver to all EU"
+          }
+        },
+        {
+          "type": "ticker_item",
+          "settings": {
+            "icon_svg": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/></svg>",
+            "title": "Happy Customers",
+            "subtitle": "Over 15000+ satisfied customers"
+          }
+        },
+        {
+          "type": "ticker_item",
+          "settings": {
+            "icon_svg": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/></svg>",
+            "title": "Best Prices",
+            "subtitle": "Denmark's cheapest GelGuns"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

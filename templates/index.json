@@ -29,10 +29,7 @@
           }
         }
       },
-      "block_order": [
-        "message_VTcRXy",
-        "message_WzaVGE"
-      ],
+      "block_order": ["message_VTcRXy", "message_WzaVGE"],
       "disabled": true,
       "name": "Store messages",
       "settings": {
@@ -87,11 +84,7 @@
           }
         }
       },
-      "block_order": [
-        "hotspot_rEWgUJ",
-        "hotspot_zHAJq6",
-        "hotspot_jEA3c9"
-      ],
+      "block_order": ["hotspot_rEWgUJ", "hotspot_zHAJq6", "hotspot_jEA3c9"],
       "disabled": true,
       "name": "Hotspots",
       "settings": {
@@ -182,11 +175,7 @@
           }
         }
       },
-      "block_order": [
-        "image_9Wyhwe",
-        "image_E9yfwh",
-        "image_hxX6UJ"
-      ],
+      "block_order": ["image_9Wyhwe", "image_E9yfwh", "image_hxX6UJ"],
       "custom_css": [],
       "settings": {
         "height": "fixed",
@@ -202,8 +191,76 @@
         "accessibility_info": ""
       }
     },
+    "marque_PdAAc8": {
+      "type": "marque",
+      "blocks": {
+        "ticker_item_q39cWb": {
+          "type": "ticker_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z\"></path></svg>",
+            "title": "Free Shipping",
+            "subtitle": "On all orders over $99"
+          }
+        },
+        "ticker_item_cdBNUW": {
+          "type": "ticker_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z\"></path></svg>",
+            "title": "EU Delivery",
+            "subtitle": "We deliver to all EU"
+          }
+        },
+        "ticker_item_xV9mbd": {
+          "type": "ticker_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\"></path></svg>",
+            "title": "Happy Customers",
+            "subtitle": "Over 15000+ satisfied customers"
+          }
+        },
+        "ticker_item_qr9rCR": {
+          "type": "ticker_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z\"></path></svg>",
+            "title": "Best Prices",
+            "subtitle": "Denmark's cheapest GelGuns"
+          }
+        }
+      },
+      "block_order": [
+        "ticker_item_q39cWb",
+        "ticker_item_cdBNUW",
+        "ticker_item_xV9mbd",
+        "ticker_item_qr9rCR"
+      ],
+      "name": "Running Ticker",
+      "settings": {
+        "max_width": "1200px",
+        "padding_top_mobile": 22,
+        "padding_top_desktop": 35,
+        "padding_bottom_mobile": 22,
+        "padding_bottom_desktop": 35,
+        "horizontal_padding_mobile": 15,
+        "horizontal_padding_desktop": 20,
+        "background_color": "#f5f5f5",
+        "custom_classes": "",
+        "title_size_mobile": 14,
+        "title_size_desktop": 16,
+        "subtitle_size_mobile": 12,
+        "subtitle_size_desktop": 14,
+        "title_color": "#404040",
+        "subtitle_color": "#404040",
+        "icon_size_mobile": 24,
+        "icon_size_desktop": 32,
+        "icon_color": "#404040",
+        "animation_speed": 30,
+        "item_gap_mobile": 40,
+        "item_gap_desktop": 60
+      }
+    },
     "marquee_banner_WMWyJY": {
       "type": "marquee-banner",
+      "disabled": true,
       "name": "Marquee Banner",
       "settings": {}
     },
@@ -395,6 +452,94 @@
         "full_width": true
       }
     },
+    "video_WMNK8D": {
+      "type": "video",
+      "blocks": {
+        "heading_qK6URr": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "heading_max_width": 15,
+            "title_size": 84,
+            "title_size_mobile": 32,
+            "use_h1": false
+          }
+        },
+        "text_6VnX46": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gratis fragt ved køb over 650 DKK · Hurtig levering 1–3 hverdage · 14 dages fortrydelsesret</p>",
+            "enlarge_text": true
+          }
+        },
+        "play_button_hf94qE": {
+          "type": "play-button",
+          "settings": {}
+        }
+      },
+      "block_order": ["heading_qK6URr", "text_6VnX46", "play_button_hf94qE"],
+      "name": "Video",
+      "settings": {
+        "video_shopify": "shopify://files/videos/Create_a_very_202507231229.mp4",
+        "video_external": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_description": "",
+        "text_alignment": "center center",
+        "full_width": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "videos_i6Vamg": {
+      "type": "videos",
+      "blocks": {
+        "video_item_nJxEE6": {
+          "type": "video_item",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=iv-5mZ_9CPY"
+          }
+        },
+        "video_item_EKwEjU": {
+          "type": "video_item",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=iv-5mZ_9CPY"
+          }
+        },
+        "video_item_9YwRBA": {
+          "type": "video_item",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=iv-5mZ_9CPY"
+          }
+        },
+        "video_item_RUw3kU": {
+          "type": "video_item",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=iv-5mZ_9CPY"
+          }
+        }
+      },
+      "block_order": [
+        "video_item_nJxEE6",
+        "video_item_EKwEjU",
+        "video_item_9YwRBA",
+        "video_item_RUw3kU"
+      ],
+      "name": "Video Testimonials",
+      "settings": {
+        "title": "Real Results from Real Homes",
+        "title_color": "#04587c",
+        "title_size_desktop": 44,
+        "title_size_mobile": 28,
+        "grid_gap": 24,
+        "background_color": "#ffffff",
+        "max_width": "1400px",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60,
+        "padding_horizontal_desktop": 60,
+        "padding_horizontal_mobile": 20,
+        "custom_class": ""
+      }
+    },
     "collapsible_tabs_ijfrUg": {
       "type": "collapsible-tabs",
       "blocks": {
@@ -481,9 +626,7 @@
         "question_HhAVzK",
         "question_V8qiir"
       ],
-      "custom_css": [
-        ".collapsible-tabs__heading {text-align: center;}"
-      ],
+      "custom_css": [".collapsible-tabs__heading {text-align: center;}"],
       "name": "Collapsible tabs",
       "settings": {
         "title": "BATTLE FAQ"
@@ -526,87 +669,6 @@
         "color_scheme": "default"
       }
     },
-    "video_KYKbmR": {
-      "type": "video",
-      "blocks": {
-        "heading_Dnd44i": {
-          "type": "heading",
-          "settings": {
-            "title": "Video",
-            "heading_max_width": 15,
-            "title_size": 84,
-            "title_size_mobile": 32,
-            "use_h1": false
-          }
-        },
-        "text_wHFBnQ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Use a video to get a customer's attention</p>",
-            "enlarge_text": true
-          }
-        },
-        "play_button_eLmYAm": {
-          "type": "play-button",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_Dnd44i",
-        "text_wHFBnQ",
-        "play_button_eLmYAm"
-      ],
-      "disabled": true,
-      "name": "Video",
-      "settings": {
-        "video_shopify": "shopify://files/videos/Create_a_very_202507231233.mp4",
-        "video_external": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_description": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "overlay_style": "shadow"
-      }
-    },
-    "video_WMNK8D": {
-      "type": "video",
-      "blocks": {
-        "heading_qK6URr": {
-          "type": "heading",
-          "settings": {
-            "title": "",
-            "heading_max_width": 15,
-            "title_size": 84,
-            "title_size_mobile": 32,
-            "use_h1": false
-          }
-        },
-        "text_6VnX46": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Gratis fragt ved køb over 650 DKK · Hurtig levering 1–3 hverdage · 14 dages fortrydelsesret</p>",
-            "enlarge_text": true
-          }
-        },
-        "play_button_hf94qE": {
-          "type": "play-button",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_qK6URr",
-        "text_6VnX46",
-        "play_button_hf94qE"
-      ],
-      "name": "Video",
-      "settings": {
-        "video_shopify": "shopify://files/videos/Create_a_very_202507231229.mp4",
-        "video_external": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_description": "",
-        "text_alignment": "center center",
-        "full_width": false,
-        "overlay_style": "shadow"
-      }
-    },
     "featured_blog_EeeUyD": {
       "type": "featured-blog",
       "name": "Blog posts",
@@ -632,15 +694,16 @@
     "compact_messages_FRrUMU",
     "hotspots_VgJx8w",
     "slideshow_yFaybj",
+    "marque_PdAAc8",
     "marquee_banner_WMWyJY",
     "running_icons_ready",
     "ss_feature_1_ETyXQr",
     "collection_list_jRtatE",
     "1480591889144",
+    "video_WMNK8D",
+    "videos_i6Vamg",
     "collapsible_tabs_ijfrUg",
     "1617293273c37b524b",
-    "video_KYKbmR",
-    "video_WMNK8D",
     "featured_blog_EeeUyD",
     "running_icons_FP6pYk"
   ]

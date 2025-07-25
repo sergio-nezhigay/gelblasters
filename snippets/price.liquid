@@ -70,7 +70,8 @@
         </span>
       </span>
       {%- if compare_at_price > price and compare_at_price > 0 -%}
-        {%- assign discount_percent = 100 | minus: price | times: 100 | divided_by: compare_at_price | round -%}
+        {% assign discount_percent = compare_at_price | minus: price | times: 100 | divided_by: compare_at_price | round %}
+
         <span class="price__discount">{{ discount_percent }}%</span>
       {%- endif -%}
     {%- endif -%}

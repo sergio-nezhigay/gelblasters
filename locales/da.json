@@ -175,6 +175,7 @@
     },
     "filtering": {
       "title": "Filtre",
+      "filter": "Filter",
       "apply": "Anvende",
       "show_label": "Vise",
       "hide_label": "Skjule",
