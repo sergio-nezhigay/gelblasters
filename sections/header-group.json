@@ -25,7 +25,7 @@
             "number_font": "base",
             "countdown_separator": "box",
             "use_custom_colors": true,
-            "bg_color": "#201230",
+            "bg_color": "#000000",
             "bg_gradient": "",
             "text_color": "#ffffff"
           }
@@ -42,6 +42,23 @@
             "countdown_separator": "box",
             "use_custom_colors": false,
             "bg_color": "#dd9a1a",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
+        },
+        "announcement_Vmk3tN": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Announce <a href=\"#\">something</a> here",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#4a4a4a",
             "bg_gradient": "",
             "text_color": "#ffffff"
           }
@@ -66,11 +83,12 @@
       "block_order": [
         "e33df8e3-c667-49c7-9da7-a23fac96c44d",
         "ab92b476-2d4e-4c0c-991e-4f528236c2d9",
+        "announcement_Vmk3tN",
         "779702cf-d8cf-4f96-b433-b424480b158b"
       ],
       "settings": {
         "message_font_size": 16,
-        "announcement_bar_col": "#201230",
+        "announcement_bar_col": "#000000",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#ffffff",
         "show_social_icons": false,

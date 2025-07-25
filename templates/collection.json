@@ -11,17 +11,18 @@
   "sections": {
     "main": {
       "type": "main-collection",
+      "custom_css": [],
       "settings": {
         "show_title": true,
         "show_image_behind_heading": false,
         "heading_image_height": "medium",
         "overlay_style": "shadow",
-        "coll_desc_pos": "below",
+        "coll_desc_pos": "above",
         "coll_num_per_page_int": 24,
-        "grid": 5,
+        "grid": 4,
         "show_vendor": false,
         "show_total": false,
-        "enable_filtering": false,
+        "enable_filtering": true,
         "collapse_tag_sidebar_by_default": false,
         "collapse_filters_method": "over-12",
         "show_filter_counts": false,
@@ -48,6 +49,9 @@
     },
     "featured_collection_dcjX87": {
       "type": "featured-collection",
+      "custom_css": [
+        ".carousel {padding-bottom: 36px;}"
+      ],
       "name": "Featured collection",
       "settings": {
         "title": "Superpopulære modeller",

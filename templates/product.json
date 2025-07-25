@@ -12,6 +12,41 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "custom_option_8PqDHJ": {
+          "type": "custom-option",
+          "disabled": true,
+          "settings": {
+            "label": "Custom option",
+            "type": "text",
+            "text_required": false,
+            "checkbox_checked_value": "Yes",
+            "checkbox_unchecked_value": "No",
+            "multiple_style": "dropdown",
+            "multiple_options": "Option 1\nOption 2\nOption 3"
+          }
+        },
+        "accordion_j4LtNA": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Collapsible tab",
+            "icon": "",
+            "content": "<p>Collapsible tab content</p>",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "sharing_YqnxHx": {
+          "type": "sharing",
+          "disabled": true,
+          "settings": {
+            "show_twitter": true,
+            "show_facebook": true,
+            "show_pinterest": true
+          }
+        },
         "complementary_CW9mr8": {
           "type": "complementary",
           "settings": {
@@ -59,6 +94,35 @@
             "show_gift_card_recipient": false
           }
         },
+        "custom_liquid_NdM7LA": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"payment-icons-row\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0965/0788/7941/files/visa-svgrepo-com.svg?v=1753447508\" alt=\"Visa\" class=\"payment-icon\" />\n  <img src=\"https://cdn.shopify.com/s/files/1/0965/0788/7941/files/mastercard-full-svgrepo-com.svg?v=1753447632 alt=\"Mastercard\" class=\"payment-icon\" />\n  <img src=\"https://cdn.shopify.com/s/files/1/0965/0788/7941/files/amex-svgrepo-com.svg?v=1753447631\" alt=\"Amex\" class=\"payment-icon\" />\n  <img src=\"https://cdn.shopify.com/s/files/1/0965/0788/7941/files/paypal-svgrepo-com.svg?v=1753447632\" alt=\"PayPal\" class=\"payment-icon\" />\n  <img src=\"https://cdn.shopify.com/s/files/1/0965/0788/7941/files/apple-pay-svgrepo-com.svg?v=1753447631\" alt=\"Apple Pay\" class=\"payment-icon\" />\n</div>\n\n<style>\n.payment-icons-row {\n  display: flex;\n  gap: 14px;\n  justify-content: center;\n  align-items: center;\n  padding: 10px 0;\n  flex-wrap: wrap;\n}\n.payment-icon {\n  height: 36px;\n  width: auto;\n  opacity: 0.8;\n  transition: opacity 0.2s ease;\n}\n.payment-icon:hover {\n  opacity: 1;\n}\n</style>",
+            "show_in_quickbuy": false
+          }
+        },
+        "icon_columns_Ekitwe": {
+          "type": "icon-columns",
+          "settings": {
+            "icon_size": "medium",
+            "text_size": "sm",
+            "enable_box": false,
+            "box_color": "#f4f4f4",
+            "icon_1": "award",
+            "icon_1_color": "rgba(0,0,0,0)",
+            "icon_1_heading": "",
+            "icon_1_text": "Autentisk design",
+            "icon_2": "check_mark_in_circle",
+            "icon_2_color": "rgba(0,0,0,0)",
+            "icon_2_heading": "",
+            "icon_2_text": "Højtydende skydning",
+            "icon_3": "box",
+            "icon_3_color": "rgba(0,0,0,0)",
+            "icon_3_heading": "",
+            "icon_3_text": "Stærkt materiale",
+            "show_in_quickbuy": false
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -70,12 +134,17 @@
         }
       },
       "block_order": [
+        "custom_option_8PqDHJ",
+        "accordion_j4LtNA",
+        "sharing_YqnxHx",
         "complementary_CW9mr8",
         "title",
         "price",
         "divider",
         "variant-picker",
         "buy-buttons",
+        "custom_liquid_NdM7LA",
+        "icon_columns_Ekitwe",
         "description"
       ],
       "settings": {

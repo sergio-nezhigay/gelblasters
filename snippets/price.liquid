@@ -26,8 +26,12 @@
   assign price = variant.price | default: 1999
 -%}
 
-<div class="price{%- if compare_at_price > price %} price--on-sale{% endif -%}
-                 {%- if available == false %} price--sold-out{% endif -%}">
+<div
+  class="
+    price{%- if compare_at_price > price %} price--on-sale{% endif -%}
+    {%- if available == false %} price--sold-out{% endif -%}
+  "
+>
   <div class="price__default">
     <span class="price__current">
       <span class="visually-hidden js-label">
@@ -65,6 +69,10 @@
           {%- endif -%}
         </span>
       </span>
+      {%- if compare_at_price > price and compare_at_price > 0 -%}
+        {%- assign discount_percent = 100 | minus: price | times: 100 | divided_by: compare_at_price | round -%}
+        <span class="price__discount">{{ discount_percent }}%</span>
+      {%- endif -%}
     {%- endif -%}
   </div>
 
@@ -79,7 +87,12 @@
   {% endif %}
 
   {% if for_variant_picker or variant.unit_price_measurement %}
-    <div class="unit-price"{% if variant.unit_price_measurement == nil %} hidden{% endif %}>
+    <div
+      class="unit-price"
+      {% if variant.unit_price_measurement == null %}
+        hidden
+      {% endif %}
+    >
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="unit-price__price">{{ variant.unit_price | money }}</span>
       <span class="unit-price__separator">{{ 'products.product.price.unit_price_separator' | t }}</span>

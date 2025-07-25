@@ -46,9 +46,9 @@
     "color_scheme_1_btn_color_hover": "#5c5c5c",
     "color_scheme_1_btn_alt_bg": "#fbf9f4",
     "color_scheme_1_btn_alt_text": "#201230",
-    "color_scheme_2_col": "#fbe9f6",
-    "color_scheme_2_head_col": "#201230",
-    "color_scheme_2_text_col": "#201230",
+    "color_scheme_2_col": "#1a1a1a",
+    "color_scheme_2_head_col": "#ffffff",
+    "color_scheme_2_text_col": "#f3f3f3",
     "color_scheme_2_link_col": "#0178e8",
     "color_scheme_2_btn_color": "#201230",
     "color_scheme_2_btn_color_hover": "#5c5c5c",
@@ -68,7 +68,7 @@
     "prod_inv_low_text": "#201230",
     "prod_inv_low_box": "rgba(0,0,0,0)",
     "prod_rating_star": "#201230",
-    "foot_bg_col": "#201230",
+    "foot_bg_col": "#000000",
     "foot_text_col": "#ffffff",
     "foot_heading_col": "#ffffff",
     "foot_divider_col": "#ececec",
@@ -537,17 +537,14 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".collection-listing {padding-bottom: 12px !important;}",
-      ".localization__selector {font-size: 16px;}",
       "h1 {font-size: 30px; font-weight: 500;}",
+      "h2 {font-size: 30px;}",
+      "h4.collection-listing {padding-bottom: 12px !important;}",
+      ".localization__selector {font-size: 16px;}",
       ".main-search__suggestions {display: none !important;}",
       ".main-search--with-suggestions {padding-bottom: 20px;}",
       ".text-overlay .btn {font-size: 20px;}",
-      ".btn {font-family: Quantico, sans-serif; font-weight: 700;}",
-      ".section-template--25667153297733__ss_feature_1_ETyXQr-settings {overflow: hidden; width: 100%;}",
-      ".wrapper-box {animation: scroll-left 30s linear infinite;}",
-      "@keyframes scroll-left {0% {transform: translateX(0); } 100% {transform: translateX(-100%); }}",
-      ".wrapper-container {overflow: hidden; width: 100%;}"
+      ".btn {font-family: Quantico, sans-serif; font-weight: 700;}"
     ]
   }
 }

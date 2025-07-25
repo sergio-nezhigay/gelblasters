@@ -108,7 +108,7 @@
           "type": "text",
           "settings": {
             "title": "Kontakt",
-            "text": "<p><strong>Gelblastershop.dk</strong></p><p>   <a href=\"https://maps.app.goo.gl/eCa2j3h47WiJcH826\" target=\"_blank\"><br/>      Bakkedraget 14<br/>      4000 Roskilde, Denmark</a><br/>  </p><p>CVR-nummer: 44084252</p><p>Bankoplysninger: 9070 1637501468</p><p>Telefonnr.: <a href=\"tel:+4581904411\">81 90 44 11</a></p><p>E-mail: <a href=\"mailto:info@gelblastershop.dk\">info@gelblastershop.dk</a></p>",
+            "text": "<p> <a href=\"https://maps.app.goo.gl/eCa2j3h47WiJcH826\" target=\"_blank\">      Bakkedraget 14<br/>      4000 Roskilde, Denmark</a><br/>  </p><p>CVR-nummer: 44084252</p><p>Bankoplysninger: 9070 1637501468</p><p>Telefonnr.: <a href=\"tel:+4581904411\">81 90 44 11</a></p><p>E-mail: <a href=\"mailto:info@gelblastershop.dk\">info@gelblastershop.dk</a></p>",
             "image": "shopify://shop_images/logo_448a2889-9c94-4391-9a11-a929f91fce6e.webp",
             "image_width": 150,
             "show_social_icons": true,
