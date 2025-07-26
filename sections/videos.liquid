@@ -1,59 +1,59 @@
 <style>
-.video-testimonials-section {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
+  .video-testimonials-section {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
 
-.testimonials-wrapper {
-  position: relative;
-  width: 100%;
-}
+  .testimonials-wrapper {
+    position: relative;
+    width: 100%;
+  }
 
-.testimonials-container {
-  position: relative;
-  width: 100%;
-}
+  .testimonials-container {
+    position: relative;
+    width: 100%;
+  }
 
-.testimonials-header {
-  position: relative;
-}
+  .testimonials-header {
+    position: relative;
+  }
 
-.testimonials-title {
-  display: block;
-}
+  .testimonials-title {
+    display: block;
+  }
 
-.testimonials-grid {
-  position: relative;
-  width: 100%;
-}
+  .testimonials-grid {
+    position: relative;
+    width: 100%;
+  }
 
-.testimonial-video {
-  position: relative;
-  width: 100%;
-}
+  .testimonial-video {
+    position: relative;
+    width: 100%;
+  }
 
-.video-container {
-  position: relative;
-  width: 100%;
-}
+  .video-container {
+    position: relative;
+    width: 100%;
+  }
 
-.video-thumbnail {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+  .video-thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
-.video-placeholder {
-  display: block;
-}
+  .video-placeholder {
+    display: block;
+  }
 
-.play-button {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .play-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
 <section id="{{ section.id }}" class="video-testimonials-section {{ section.settings.custom_class }}">
   <div class="testimonials-wrapper">
@@ -66,16 +66,16 @@
 
       {% if section.blocks.size > 0 %}
         <div class="testimonials-grid video-testimonials-slider">
-            {% for block in section.blocks %}
-              {% case block.type %}
-                {% when 'video_item' %}
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'video_item' %}
                 <div class="testimonial-video" {{ block.shopify_attributes }}>
                   {% if block.settings.video_url != blank %}
                     <div class="video-container" data-video-id="{{ block.id }}">
                       <div class="video-thumbnail-wrapper">
                         {% if block.settings.video_thumbnail != blank %}
-                          <img 
-                            src="{{ block.settings.video_thumbnail | image_url }}" 
+                          <img
+                            src="{{ block.settings.video_thumbnail | image_url }}"
                             alt="Video thumbnail"
                             width="100%"
                             height="500"
@@ -85,22 +85,29 @@
                         {% else %}
                           <div class="video-placeholder"></div>
                         {% endif %}
-                        
+
                         <div class="play-button" data-video-url="{{ block.settings.video_url }}">
-                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <svg
+                            width="19"
+                            height="19"
+                            viewBox="0 0 19 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
                             <path d="M4.75 2.375L15.8333 9.5L4.75 16.625V2.375Z" fill="#04587c"/>
                           </svg>
                         </div>
                       </div>
-                      
+
                       <div class="video-iframe-wrapper" style="display: none;">
-                        <iframe 
+                        <iframe
                           class="video-iframe"
-                          width="100%" 
-                          height="500" 
-                          frameborder="0" 
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                          allowfullscreen>
+                          width="100%"
+                          height="500"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        >
                         </iframe>
                       </div>
                     </div>
@@ -162,7 +169,6 @@
     color: var(--testimonials-title-color);
     font-size: var(--testimonials-title-size-desktop);
     font-weight: 400;
-    font-family: 'Lemon Mint', sans-serif;
     text-transform: uppercase;
     line-height: 1.1;
     margin: 0;
@@ -338,39 +344,40 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const playButtons = document.querySelectorAll('#{{ section.id }} .play-button');
-    
+
     function getVideoEmbedUrl(url) {
       // YouTube
-      const youtubeRegex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i;
+      const youtubeRegex =
+        /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i;
       const youtubeMatch = url.match(youtubeRegex);
       if (youtubeMatch) {
         return `https://www.youtube.com/embed/${youtubeMatch[1]}?autoplay=1&rel=0`;
       }
-      
+
       // Vimeo
       const vimeoRegex = /vimeo\.com\/(?:.*\/)?(\d+)/i;
       const vimeoMatch = url.match(vimeoRegex);
       if (vimeoMatch) {
         return `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=1`;
       }
-      
+
       return url;
     }
-    
-    playButtons.forEach(button => {
-      button.addEventListener('click', function() {
+
+    playButtons.forEach((button) => {
+      button.addEventListener('click', function () {
         const videoUrl = this.dataset.videoUrl;
         const container = this.closest('.video-container');
         const thumbnailWrapper = container.querySelector('.video-thumbnail-wrapper');
         const iframeWrapper = container.querySelector('.video-iframe-wrapper');
         const iframe = container.querySelector('.video-iframe');
-        
+
         if (videoUrl && iframe) {
           const embedUrl = getVideoEmbedUrl(videoUrl);
           iframe.src = embedUrl;
-          
+
           thumbnailWrapper.style.display = 'none';
           iframeWrapper.style.display = 'block';
         }
@@ -397,10 +404,10 @@
                   slidesToShow: 1,
                   slidesToScroll: 1,
                   dots: true,
-                  arrows: false
-                }
-              }
-            ]
+                  arrows: false,
+                },
+              },
+            ],
           });
         }
       } else {
@@ -414,7 +421,7 @@
     initVideoTestimonialsSlider();
 
     // Re-initialize on resize
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
       initVideoTestimonialsSlider();
     });
   });

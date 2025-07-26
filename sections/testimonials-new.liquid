@@ -1,0 +1,823 @@
+<section id="{{ section.id }}" class="gelblastershop-reviews-wrapper {{ section.settings.custom_classes }}" style="background: {{ section.settings.background_color }};">
+  <div class="gelblastershop-reviews-container">
+    <div class="gelblastershop-reviews-content">
+      {% if section.settings.title != blank %}
+        <h2 class="gelblastershop-reviews-title">{{ section.settings.title }}</h2>
+      {% endif %}
+
+      {% if section.settings.show_rating %}
+        <div class="gelblastershop-reviews-rating">
+          <div class="gelblastershop-reviews-stars">
+            {% for i in (1..5) %}
+              <span class="gelblastershop-reviews-star {% if i <= section.settings.overall_rating %}filled{% endif %}">★</span>
+            {% endfor %}
+          </div>
+          <span class="gelblastershop-reviews-rating-text">{{ section.settings.overall_rating }}/5</span>
+        </div>
+      {% endif %}
+
+      {% if section.settings.subtitle != blank %}
+        <p class="gelblastershop-reviews-subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+
+      {% if section.blocks.size > 0 %}
+        <div class="swiper gelblastershop-reviews-swiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide" {{ block.shopify_attributes }}>
+                <div class="gelblastershop-reviews-card">
+                  <div class="gelblastershop-reviews-header">
+                    <h3 class="gelblastershop-reviews-customer-name">{{ block.settings.customer_name }}</h3>
+                    <div class="gelblastershop-reviews-verification">
+                      <span class="gelblastershop-reviews-verified-icon">✓</span>
+                      <span class="gelblastershop-reviews-verified-text">{{ block.settings.verification_text }}</span>
+                    </div>
+                    <div class="gelblastershop-reviews-review-stars">
+                      {% for i in (1..5) %}
+                        <span class="gelblastershop-reviews-review-star {% if i <= block.settings.star_rating %}filled{% endif %}">★</span>
+                      {% endfor %}
+                    </div>
+                  </div>
+
+                  {% if block.settings.review_text != blank %}
+                    <div class="gelblastershop-reviews-review-text">
+                      {{ block.settings.review_text }}
+                    </div>
+                  {% endif %}
+
+                  <div class="gelblastershop-reviews-footer">
+                    <div class="gelblastershop-reviews-product">
+                      {% if block.settings.product_image != blank %}
+                        <div class="gelblastershop-reviews-product-image">
+                          <img src="{{ block.settings.product_image | image_url: width: 60 }}" 
+                               alt="{{ block.settings.product_name }}" 
+                               loading="lazy" 
+                               width="60" 
+                               height="60">
+                        </div>
+                      {% endif %}
+                      {% if block.settings.product_name != blank %}
+                        <span class="gelblastershop-reviews-product-name">{{ block.settings.product_name }}</span>
+                      {% endif %}
+                    </div>
+
+                    {% if block.settings.button_text != blank and block.settings.button_url != blank %}
+                      <a href="{{ block.settings.button_url }}" class="gelblastershop-reviews-button">
+                        {{ block.settings.button_text }}
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          
+          {% if section.blocks.size > 1 %}
+            <div class="swiper-pagination gelblastershop-reviews-pagination"></div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+
+<style>
+  :root {
+    --gelblastershop-reviews-max-width: 1200px;
+    --gelblastershop-reviews-gap: 20px;
+    --gelblastershop-reviews-card-radius: 8px;
+    --gelblastershop-reviews-transition: all 0.3s ease;
+  }
+
+  .gelblastershop-reviews-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .gelblastershop-reviews-container {
+    max-width: var(--gelblastershop-reviews-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .gelblastershop-reviews-content {
+    text-align: center;
+  }
+
+  .gelblastershop-reviews-title {
+    margin: 0 0 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .gelblastershop-reviews-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .gelblastershop-reviews-stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .gelblastershop-reviews-star {
+    font-size: 20px;
+    color: #ccc;
+  }
+
+  .gelblastershop-reviews-star.filled {
+    color: #ffd700;
+  }
+
+  .gelblastershop-reviews-rating-text {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .gelblastershop-reviews-subtitle {
+    margin: 0 0 40px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .gelblastershop-reviews-swiper {
+    position: relative;
+    overflow: visible;
+  }
+
+  .gelblastershop-reviews-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .gelblastershop-reviews-swiper .swiper-slide {
+    height: auto;
+  }
+
+  .gelblastershop-reviews-card {
+    background: #333;
+    border-radius: var(--gelblastershop-reviews-card-radius);
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+  }
+
+  .gelblastershop-reviews-header {
+    margin-bottom: 20px;
+  }
+
+  .gelblastershop-reviews-customer-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: white;
+  }
+
+  .gelblastershop-reviews-verification {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .gelblastershop-reviews-verified-icon {
+    background: #00d4aa;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .gelblastershop-reviews-verified-text {
+    font-size: 14px;
+    color: #ccc;
+  }
+
+  .gelblastershop-reviews-review-stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .gelblastershop-reviews-review-star {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .gelblastershop-reviews-review-star.filled {
+    color: #00d4aa;
+  }
+
+  .gelblastershop-reviews-review-text {
+    flex-grow: 1;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ddd;
+    margin-bottom: 25px;
+  }
+
+  .gelblastershop-reviews-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .gelblastershop-reviews-product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .gelblastershop-reviews-product-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .gelblastershop-reviews-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gelblastershop-reviews-product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .gelblastershop-reviews-button {
+    background: white;
+    color: #333;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: var(--gelblastershop-reviews-transition);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .gelblastershop-reviews-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+  }
+
+  .gelblastershop-reviews-pagination {
+    margin-top: 40px !important;
+    position: static !important;
+    z-index: 10 !important;
+    bottom: auto !important;
+  }
+
+  .gelblastershop-reviews-pagination .swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    background: #555 !important;
+    opacity: 1 !important;
+    margin: 0 5px !important;
+  }
+
+  .gelblastershop-reviews-pagination .swiper-pagination-bullet-active {
+    background: #00d4aa !important;
+  }
+
+  @media (max-width: 768px) {
+    .gelblastershop-reviews-title {
+      font-size: 24px;
+    }
+
+    .gelblastershop-reviews-card {
+      padding: 20px;
+    }
+
+    .gelblastershop-reviews-container {
+      padding: 0 15px;
+    }
+
+    .gelblastershop-reviews-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .gelblastershop-reviews-button {
+      align-self: stretch;
+      text-align: center;
+    }
+  }
+</style>
+
+<style>
+  #{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-container {
+    max-width: {{ section.settings.max_width }};
+    padding-left: {{ section.settings.padding_horizontal_desktop }}px;
+    padding-right: {{ section.settings.padding_horizontal_desktop }}px;
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-title {
+    font-size: {{ section.settings.title_size_desktop }}px;
+    color: {{ section.settings.title_color }};
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-subtitle {
+    font-size: {{ section.settings.subtitle_size_desktop }}px;
+    color: {{ section.settings.subtitle_color }};
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-rating-text {
+    color: {{ section.settings.rating_text_color }};
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-customer-name {
+    font-size: {{ section.settings.customer_name_size_desktop }}px;
+    color: {{ section.settings.customer_name_color }};
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-verified-text {
+    color: {{ section.settings.verification_text_color }};
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-review-text {
+    font-size: {{ section.settings.review_text_size_desktop }}px;
+    color: {{ section.settings.review_text_color }};
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-product-name {
+    color: {{ section.settings.product_name_color }};
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-button {
+    background: {{ section.settings.button_background }};
+    color: {{ section.settings.button_text_color }};
+  }
+
+  #{{ section.id }} .gelblastershop-reviews-button:hover {
+    background: {{ section.settings.button_hover_background }};
+  }
+
+  @media (max-width: 768px) {
+    #{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    #{{ section.id }} .gelblastershop-reviews-container {
+      padding-left: {{ section.settings.padding_horizontal_mobile }}px;
+      padding-right: {{ section.settings.padding_horizontal_mobile }}px;
+    }
+
+    #{{ section.id }} .gelblastershop-reviews-title {
+      font-size: {{ section.settings.title_size_mobile }}px;
+    }
+
+    #{{ section.id }} .gelblastershop-reviews-subtitle {
+      font-size: {{ section.settings.subtitle_size_mobile }}px;
+    }
+
+    #{{ section.id }} .gelblastershop-reviews-customer-name {
+      font-size: {{ section.settings.customer_name_size_mobile }}px;
+    }
+
+    #{{ section.id }} .gelblastershop-reviews-review-text {
+      font-size: {{ section.settings.review_text_size_mobile }}px;
+    }
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiperContainer = document.querySelector('#{{ section.id }} .gelblastershop-reviews-swiper');
+    
+    if (!swiperContainer) return;
+
+    const swiper = new Swiper(swiperContainer, {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+      loop: false,
+      centeredSlides: false,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '#{{ section.id }} .gelblastershop-reviews-pagination',
+        clickable: true,
+        dynamicBullets: false,
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 4,
+          slidesPerGroup: 1,
+          spaceBetween: 20,
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Gelblastershop Reviews",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "MED OVER +15.000 GLADE KUNDER I 4 LANDE!"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Title Size Desktop",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title Size Mobile",
+      "min": 14,
+      "max": 48,
+      "step": 2,
+      "default": 28
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show Rating",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "overall_rating",
+      "label": "Overall Rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "rating_text_color",
+      "label": "Rating Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Tag os @gelzone og bliv fremvist på vores socials!"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size_desktop",
+      "label": "Subtitle Size Desktop",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size_mobile",
+      "label": "Subtitle Size Mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "range",
+      "id": "customer_name_size_desktop",
+      "label": "Customer Name Size Desktop",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "customer_name_size_mobile",
+      "label": "Customer Name Size Mobile",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "customer_name_color",
+      "label": "Customer Name Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "verification_text_color",
+      "label": "Verification Text Color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "range",
+      "id": "review_text_size_desktop",
+      "label": "Review Text Size Desktop",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "review_text_size_mobile",
+      "label": "Review Text Size Mobile",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review Text Color",
+      "default": "#dddddd"
+    },
+    {
+      "type": "color",
+      "id": "product_name_color",
+      "label": "Product Name Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button Hover Background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "Section Max Width",
+      "default": "1200px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Padding Top Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Padding Bottom Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding Top Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding Bottom Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal_desktop",
+      "label": "Horizontal Padding Desktop",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal_mobile",
+      "label": "Horizontal Padding Mobile",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "custom_classes",
+      "label": "Custom CSS Classes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Customer Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer Name",
+          "default": "Sophia M."
+        },
+        {
+          "type": "text",
+          "id": "verification_text",
+          "label": "Verification Text",
+          "default": "Verified Buyer Netherlands"
+        },
+        {
+          "type": "range",
+          "id": "star_rating",
+          "label": "Star Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "<p>I was amazed by the power and range of this blaster. The rechargeable battery lasts long, and the gel balls make it painless yet fun. Everyone who tries it wants one for themselves!</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "Product Name",
+          "default": "AK Shark Lyserød"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "SHOP NU"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gelblastershop Reviews",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Sophia M.",
+            "verification_text": "Verified Buyer Netherlands",
+            "star_rating": 5,
+            "review_text": "<p>I was amazed by the power and range of this blaster. The rechargeable battery lasts long, and the gel balls make it painless yet fun. Everyone who tries it wants one for themselves!</p>",
+            "product_name": "AK Shark Lyserød",
+            "button_text": "SHOP NU"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Marlene K.",
+            "verification_text": "Verified Buyer Denmark",
+            "star_rating": 5,
+            "review_text": "<p>Jeg blev overrasket over præcisionen og styrken i 1912'en. Batteriet holder længe, og gelkuglerne gør den både sikker og sjov. Alle der prøver den, snakker om at de også skal have en!</p>",
+            "product_name": "1912 Orange",
+            "button_text": "SHOP NU"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Markus N.",
+            "verification_text": "Verified Buyer Denmark",
+            "star_rating": 5,
+            "review_text": "<p>Fik min levering allerede dagen efter bestilling – imponerende hurtigt! Den var klar til brug med det samme, og kvaliteten er i top. Super oplevelse hele vejen igennem. Handler her igen!</p>",
+            "product_name": "Multi Bow",
+            "button_text": "SHOP NU"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Nikoline M.",
+            "verification_text": "Verified Buyer Denmark",
+            "star_rating": 5,
+            "review_text": "<p>Vores søde nabo og deres børn udfordrede os til kamp – og vi tog imod! Gelblasterne skabte grin, taktik og masser af sjove øjeblikke. En oplevelse vi nu gentager hver uge!</p>",
+            "product_name": "Familie Bundle",
+            "button_text": "SHOP NU"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

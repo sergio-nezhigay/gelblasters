@@ -29,7 +29,10 @@
           }
         }
       },
-      "block_order": ["message_VTcRXy", "message_WzaVGE"],
+      "block_order": [
+        "message_VTcRXy",
+        "message_WzaVGE"
+      ],
       "disabled": true,
       "name": "Store messages",
       "settings": {
@@ -84,7 +87,11 @@
           }
         }
       },
-      "block_order": ["hotspot_rEWgUJ", "hotspot_zHAJq6", "hotspot_jEA3c9"],
+      "block_order": [
+        "hotspot_rEWgUJ",
+        "hotspot_zHAJq6",
+        "hotspot_jEA3c9"
+      ],
       "disabled": true,
       "name": "Hotspots",
       "settings": {
@@ -113,8 +120,8 @@
         "image_9Wyhwe": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_1920_x_500_px.webp",
-            "mobile_image": "shopify://shop_images/MCXGelBlasterTopmodel.png",
+            "image": "shopify://shop_images/Image_Jul_22_2025_02_34_57_PM.webp",
+            "mobile_image": "shopify://shop_images/Image_Jul_22_2025_02_34_57_PM_31cf325c-4aeb-438e-b5cf-89677fb80de9.webp",
             "slide_link": "",
             "subheading": "",
             "title": "Ready, Aim, Blast Off!",
@@ -175,7 +182,11 @@
           }
         }
       },
-      "block_order": ["image_9Wyhwe", "image_E9yfwh", "image_hxX6UJ"],
+      "block_order": [
+        "image_9Wyhwe",
+        "image_E9yfwh",
+        "image_hxX6UJ"
+      ],
       "custom_css": [],
       "settings": {
         "height": "fixed",
@@ -197,33 +208,33 @@
         "ticker_item_q39cWb": {
           "type": "ticker_item",
           "settings": {
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z\"></path></svg>",
-            "title": "Free Shipping",
-            "subtitle": "On all orders over $99"
+            "icon_svg": "<!--?xml version=\"1.0\" ?-->\n\n<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->\n<svg width=\"800px\" height=\"800px\" viewbox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\">\n\n<defs>\n\n<style>.cls-1,.cls-2{fill:none;stroke:#000000;stroke-linejoin:round;stroke-width:2px;}.cls-1{stroke-linecap:round;}</style>\n\n</defs>\n\n<g id=\"free-shipping\">\n\n<circle class=\"cls-1\" cx=\"53\" cy=\"17\" r=\"2\"></circle>\n\n<circle cx=\"45.5\" cy=\"23.5\" r=\"1.0691\"></circle>\n\n<circle cx=\"16.5\" cy=\"14.5\" r=\"1.0691\"></circle>\n\n<polyline class=\"cls-1\" points=\"53.934 54 61 54 61 43.485 54 40 49.476 31 39.173 31\"></polyline>\n\n<line class=\"cls-1\" x1=\"20.6727\" x2=\"44.1886\" y1=\"54\" y2=\"54\"></line>\n\n<polyline class=\"cls-1\" points=\"10.748 24 3 24 3 54 10.894 54\"></polyline>\n\n<polyline class=\"cls-1\" points=\"39 49 39 24 32.161 24\"></polyline>\n\n<line class=\"cls-1\" x1=\"43\" x2=\"45\" y1=\"44\" y2=\"44\"></line>\n\n<circle class=\"cls-1\" cx=\"49.0802\" cy=\"54.75\" r=\"4.75\"></circle>\n\n<circle class=\"cls-1\" cx=\"15.7406\" cy=\"54.75\" r=\"4.75\"></circle>\n\n<polyline class=\"cls-1\" points=\"26 37 23 37 23 43 26 43\"></polyline>\n\n<line class=\"cls-1\" x1=\"26\" x2=\"23\" y1=\"40\" y2=\"40\"></line>\n\n<polyline class=\"cls-1\" points=\"32 37 29 37 29 43 32 43\"></polyline>\n\n<line class=\"cls-1\" x1=\"32\" x2=\"29\" y1=\"40\" y2=\"40\"></line>\n\n<polyline class=\"cls-1\" points=\"13 37 10 37 10 43\"></polyline>\n\n<line class=\"cls-1\" x1=\"13\" x2=\"10\" y1=\"40\" y2=\"40\"></line>\n\n<path class=\"cls-1\" d=\"M16,43V37h2.6439A1.3562,1.3562,0,0,1,20,38.3561v.2878A1.3562,1.3562,0,0,1,18.6439,40H17l3,3\"></path>\n\n<path class=\"cls-1\" d=\"M31.5561,22.7505,27.623,17.8342a2.0742,2.0742,0,0,0-2.598-.5845,2.001,2.001,0,0,0-.5919,3l1.4,1.75H12.9946a2,2,0,0,0-2,2h0a2,2,0,0,0,2,2H25.8335l-1.317,1.6462a2.1129,2.1129,0,0,0,.2609,2.9407,2,2,0,0,0,2.7787-.3374l4-5A2,2,0,0,0,31.5561,22.7505Z\"></path>\n\n<line class=\"cls-1\" x1=\"33\" x2=\"30\" y1=\"7\" y2=\"10\"></line>\n\n<line class=\"cls-1\" x1=\"30\" x2=\"33\" y1=\"7\" y2=\"10\"></line>\n\n<line class=\"cls-2\" x1=\"39\" x2=\"54\" y1=\"40\" y2=\"40\"></line>\n\n<line class=\"cls-2\" x1=\"3\" x2=\"61\" y1=\"50\" y2=\"50\"></line>\n\n</g>\n\n</svg>",
+            "title": "GRATIS FRAGT",
+            "subtitle": "PÅ KØB OVER 650"
           }
         },
         "ticker_item_cdBNUW": {
           "type": "ticker_item",
           "settings": {
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z\"></path></svg>",
-            "title": "EU Delivery",
-            "subtitle": "We deliver to all EU"
+            "icon_svg": "<!--?xml version=\"1.0\" encoding=\"utf-8\"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->\n<svg fill=\"#000000\" width=\"800px\" height=\"800px\" viewbox=\"0 0 32 32\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M6.553 27.602c-0.628 1.306-1.025 2.177-4.522 2.304 0.1-3.374 0.744-3.736 2.031-4.378 0.54-0.27 1.213-0.605 1.941-1.164l-1.218-1.555c-0.575 0.442-1.104 0.674-1.615 0.928-2.145 1.070-3.156 2.123-3.156 7.145l0.017 1.022 0.983-0.022c5.301 0 6.292-1.198 7.285-3.26 0.217-0.452 0.338-0.758 0.705-1.367l-1.483-1.347c-0.444 0.607-0.722 1.183-0.968 1.692zM22.030 5.896c-2.212 0-4.011 1.799-4.011 4.010s1.8 4.011 4.011 4.011 4.011-1.8 4.011-4.011c0-2.211-1.8-4.011-4.011-4.011zM22.030 11.909c-1.104 0-2.003-0.899-2.003-2.002s0.898-2.002 2.003-2.002 2.003 0.899 2.003 2.002c-0 1.104-0.898 2.002-2.003 2.002zM31.993 0.916c-0.030-0.499-0.426-0.899-0.925-0.936 0 0-5.596-0.408-10.98 1.603-1.967 0.735-3.586 1.898-5.097 3.661-1.26 1.47-2.512 4.126-3.617 6.332-0.427 0.851-0.835 1.666-1.181 2.288h-5.563c-0.286 0-0.558 0.123-0.748 0.336l-3.666 3.973c-0.234 0.265-0.312 0.633-0.204 0.969s0.385 0.592 0.729 0.67l5.967 1.364c0.407 0.502 1.084 1.253 2.168 2.456l2.261 2.506 1.217 5.148c0.080 0.339 0.331 0.613 0.663 0.72 0.101 0.032 0.206 0.049 0.309 0.049 0.236 0 0.467-0.083 0.651-0.241l3.705-3.686c0.221-0.189 0.349-0.467 0.349-0.759v-5.16c0.498-0.309 1.381-0.786 2.212-1.251 2.264-1.265 5.645-2.841 7.046-4.087 1.974-1.754 2.692-3.040 3.398-4.941 1.678-4.521 1.322-10.751 1.305-11.014zM28.813 11.233c-0.616 1.659-1.174 2.651-2.852 4.142-1.239 1.101-4.629 2.682-6.694 3.837-1.541 0.861-2.464 1.364-2.869 1.695-0.233 0.189-0.368 0.474-0.368 0.774v5.227l-2.11 2.319-0.899-3.8c-0.039-0.163-0.118-0.314-0.231-0.439-1.839-2.038-4.617-5.119-4.83-5.364-0.139-0.169-0.332-0.289-0.549-0.339l-4.581-1.048 2.247-2.375h5.689c0.348 0 0.671-0.181 0.852-0.476 0.44-0.716 0.95-1.736 1.542-2.915 1.002-1.998 2.248-4.642 3.348-5.926 1.3-1.516 2.619-2.469 4.278-3.089 3.691-1.379 7.499-1.524 9.24-1.511 0.032 1.844-0.037 6.119-1.214 9.289z\"></path>\n</svg>",
+            "title": "HURTIG LEVERING",
+            "subtitle": "1–3 HVERDAGE"
           }
         },
         "ticker_item_xV9mbd": {
           "type": "ticker_item",
           "settings": {
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\"></path></svg>",
-            "title": "Happy Customers",
-            "subtitle": "Over 15000+ satisfied customers"
+            "icon_svg": "<!--?xml version=\"1.0\" ?-->\n\n<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->\n<svg fill=\"#000000\" width=\"800px\" height=\"800px\" viewbox=\"0 0 64 64\" xmlns=\"http://www.w3.org/2000/svg\">\n\n<g id=\"a\"></g>\n\n<g id=\"b\">\n\n<path d=\"M57.9443,30.4697c-.3867-5.3633-4.7046-7.7041-5.9443-8.2686v-5.7012c0-1.9297-1.5703-3.5-3.5-3.5H9.5c-1.9297,0-3.5,1.5703-3.5,3.5v20c0,1.9297,1.5703,3.5,3.5,3.5H29.1206c-.6851,.6738-1.3618,1.4014-2.0063,2.1816-.1523,.1846-.1523,.4521,0,.6367,4.2549,5.1533,9.9238,8.0098,10.1631,8.1289,.0703,.0352,.1465,.0527,.2227,.0527,.0913,0,.1831-.0254,.2632-.0752,.1475-.0908,.2368-.252,.2368-.4248v-2.4863c2.0288,.0391,9.3398-.0518,13.4019-2.8291,2.7061-1.8506,7.1548-6.2227,6.5425-14.7148ZM9.5,39c-1.3784,0-2.5-1.1211-2.5-2.5V16.5c0-1.3789,1.1216-2.5,2.5-2.5H48.5c1.3784,0,2.5,1.1211,2.5,2.5l.0024,5.9814c-.0034,.0342-.0034,.0684,0,.1025l.0024,5.168c-.0068,.0488-.7432,4.9004-7.0288,7.877-2.2139,1.0498-4.8853,1.293-5.9761,1.3496v-2.4785c0-.1729-.0894-.334-.2368-.4248-.147-.0908-.3311-.1006-.4858-.0225-.1846,.0918-3.5913,1.8076-7.0913,4.9473H9.5Zm41.3374,5.3584c-4.3706,2.9893-13.2266,2.6484-13.3159,2.6416-.1328,.002-.2686,.0449-.3672,.1387-.0986,.0947-.1543,.2246-.1543,.3613v2.1602c-1.6191-.916-5.6436-3.4092-8.8472-7.1602,3.2036-3.751,7.228-6.2441,8.8472-7.1602v2.1553c0,.2764,.2236,.5,.5,.5,.1558,0,3.854-.0166,6.9043-1.4619,6.769-3.2061,7.5605-8.4238,7.5957-8.7129v-4.5107c1.4209,.7344,4.6323,2.8652,4.9473,7.2324,.5762,7.9932-3.5806,12.0879-6.1099,13.8164Zm-18.7568-14.167c.6045-1.043,.5654-2.2734-.1074-3.377-.4351-.7148-1.2041-1.2246-1.9517-1.7197-.6934-.4609-1.0869-.7627-1.1421-.8066-.0186-.127,.0244-.2441,.0713-.2979,.0156-.0186,.0298-.0342,.0996-.0391,.1699,.002,.2686,.1113,.2681,.1104,.4604,.6377,1.3604,.8164,2.0493,.4062,.6816-.4053,.8901-1.251,.4844-1.9678-.3079-.544-1.1695-1.2845-2.4112-1.4023-.0159-.0738-.0289-.137-.0331-.1746-.0724-.4439-.751-.436-.8206,0l-.0416,.2125c-.7568,.1178-1.4344,.4649-1.9215,1.0215-.604,.6914-.873,1.6123-.7383,2.5264,.189,1.293,1.4185,2.1084,2.4092,2.7666,.3096,.2051,.9541,.6328,1.0615,.8018,.0928,.1523,.1812,.373,.0752,.5547-.0835,.1445-.2622,.2363-.4971,.2529-.1948,.0039-.5332-.29-.6689-.498-.4253-.6729-1.3223-.8945-2.0439-.5068-.6704,.3613-.9067,1.1279-.5879,1.9082,.3538,.8638,1.5298,1.7808,2.9023,1.9343l.051,.2608c.0696,.436,.7482,.444,.8206,0,.0063-.056,.0316-.1699,.0583-.2936,1.1176-.165,2.0853-.7613,2.6145-1.673Zm-5.521-.6074c-.0581-.1416-.1606-.4883,.1367-.6484,.085-.0459,.1797-.0684,.2729-.0684,.1816,0,.3594,.084,.4556,.2354,.0068,.0098,.6748,1.0156,1.5854,.9541,.5649-.0391,1.0342-.3115,1.2861-.748,.2715-.4668,.2397-1.041-.0859-1.5762-.2007-.3291-.6909-.6699-1.3657-1.1182-.8647-.5732-1.8452-1.2236-1.9697-2.0762-.0918-.624,.0908-1.2529,.5015-1.7227,.373-.4258,.9141-.6846,1.5229-.7285,1.1387-.0889,1.8945,.5742,2.0825,.9053,.1055,.1875,.1367,.4609-.125,.6162-.2393,.1426-.5732,.0811-.7383-.1455-.1011-.1299-.4878-.5596-1.1348-.5098-.3218,.0234-.5864,.1504-.7866,.3799-.251,.2881-.3657,.6992-.3071,1.1006,.0625,.4219,.5371,.8018,1.5825,1.4971,.6523,.4326,1.3271,.8799,1.6465,1.4043,.4761,.7803,.5112,1.6387,.0962,2.3545-.4111,.709-1.2051,1.1699-2.1265,1.2334-1.2119,.082-2.2891-.751-2.5293-1.3389Zm-8.5601-5.043c-1.103,0-2,.8975-2,2s.897,2,2,2,2-.8975,2-2-.897-2-2-2Zm0,3c-.5513,0-1-.4482-1-1s.4487-1,1-1,1,.4482,1,1-.4487,1-1,1Zm22.001,1c1.103,0,2-.8975,2-2s-.897-2-2-2-2,.8975-2,2,.897,2,2,2Zm0-3c.5513,0,1,.4482,1,1s-.4487,1-1,1-1-.4482-1-1,.4487-1,1-1Z\"></path>\n\n</g>\n\n</svg>",
+            "title": "14 DAGES",
+            "subtitle": "FORTRYDELSESRET"
           }
         },
         "ticker_item_qr9rCR": {
           "type": "ticker_item",
           "settings": {
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z\"></path></svg>",
-            "title": "Best Prices",
-            "subtitle": "Denmark's cheapest GelGuns"
+            "icon_svg": "<!--?xml version=\"1.0\" encoding=\"utf-8\"?-->\n<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->\n<svg fill=\"#000000\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"800px\" height=\"800px\" viewbox=\"0 0 256 173\" enable-background=\"new 0 0 256 173\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\">\n<path d=\"M128.253,56.864c15.186,0,27.432-12.247,27.432-27.432S143.536,2,128.253,2\n\tc-15.186,0-27.432,12.247-27.432,27.432C100.918,44.716,113.165,56.864,128.253,56.864z M64.571,136.32h-49.28\n\tc-15.969,0-16.851-24.395,0.294-24.395H58.3l24.493-36.054c7.25-9.895,15.48-14.598,27.138-14.598h36.544\n\tc11.659,0,19.888,4.311,27.138,14.598l24.591,36.054h43.01c17.243,0,16.165,24.395,0.588,24.395h-49.28\n\tc-3.919,0-8.622-1.372-11.365-5.584l-18.811-26.844l-0.098,67.209H94.844l-0.098-67.209l-18.811,26.844\n\tC73.192,134.85,68.49,136.32,64.571,136.32z\"></path>\n<path d=\"M224.957,95.543C240.939,95.543,254,82.568,254,66.5s-12.975-29.043-29.043-29.043S196,50.518,196,66.586\n\tC196,82.568,208.975,95.543,224.957,95.543z M223.353,68.963c-5.327-1.862-8.65-4.554-8.65-9.337c0-4.411,2.921-7.877,8.278-8.965\n\tv-4.783h4.01v4.554c3.322,0,5.728,0.687,7.504,1.633l-1.633,5.728c-1.318-0.544-3.466-1.461-6.416-1.461\n\tc-2.95,0-4.554,1.461-4.554,2.921c0,2.005,1.862,2.778,5.872,4.411c5.471,2.005,8.02,4.783,8.02,9.337\n\tc0,4.554-2.778,8.02-8.65,9.337v4.554h-4.01v-4.411c-3.466,0-6.96-0.917-8.65-1.862l1.461-5.872\n\tc1.862,0.917,4.783,2.005,7.877,2.005c3.322,0,4.955-1.461,4.955-3.466S227.191,70.453,223.353,68.963z\"></path>\n<path d=\"M41.981,52.014L30.056,68.489l-7.626-8.285c-0.847-0.941-0.816-2.354,0.094-3.264c0.941-0.847,2.354-0.816,3.264,0.094\n\tl3.86,4.174l8.599-11.862c0.753-1.004,2.165-1.287,3.232-0.533C42.484,49.535,42.735,51.01,41.981,52.014z M60.12,63.625\n\tc1.569,1.506,0.847,4.142-1.224,4.644l-7.218,1.852l2.04,7.155c0.565,2.071-1.381,3.985-3.421,3.421l-7.029-2.008l10.042,19.99\n\tl-8.379-2.385l-2.322,7.751L31.5,81.889l-11.109,22.155l-2.322-7.751L9.69,98.678l10.042-19.99l-7.029,2.008\n\tc-2.071,0.565-3.985-1.381-3.421-3.421l2.04-7.155L4.104,68.27c-2.071-0.502-2.793-3.138-1.224-4.644l5.272-5.178l-5.304-5.178\n\tc-1.569-1.506-0.847-4.142,1.224-4.644l7.218-1.852l-2.04-7.155c-0.565-2.071,1.381-3.985,3.421-3.421l7.155,2.04l1.852-7.218\n\tc0.502-2.071,3.201-2.762,4.644-1.224l5.178,5.335l5.178-5.335c1.475-1.569,4.142-0.816,4.644,1.224l1.852,7.218l7.155-2.04\n\tc2.071-0.565,3.985,1.381,3.421,3.421l-2.04,7.155l7.218,1.852c2.071,0.502,2.793,3.138,1.224,4.644l-5.304,5.178L60.12,63.625z\n\t M49.482,58.447c0-9.603-7.814-17.354-17.354-17.354c-9.603,0-17.354,7.783-17.354,17.385s7.751,17.354,17.354,17.354\n\tS49.482,68.05,49.482,58.447z\"></path>\n<g id=\"shopping_cart\">\n</g>\n<g id=\"cross\">\n</g>\n<g id=\"leaf\">\n</g>\n</svg>",
+            "title": "Bedste priser",
+            "subtitle": "Danmarks billigste GelGuns"
           }
         }
       },
@@ -233,9 +244,13 @@
         "ticker_item_xV9mbd",
         "ticker_item_qr9rCR"
       ],
+      "custom_css": [
+        ".running-ticker-title,.running-ticker-subtitle {color: black;}",
+        ".running-ticker-icon svg {color: black; fill: black;}"
+      ],
       "name": "Running Ticker",
       "settings": {
-        "max_width": "1200px",
+        "max_width": "",
         "padding_top_mobile": 22,
         "padding_top_desktop": 35,
         "padding_bottom_mobile": 22,
@@ -420,6 +435,14 @@
         "collection_YzWhR3",
         "collection_FRVGrQ"
       ],
+      "custom_css": [
+        ".for-collections {background: #8cc3db;}",
+        ".product-block.collection-block {background: #fffafa; border: 1px solid; border-radius: 10px;}",
+        ".product-block__title {width: fit-content; text-align: center; margin: 0 auto; transition: all 0.3s ease-in-out;}",
+        ".slider__item:hover .product-block__title {border-bottom: 1px solid;}",
+        ".img-ar > img {transition: all 0.3s ease-in-out;}",
+        ".slider__item:hover .img-ar > img {transform: scale(1.05);}"
+      ],
       "name": "Collection list",
       "settings": {
         "title": "Kampkategorier",
@@ -440,6 +463,15 @@
     },
     "1480591889144": {
       "type": "featured-collection",
+      "custom_css": [
+        ".collection-slider .has-paging .slider-nav__btn {background: white; color: black; border: 1px solid rgba(181, 181, 181, 1) !important; border-radius: 6px;}",
+        ".price__discount {background: #d339a8; color: white; padding: 2px 10px; border: none; font-size: 12px !important;}",
+        ".product-block {border: 1px solid black;}",
+        ".price__current {color: black;}",
+        ".small-feature-link {color: black; text-decoration-color: unset;}",
+        ".collection-slider-row {padding-bottom: 50px; padding-top: 50px; margin-top: 0;}",
+        ".small-feature-link {font-size: 20px;}"
+      ],
       "settings": {
         "title": "Superpopulære modeller",
         "collection": "top-produkter",
@@ -448,44 +480,8 @@
         "grid": 4,
         "rows": 1,
         "color_scheme": "default",
-        "show_view_all": false,
+        "show_view_all": true,
         "full_width": true
-      }
-    },
-    "video_WMNK8D": {
-      "type": "video",
-      "blocks": {
-        "heading_qK6URr": {
-          "type": "heading",
-          "settings": {
-            "title": "",
-            "heading_max_width": 15,
-            "title_size": 84,
-            "title_size_mobile": 32,
-            "use_h1": false
-          }
-        },
-        "text_6VnX46": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Gratis fragt ved køb over 650 DKK · Hurtig levering 1–3 hverdage · 14 dages fortrydelsesret</p>",
-            "enlarge_text": true
-          }
-        },
-        "play_button_hf94qE": {
-          "type": "play-button",
-          "settings": {}
-        }
-      },
-      "block_order": ["heading_qK6URr", "text_6VnX46", "play_button_hf94qE"],
-      "name": "Video",
-      "settings": {
-        "video_shopify": "shopify://files/videos/Create_a_very_202507231229.mp4",
-        "video_external": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_description": "",
-        "text_alignment": "center center",
-        "full_width": false,
-        "overlay_style": "shadow"
       }
     },
     "videos_i6Vamg": {
@@ -494,42 +490,47 @@
         "video_item_nJxEE6": {
           "type": "video_item",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=iv-5mZ_9CPY"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/556b2c0e5e5742e6bba33a5a3523c856.mp4",
+            "video_thumbnail": "shopify://shop_images/gelblaster_skov.png"
           }
         },
-        "video_item_EKwEjU": {
+        "video_item_Mcjcif": {
           "type": "video_item",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=iv-5mZ_9CPY"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/556b2c0e5e5742e6bba33a5a3523c856.mp4",
+            "video_thumbnail": "shopify://shop_images/gelblaster_skov.png"
           }
         },
-        "video_item_9YwRBA": {
+        "video_item_kkyzVa": {
           "type": "video_item",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=iv-5mZ_9CPY"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/556b2c0e5e5742e6bba33a5a3523c856.mp4",
+            "video_thumbnail": "shopify://shop_images/gelblaster_skov.png"
           }
         },
-        "video_item_RUw3kU": {
+        "video_item_443nBM": {
           "type": "video_item",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=iv-5mZ_9CPY"
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/556b2c0e5e5742e6bba33a5a3523c856.mp4",
+            "video_thumbnail": "shopify://shop_images/gelblaster_skov.png"
           }
         }
       },
       "block_order": [
         "video_item_nJxEE6",
-        "video_item_EKwEjU",
-        "video_item_9YwRBA",
-        "video_item_RUw3kU"
+        "video_item_Mcjcif",
+        "video_item_kkyzVa",
+        "video_item_443nBM"
       ],
+      "custom_css": [],
       "name": "Video Testimonials",
       "settings": {
-        "title": "Real Results from Real Homes",
-        "title_color": "#04587c",
+        "title": "Why Kids Love It",
+        "title_color": "#201230",
         "title_size_desktop": 44,
         "title_size_mobile": 28,
         "grid_gap": 24,
-        "background_color": "#ffffff",
+        "background_color": "#f2b580",
         "max_width": "1400px",
         "padding_top_desktop": 80,
         "padding_bottom_desktop": 80,
@@ -539,6 +540,142 @@
         "padding_horizontal_mobile": 20,
         "custom_class": ""
       }
+    },
+    "testimonials_DDWNDh": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_TjXxK9": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "I was amazed by the power and range of this blaster. The rechargeable battery lasts long, and the gel balls make it painless yet fun. Everyone who tries it wants one for themselves!",
+            "author": "Sophia M.",
+            "image": "shopify://shop_images/gelblaster_skov.png",
+            "image_caption": "Verified Buyer Netherlands",
+            "link": ""
+          }
+        },
+        "testimonial_QybxdX": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Jeg blev overrasket over præcisionen og styrken i 1912'en. Batteriet holder længe, og gelkuglerne gør den både sikker og sjov. Alle der prøver den, snakker om at de også skal have en!",
+            "author": "Marlene K.",
+            "image": "shopify://shop_images/gelblaster_skov.png",
+            "image_caption": "Verified Buyer Denmark",
+            "link": ""
+          }
+        },
+        "testimonial_kACEFR": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Fik min levering allerede dagen efter bestilling – imponerende hurtigt! Den var klar til brug med det samme, og kvaliteten er i top. Super oplevelse hele vejen igennem. Handler her igen!",
+            "author": "Markus N.",
+            "image": "shopify://shop_images/gelblaster_skov.png",
+            "image_caption": "Verified Buyer Denmark",
+            "link": ""
+          }
+        },
+        "testimonial_xyqwgd": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Vores søde nabo og deres børn udfordrede os til kamp – og vi tog imod! Gelblasterne skabte grin, taktik og masser af sjove øjeblikke. En oplevelse vi nu gentager hver uge!",
+            "author": "Nikoline M.",
+            "image": "shopify://shop_images/gelblaster_skov.png",
+            "image_caption": "Verified Buyer Denmark",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_TjXxK9",
+        "testimonial_QybxdX",
+        "testimonial_kACEFR",
+        "testimonial_xyqwgd"
+      ],
+      "custom_css": [
+        ".slideshow-nav__btn {background: white; color: black; border: 1px solid rgba(181, 181, 181, 1) !important; border-radius: 6px;}",
+        ".slideshow-ctrl {margin-left: 0 !important;}",
+        ".testimonial__star .icon {color: orange;}",
+        ".testimonial__star svg {width: 26px; height: 26px;}"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Customer reviews",
+        "layout": "image-right",
+        "text_caps": false,
+        "quote_text_size": 30,
+        "quote_text_size_mobile": 20,
+        "image_shape": "square",
+        "color_scheme": "default",
+        "use_custom_star_rating_color": false,
+        "star_rating_color": "#e9a80a",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "1617293273c37b524b": {
+      "type": "rich-text",
+      "blocks": {
+        "ab9dbf1f-cae8-4488-835a-1d27be252dfe": {
+          "type": "heading",
+          "settings": {
+            "title": "GELBLASTERSHOP.DK",
+            "use_h1": false
+          }
+        },
+        "74d4f957-8922-4307-ac16-bee3d887612a": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Welcome to GelBlasterShop.dk – Your Ultimate Gel Blaster Shop!"
+          }
+        },
+        "text_LXTAJm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to GelBlasterShop.dk, the place where fun, action, and high quality meet! Here you will find Denmark’s largest collection of gel blasters and a wide selection of gel blaster accessories. Whether you are looking for child-friendly gel blasters, gift ideas for kids, or the latest tactical models, we have what you’re looking for. Our store is built around safety, durability, and the joy of play – something both kids and adults will love.</p><p>By choosing us, you not only get access to the market’s best gel blasters but also outstanding customer service and fast delivery.</p><p><strong>Gel Blasters – Why Choose Them?</strong><br/><br/>A gel blaster set combines the best of active toys with innovation and fun. Whether you want to improve your tactical skills or just look for great toys for kids, gel blasters are the answer! Here’s what makes them unique:</p><ul><li>Our products use water-based gel beads that are 100% biodegradable. That means they are both safe for children and gentle on the environment.<br/></li><li>Perfect as outdoor toys for kids, providing hours of entertainment in the garden, park, or playground.<br/></li><li>A gel blaster as a gift creates excitement and fun playtimes your kids will remember for a long time.<br/></li></ul><p><strong>Discover Our Popular Gel Blaster Models</strong><br/><br/>At GelBlasterShop.dk, you will find some of the most sought-after models on the market. Here is a small selection from our range to ensure there is something for every taste:</p><ul><li>Perfect for those who want a compact and fast gel blaster. Ideal for both kids and adults who want fun without a steep learning curve.<br/></li><li>A classic that combines style with performance. This model is popular among both beginners and enthusiasts.<br/></li><li>Known for its versatility and durability. A must-have for the tactically oriented player seeking excitement and precision.<br/></li><li>The ultimate tactical gel blaster for those who want to take play to the next level. With its robust design and various features, this model is perfect for action-packed games.<br/></li></ul><p>These models are not only great as fun gifts for children but also as exciting activities for adults who love tactical challenges.</p><p><strong>How to Get Started with a Gel Blaster</strong><br/><br/>Starting your gel blaster adventure is easy! Follow these steps for the best experience:</p><ol><li>Whether it’s a Uz, Desert E, M4, or SCAR, we have a gel blaster to suit your needs.<br/></li><li>Soak the biodegradable water beads for 3–4 hours so they are ready to use.<br/></li><li> Most gel blasters run on rechargeable batteries, so make sure your gel blaster is fully charged before play begins.<br/></li><li>Use protective goggles and respect the surroundings to ensure a fun yet safe experience.<br/></li></ol><p><strong>Gel Blasters Turn Everyday Life into an Adventure</strong><br/><br/>Our products are designed to suit different needs – from simple play at home to bigger events like birthdays, bachelor parties, or social meetups with friends and family. With their perfect balance of fun and safety, gel blasters are an ideal activity for all ages.</p><p><strong>Why Choose GelBlasterShop.dk</strong><br/><br/>We only work with the best manufacturers to ensure you always get products of the highest quality. Our mission is to provide you with access to the best selection on the market and excellent customer service. Here’s what you can expect:</p><ul><li>From classics like the Desert E to advanced models like the SCAR, we have something for everyone.<br/></li><li>We offer extra ammunition, protective gear, and upgrades so you can get the most out of your gel blaster.<br/></li><li>For purchases over 650 DKK, we deliver your order free of charge within 1–3 business days.<br/></li><li>We always strive to offer the best market prices on gel blasters.<br/></li></ul><p><strong>Ready to Start Playing?</strong><br/><br/>Click \"Shop Now\" and discover the perfect gel blaster for you! Whether you’re looking for fun gifts for children or want to try action toys like the Uz or M4, we’ve got you covered. At GelBlasterShop.dk, we promise quality products, fast delivery, and a universe of fun.</p><p>Get ready for hours of fun play for both children and adults. Dive into our range and find your next adventure today!</p><p><strong>Planning Your Gel Blaster Arena</strong></p><p><strong>Tips for Finding Good Locations Near You for Experiences</strong></p><p><strong>Disclaimer:</strong> Gel blasters are toys and are not designed to look or function like real weapons. They are safe, environmentally friendly, and made for fun and entertainment for all ages.</p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "ab9dbf1f-cae8-4488-835a-1d27be252dfe",
+        "74d4f957-8922-4307-ac16-bee3d887612a",
+        "text_LXTAJm"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "featured_blog_EeeUyD": {
+      "type": "featured-blog",
+      "custom_css": [
+        ".small-feature-link {color: black; border-bottom: 1px solid; text-decoration-color: unset;}",
+        ".use-color-scheme--1 {background: #8ecad6;}"
+      ],
+      "name": "Blog posts",
+      "settings": {
+        "title": "Blog posts",
+        "blog": "posts",
+        "post_limit": 3,
+        "show_author": false,
+        "show_date": true,
+        "show_excerpts": true,
+        "crop_ratio": "1.78",
+        "color_scheme": "1"
+      }
+    },
+    "running_icons_FP6pYk": {
+      "type": "running-icons",
+      "disabled": true,
+      "name": "Running Icons",
+      "settings": {}
     },
     "collapsible_tabs_ijfrUg": {
       "type": "collapsible-tabs",
@@ -626,68 +763,13 @@
         "question_HhAVzK",
         "question_V8qiir"
       ],
-      "custom_css": [".collapsible-tabs__heading {text-align: center;}"],
+      "custom_css": [
+        ".collapsible-tabs__heading {text-align: center;}"
+      ],
       "name": "Collapsible tabs",
       "settings": {
         "title": "BATTLE FAQ"
       }
-    },
-    "1617293273c37b524b": {
-      "type": "rich-text",
-      "blocks": {
-        "ab9dbf1f-cae8-4488-835a-1d27be252dfe": {
-          "type": "heading",
-          "settings": {
-            "title": "GELBLASTERSHOP.DK",
-            "use_h1": false
-          }
-        },
-        "74d4f957-8922-4307-ac16-bee3d887612a": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Welcome to GelBlasterShop.dk – Your Ultimate Gel Blaster Shop!"
-          }
-        },
-        "text_LXTAJm": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Welcome to GelBlasterShop.dk, the place where fun, action, and high quality meet! Here you will find Denmark’s largest collection of gel blasters and a wide selection of gel blaster accessories. Whether you are looking for child-friendly gel blasters, gift ideas for kids, or the latest tactical models, we have what you’re looking for. Our store is built around safety, durability, and the joy of play – something both kids and adults will love.</p><p>By choosing us, you not only get access to the market’s best gel blasters but also outstanding customer service and fast delivery.</p><p><strong>Gel Blasters – Why Choose Them?</strong><br/><br/>A gel blaster set combines the best of active toys with innovation and fun. Whether you want to improve your tactical skills or just look for great toys for kids, gel blasters are the answer! Here’s what makes them unique:</p><ul><li>Our products use water-based gel beads that are 100% biodegradable. That means they are both safe for children and gentle on the environment.<br/></li><li>Perfect as outdoor toys for kids, providing hours of entertainment in the garden, park, or playground.<br/></li><li>A gel blaster as a gift creates excitement and fun playtimes your kids will remember for a long time.<br/></li></ul><p><strong>Discover Our Popular Gel Blaster Models</strong><br/><br/>At GelBlasterShop.dk, you will find some of the most sought-after models on the market. Here is a small selection from our range to ensure there is something for every taste:</p><ul><li>Perfect for those who want a compact and fast gel blaster. Ideal for both kids and adults who want fun without a steep learning curve.<br/></li><li>A classic that combines style with performance. This model is popular among both beginners and enthusiasts.<br/></li><li>Known for its versatility and durability. A must-have for the tactically oriented player seeking excitement and precision.<br/></li><li>The ultimate tactical gel blaster for those who want to take play to the next level. With its robust design and various features, this model is perfect for action-packed games.<br/></li></ul><p>These models are not only great as fun gifts for children but also as exciting activities for adults who love tactical challenges.</p><p><strong>How to Get Started with a Gel Blaster</strong><br/><br/>Starting your gel blaster adventure is easy! Follow these steps for the best experience:</p><ol><li>Whether it’s a Uz, Desert E, M4, or SCAR, we have a gel blaster to suit your needs.<br/></li><li>Soak the biodegradable water beads for 3–4 hours so they are ready to use.<br/></li><li> Most gel blasters run on rechargeable batteries, so make sure your gel blaster is fully charged before play begins.<br/></li><li>Use protective goggles and respect the surroundings to ensure a fun yet safe experience.<br/></li></ol><p><strong>Gel Blasters Turn Everyday Life into an Adventure</strong><br/><br/>Our products are designed to suit different needs – from simple play at home to bigger events like birthdays, bachelor parties, or social meetups with friends and family. With their perfect balance of fun and safety, gel blasters are an ideal activity for all ages.</p><p><strong>Why Choose GelBlasterShop.dk</strong><br/><br/>We only work with the best manufacturers to ensure you always get products of the highest quality. Our mission is to provide you with access to the best selection on the market and excellent customer service. Here’s what you can expect:</p><ul><li>From classics like the Desert E to advanced models like the SCAR, we have something for everyone.<br/></li><li>We offer extra ammunition, protective gear, and upgrades so you can get the most out of your gel blaster.<br/></li><li>For purchases over 650 DKK, we deliver your order free of charge within 1–3 business days.<br/></li><li>We always strive to offer the best market prices on gel blasters.<br/></li></ul><p><strong>Ready to Start Playing?</strong><br/><br/>Click \"Shop Now\" and discover the perfect gel blaster for you! Whether you’re looking for fun gifts for children or want to try action toys like the Uz or M4, we’ve got you covered. At GelBlasterShop.dk, we promise quality products, fast delivery, and a universe of fun.</p><p>Get ready for hours of fun play for both children and adults. Dive into our range and find your next adventure today!</p><p><strong>Planning Your Gel Blaster Arena</strong></p><p><strong>Tips for Finding Good Locations Near You for Experiences</strong></p><p><strong>Disclaimer:</strong> Gel blasters are toys and are not designed to look or function like real weapons. They are safe, environmentally friendly, and made for fun and entertainment for all ages.</p>",
-            "enlarge_text": true
-          }
-        }
-      },
-      "block_order": [
-        "ab9dbf1f-cae8-4488-835a-1d27be252dfe",
-        "74d4f957-8922-4307-ac16-bee3d887612a",
-        "text_LXTAJm"
-      ],
-      "disabled": true,
-      "settings": {
-        "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
-        "color_scheme": "default"
-      }
-    },
-    "featured_blog_EeeUyD": {
-      "type": "featured-blog",
-      "name": "Blog posts",
-      "settings": {
-        "title": "Blog posts",
-        "blog": "posts",
-        "post_limit": 3,
-        "show_author": false,
-        "show_date": true,
-        "show_excerpts": true,
-        "crop_ratio": "1.78",
-        "color_scheme": "2"
-      }
-    },
-    "running_icons_FP6pYk": {
-      "type": "running-icons",
-      "disabled": true,
-      "name": "Running Icons",
-      "settings": {}
     }
   },
   "order": [
@@ -700,11 +782,11 @@
     "ss_feature_1_ETyXQr",
     "collection_list_jRtatE",
     "1480591889144",
-    "video_WMNK8D",
     "videos_i6Vamg",
-    "collapsible_tabs_ijfrUg",
+    "testimonials_DDWNDh",
     "1617293273c37b524b",
     "featured_blog_EeeUyD",
-    "running_icons_FP6pYk"
+    "running_icons_FP6pYk",
+    "collapsible_tabs_ijfrUg"
   ]
 }

@@ -176,51 +176,10 @@
         "show_vendor": false,
         "grid": 4
       }
-    },
-    "video_xKMeBB": {
-      "type": "video",
-      "blocks": {
-        "heading_nYbXng": {
-          "type": "heading",
-          "settings": {
-            "title": "",
-            "heading_max_width": 15,
-            "title_size": 84,
-            "title_size_mobile": 32,
-            "use_h1": false
-          }
-        },
-        "text_YqmDHH": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Gratis fragt ved køb over 650 DKK · Hurtig levering 1–3 hverdage · 14 dages fortrydelsesret</p>",
-            "enlarge_text": true
-          }
-        },
-        "play_button_GLeDE7": {
-          "type": "play-button",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_nYbXng",
-        "text_YqmDHH",
-        "play_button_GLeDE7"
-      ],
-      "name": "Video",
-      "settings": {
-        "video_shopify": "shopify://files/videos/Create_a_very_202507231233.mp4",
-        "video_external": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_description": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "overlay_style": "shadow"
-      }
     }
   },
   "order": [
     "main",
-    "related-products",
-    "video_xKMeBB"
+    "related-products"
   ]
 }
