@@ -436,7 +436,6 @@
         "collection_FRVGrQ"
       ],
       "custom_css": [
-        ".for-collections {background: #8cc3db;}",
         ".product-block.collection-block {background: #fffafa; border: 1px solid; border-radius: 10px;}",
         ".product-block__title {width: fit-content; text-align: center; margin: 0 auto; transition: all 0.3s ease-in-out;}",
         ".slider__item:hover .product-block__title {border-bottom: 1px solid;}",
@@ -458,7 +457,8 @@
         "coll_text_position_under_mobile": false,
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
+        "coll_button_style": "primary",
+        "section_bg_color": "#8cc3db"
       }
     },
     "1480591889144": {
@@ -656,8 +656,7 @@
     "featured_blog_EeeUyD": {
       "type": "featured-blog",
       "custom_css": [
-        ".small-feature-link {color: black; border-bottom: 1px solid; text-decoration-color: unset;}",
-        ".use-color-scheme--1 {background: #8ecad6;}"
+        ".small-feature-link {color: black; border-bottom: 1px solid; text-decoration-color: unset;}"
       ],
       "name": "Blog posts",
       "settings": {
@@ -668,7 +667,8 @@
         "show_date": true,
         "show_excerpts": true,
         "crop_ratio": "1.78",
-        "color_scheme": "1"
+        "color_scheme": "1",
+        "section_bg_color": "#8ecad6"
       }
     },
     "running_icons_FP6pYk": {
