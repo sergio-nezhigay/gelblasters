@@ -16,7 +16,7 @@
         "show_title": true,
         "show_image_behind_heading": false,
         "heading_image_height": "medium",
-        "overlay_style": "shadow",
+        "overlay_style": "full",
         "coll_desc_pos": "above",
         "coll_num_per_page_int": 24,
         "grid": 4,

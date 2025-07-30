@@ -131,7 +131,14 @@
     "after_add_to_cart": "drawer",
     "product_currency_code_enabled": false,
     "image_quality": "1.25",
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "installed_preset_name": "Symmetry",
   "presets": {
@@ -544,7 +551,10 @@
       ".main-search__suggestions {display: none !important;}",
       ".main-search--with-suggestions {padding-bottom: 20px;}",
       ".text-overlay .btn {font-size: 20px;}",
-      ".btn {font-family: Quantico, sans-serif; font-weight: 700;}"
+      ".btn {font-family: Quantico, sans-serif; font-weight: 700;}",
+      ".jdgm-write-rev-link {border-radius: 20px !important; margin-top: 20px !important;}",
+      ".jdgm-rev-widg__title {font-size: 30px !important;}",
+      ".jdgm-rev__author,.jdgm-rev__body,.jdgm-rev-widg__summary-average,.jdgm-rev__timestamp,.jdgm-rev-widg__summary-text.jdgm-all-reviews__summary-text--verified,.jdgm-sort-dropdown,.jdgm-sort-dropdown-arrow,.jdgm-histogram__frequency,.jdgm-rev__icon:before {color: #2f223e !important;}"
     ]
   }
 }

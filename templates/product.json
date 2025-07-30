@@ -25,19 +25,6 @@
             "multiple_options": "Option 1\nOption 2\nOption 3"
           }
         },
-        "accordion_j4LtNA": {
-          "type": "accordion",
-          "disabled": true,
-          "settings": {
-            "title": "Collapsible tab",
-            "icon": "",
-            "content": "<p>Collapsible tab content</p>",
-            "page": "",
-            "custom_liquid": "",
-            "open": false,
-            "show_in_quickbuy": false
-          }
-        },
         "sharing_YqnxHx": {
           "type": "sharing",
           "disabled": true,
@@ -57,6 +44,11 @@
         },
         "title": {
           "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_YB9BEe": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {}
         },
         "price": {
@@ -123,8 +115,47 @@
             "show_in_quickbuy": false
           }
         },
+        "accordion_j4LtNA": {
+          "type": "accordion",
+          "name": "Description",
+          "disabled": true,
+          "settings": {
+            "title": "Description",
+            "icon": "briefcase",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{{ product.description }}",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_VM6Ujr": {
+          "type": "accordion",
+          "settings": {
+            "title": "Description",
+            "icon": "",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{{ product.description }}",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_dj7VaK": {
+          "type": "accordion",
+          "settings": {
+            "title": "Fragt og levering",
+            "icon": "",
+            "content": "<p><strong>Vi tilbyder fri fragt på ordrer over 650,- og du kan forvente en leveringstid på 1–3 hverdage på alle produkter.</strong></p><p>Vi sender alle pakker med enten <strong>DAO</strong> eller <strong>GLS</strong>, alt efter dit valg.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "show_in_tab": false,
             "open_tab": false,
@@ -135,16 +166,19 @@
       },
       "block_order": [
         "custom_option_8PqDHJ",
-        "accordion_j4LtNA",
         "sharing_YqnxHx",
         "complementary_CW9mr8",
         "title",
+        "judge_me_reviews_preview_badge_YB9BEe",
         "price",
         "divider",
         "variant-picker",
         "buy-buttons",
         "custom_liquid_NdM7LA",
         "icon_columns_Ekitwe",
+        "accordion_j4LtNA",
+        "accordion_VM6Ujr",
+        "accordion_dj7VaK",
         "description"
       ],
       "settings": {
@@ -176,10 +210,43 @@
         "show_vendor": false,
         "grid": 4
       }
+    },
+    "featured_collection_HTpfJX": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": " Superpopulære modeller",
+        "collection": "top-produkter",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true
+      }
+    },
+    "1753877280e1065982": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_cxP46W": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_cxP46W"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "featured_collection_HTpfJX",
+    "1753877280e1065982"
   ]
 }
