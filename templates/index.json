@@ -244,10 +244,7 @@
         "ticker_item_xV9mbd",
         "ticker_item_qr9rCR"
       ],
-      "custom_css": [
-        ".running-ticker-title,.running-ticker-subtitle {color: black;}",
-        ".running-ticker-icon svg {color: black; fill: black;}"
-      ],
+      "custom_css": [],
       "name": "Running Ticker",
       "settings": {
         "max_width": "",
@@ -270,7 +267,8 @@
         "icon_color": "#404040",
         "animation_speed": 30,
         "item_gap_mobile": 40,
-        "item_gap_desktop": 60
+        "item_gap_desktop": 60,
+        "content_color": "#000000"
       }
     },
     "marquee_banner_WMWyJY": {
@@ -435,13 +433,7 @@
         "collection_YzWhR3",
         "collection_FRVGrQ"
       ],
-      "custom_css": [
-        ".product-block.collection-block {background: #fffafa; border: 1px solid; border-radius: 10px;}",
-        ".product-block__title {width: fit-content; text-align: center; margin: 0 auto; transition: all 0.3s ease-in-out;}",
-        ".slider__item:hover .product-block__title {border-bottom: 1px solid;}",
-        ".img-ar > img {transition: all 0.3s ease-in-out;}",
-        ".slider__item:hover .img-ar > img {transform: scale(1.05);}"
-      ],
+      "custom_css": [],
       "name": "Collection list",
       "settings": {
         "title": "Kampkategorier",
@@ -458,7 +450,8 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary",
-        "section_bg_color": "#8cc3db"
+        "section_bg_color": "#8cc3db",
+        "collection_card_bg_color": "#fffafa"
       }
     },
     "1480591889144": {

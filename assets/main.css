@@ -12033,12 +12033,12 @@ model-viewer .container {
 .product-block {
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #54EB2122;
+  border: 1px solid #54eb2122;
   transition: box-shadow 0.3s ease;
 }
 
 .product-block:hover {
-  border: 1px solid #54EB21;
+  border: 1px solid #54eb21;
 }
 
 .product-label.product-label--sale span {
@@ -12109,4 +12109,49 @@ h1 {
 
 .product-block__title {
   font-size: 22px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+h2 {
+  font-size: 30px;
+}
+h4.collection-listing {
+  padding-bottom: 12px !important;
+}
+.localization__selector {
+  font-size: 16px;
+}
+.main-search__suggestions {
+  display: none !important;
+}
+.main-search--with-suggestions {
+  padding-bottom: 20px;
+}
+.text-overlay .btn {
+  font-size: 20px;
+}
+.btn {
+  font-family: Quantico, sans-serif;
+  font-weight: 700;
+}
+.jdgm-write-rev-link {
+  border-radius: 20px !important;
+  margin-top: 20px !important;
+}
+.jdgm-rev-widg__title {
+  font-size: 30px !important;
+}
+.jdgm-rev__author,
+.jdgm-rev__body,
+.jdgm-rev-widg__summary-average,
+.jdgm-rev__timestamp,
+.jdgm-rev-widg__summary-text.jdgm-all-reviews__summary-text--verified,
+.jdgm-sort-dropdown,
+.jdgm-sort-dropdown-arrow,
+.jdgm-histogram__frequency,
+.jdgm-rev__icon:before {
+  color: #2f223e !important;
 }
