@@ -13,7 +13,10 @@
       <carousel-slider class="carousel block collection-slider">
     {%- endif -%}
 
-    <div class="hometitle align-center has-paging{% if section.settings.enable_carousel %} slider-nav{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+    <div
+      class="hometitle align-center has-paging{% if section.settings.enable_carousel %} slider-nav{% endif %}"
+      {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}
+    >
       {% if section.settings.enable_carousel %}
         <button name="prev" class="slider-nav__btn has-ltr-icon">
           <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
@@ -32,12 +35,18 @@
     </div>
 
     {%- if section.settings.show_view_all -%}
-      <div class="view-all align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}>
+      <div
+        class="view-all align-center"
+        {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}
+      >
         <a class="small-feature-link" href="{{ collection.url }}">{{ 'sections.featured_collection.view_all' | t }}</a>
       </div>
     {%- endif -%}
 
-    <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad slider--no-scrollbar{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+    <div
+      class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad slider--no-scrollbar{% endif %}"
+      {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}
+    >
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
           if section.settings.collection == blank
@@ -98,24 +107,53 @@
 
   {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
     <div class="quickbuy-container use-color-scheme use-color-scheme--{{ settings.quickbuy_color_scheme }}">
-      <a href="#" class="close-detail" aria-label="{{ 'accessibility.close' | t }}" tabindex="-1" aria-hidden="true">{% render 'icon-close', stroke_width: 1 %}</a>
+      <a href="#" class="close-detail" aria-label="{{ 'accessibility.close' | t }}" tabindex="-1" aria-hidden="true">
+        {%- render 'icon-close', stroke_width: 1 -%}
+      </a>
       <div class="inner"></div>
     </div>
   {% endif %}
 </div>
 
+{% stylesheet %}
+  .section-featured-collection .collection-slider .has-paging .slider-nav__btn {
+    background: white;
+    color: black;
+    border: 1px solid rgba(181, 181, 181, 1) !important;
+    border-radius: 6px;
+  }
+  .section-featured-collection .price__discount {
+    background: #d339a8;
+    color: white;
+    padding: 2px 10px;
+    border: none;
+    font-size: 12px !important;
+  }
+  .section-featured-collection .product-block {
+    border: 1px solid black;
+  }
+  .section-featured-collection .price__current {
+    color: black;
+  }
+  .section-featured-collection .small-feature-link {
+    color: black;
+    text-decoration-color: unset;
+    font-size: 20px;
+  }
+  .section-featured-collection .collection-slider-row {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-top: 0;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
   "name": "Featured collection",
   "class": "section-featured-collection",
   "disabled_on": {
-    "templates": [
-      "password"
-    ],
-    "groups": [
-      "aside"
-    ]
+    "templates": ["password"],
+    "groups": ["aside"]
   },
   "settings": [
     {

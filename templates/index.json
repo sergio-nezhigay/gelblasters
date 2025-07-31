@@ -456,15 +456,7 @@
     },
     "1480591889144": {
       "type": "featured-collection",
-      "custom_css": [
-        ".collection-slider .has-paging .slider-nav__btn {background: white; color: black; border: 1px solid rgba(181, 181, 181, 1) !important; border-radius: 6px;}",
-        ".price__discount {background: #d339a8; color: white; padding: 2px 10px; border: none; font-size: 12px !important;}",
-        ".product-block {border: 1px solid black;}",
-        ".price__current {color: black;}",
-        ".small-feature-link {color: black; text-decoration-color: unset;}",
-        ".collection-slider-row {padding-bottom: 50px; padding-top: 50px; margin-top: 0;}",
-        ".small-feature-link {font-size: 20px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "title": "Superpopulære modeller",
         "collection": "top-produkter",
