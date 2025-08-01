@@ -197,25 +197,27 @@
                   </div>
                 {% endif %}
 
-                <div class="collapsible-tabs">
-                  <div class="collapsible-tabs__tab disclosure">
-                    <button
-                      class="disclosure__title"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="collection-desc-{{ section.id }}"
-                    >
-                      Description
-                    </button>
-                    <div
-                      class="disclosure__panel collapsible-tabs__tab-content"
-                      id="collection-desc-{{ section.id }}"
-                      hidden
-                    >
-                      <div class="fine-accordion__content rte cf align-center reading-width">
-                        {{ collection.description }}
-                      </div>
-                    </div>
+                <div class="collapsible-tabs collection-desc-tabs">
+                  <div class="collapsible-tabs__tab">
+                    <details-disclosure>
+                      <details class="disclosure">
+                        <summary
+                          class="disclosure__title"
+                          aria-expanded="false"
+                          aria-controls="collection-desc-{{ section.id }}"
+                        >
+                          Description
+                        </summary>
+                        <div
+                          class="disclosure__panel collapsible-tabs__tab-content"
+                          id="collection-desc-{{ section.id }}"
+                        >
+                          <div class="fine-accordion__content rte cf align-center reading-width">
+                            {{ collection.description }}
+                          </div>
+                        </div>
+                      </details>
+                    </details-disclosure>
                   </div>
                 </div>
               </div>

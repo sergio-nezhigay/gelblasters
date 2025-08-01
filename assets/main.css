@@ -12147,3 +12147,12 @@ h4.collection-listing {
 .jdgm-rev__icon:before {
   color: #2f223e !important;
 }
+
+.collection-desc-tabs {
+  width: 100%;
+}
+
+.collection-desc-tabs .collapsible-tabs__tab {
+  border-top: none;
+  border-bottom: none;
+}

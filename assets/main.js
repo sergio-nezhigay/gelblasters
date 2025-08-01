@@ -5150,16 +5150,3 @@ window.onpageshow = () => {
       console.log(error.message);
     });
 };
-
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.disclosure__title').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
-      const panel = document.getElementById(btn.getAttribute('aria-controls'));
-      if (panel) {
-        panel.hidden = expanded;
-      }
-    });
-  });
-});
