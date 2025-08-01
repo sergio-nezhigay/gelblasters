@@ -5,7 +5,7 @@
 >
   <div class="container blog-row">
     {% unless blog.empty? %}
-      <h2 class="hometitle h4 align-center">
+      <h2 class="hometitle h2 align-center">
         <a href="{{ blog.url }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
           {{- section.settings.title | escape -}}
         </a>

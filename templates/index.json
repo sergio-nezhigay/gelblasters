@@ -512,7 +512,7 @@
       "settings": {
         "title": "Why Kids Love It",
         "title_color": "#201230",
-        "title_size_desktop": 44,
+        "title_size_desktop": 32,
         "title_size_mobile": 28,
         "grid_gap": 24,
         "background_color": "#f2b580",
