@@ -635,9 +635,7 @@
     },
     "featured_blog_EeeUyD": {
       "type": "featured-blog",
-      "custom_css": [
-        ".small-feature-link {color: black; border-bottom: 1px solid; text-decoration-color: unset;}"
-      ],
+      "custom_css": [],
       "name": "Blog posts",
       "settings": {
         "title": "Blog posts",
@@ -743,9 +741,7 @@
         "question_HhAVzK",
         "question_V8qiir"
       ],
-      "custom_css": [
-        ".collapsible-tabs__heading {text-align: center;}"
-      ],
+      "custom_css": [],
       "name": "Collapsible tabs",
       "settings": {
         "title": "BATTLE FAQ"

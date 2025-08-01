@@ -1,3 +1,11 @@
+{% stylesheet %}
+  .small-feature-link {
+    color: black;
+    border-bottom: 1px solid;
+    text-decoration-color: unset;
+  }
+{% endstylesheet %}
+
 {%- assign blog = blogs[section.settings.blog] -%}
 <div
   class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}"
