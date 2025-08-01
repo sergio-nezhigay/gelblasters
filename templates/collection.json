@@ -44,14 +44,13 @@
         "rel_coll_gall_full_width": false,
         "rel_coll_gall_overlay_style": "shadow",
         "rel_coll_gall_text_alignment": "center center",
-        "rel_coll_grid_mobile": "2"
+        "rel_coll_grid_mobile": "2",
+        "collection_image_size": 74
       }
     },
     "featured_collection_dcjX87": {
       "type": "featured-collection",
-      "custom_css": [
-        ".carousel {padding-bottom: 36px;}"
-      ],
+      "custom_css": [],
       "name": "Featured collection",
       "settings": {
         "title": "Superpopulære modeller",

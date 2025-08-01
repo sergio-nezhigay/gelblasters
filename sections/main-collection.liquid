@@ -183,16 +183,15 @@
             {%- endif -%}
 
             {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-              <div class="collection-desc-row" style="display: flex; align-items: flex-start; gap: 24px;">
+              <div class="collection-desc-row">
                 {% if section.settings.show_image_behind_heading == false and collection.image %}
-                  <div style="width:50px; height:50px; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+                  <div style="width:{{ section.settings.collection_image_size }}px; height:{{ section.settings.collection_image_size }}px; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
                     {%- render 'image',
                       image: collection.image,
-                      sizes: '50px',
-                      widths: '50',
-                      height: 50,
-                      width: 50,
-                      style: 'object-fit:cover;width:50px;height:50px;border-radius:4px;'
+                      sizes: '{{ section.settings.collection_image_size }}px',
+                      height: '{{ section.settings.collection_image_size }}',
+                      width: '{{ section.settings.collection_image_size }}',
+                      style: 'object-fit:cover;border-radius:4px;'
                     -%}
                   </div>
                 {% endif %}
@@ -206,7 +205,7 @@
                           aria-expanded="false"
                           aria-controls="collection-desc-{{ section.id }}"
                         >
-                          Description
+                          {{ 'sections.collection.more_information' | t }}
                         </summary>
                         <div
                           class="disclosure__panel collapsible-tabs__tab-content"
@@ -430,6 +429,29 @@
     </div>
   {% endif %}
 </div>
+
+{% stylesheet %}
+  .collection-listing .product-block {
+    border: 1px solid;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+  .product-block__title {
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+  }
+  .product-block:hover .product-block__title {
+    border-bottom: 1px solid;
+  }
+  .img-ar > img {
+    transition: all 0.3s ease-in-out;
+  }
+  .product-block:hover .img-ar > img {
+    transform: scale(1.05);
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -890,6 +912,15 @@
         }
       ],
       "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "collection_image_size",
+      "label": "Collection image size (px)",
+      "min": 24,
+      "max": 200,
+      "step": 2,
+      "default": 50
     }
   ]
 }

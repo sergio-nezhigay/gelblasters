@@ -19,6 +19,7 @@
       "list_layout": "Liste",
       "view_all_related_collections": "Se alle...",
       "empty": "Ingen produkter fundet",
+      "more_information": "Mere information",
       "product_count": {
         "one": "{{ count }} produkt",
         "other": "{{ count }} produkter"

@@ -113,19 +113,21 @@
 </style>
 
 {% stylesheet %}
-  .product-block.collection-block {
+  .product-block {
     border: 1px solid;
     border-radius: 10px;
   }
-  .product-block__title {
+  .product-block .product-block__title {
     width: fit-content;
     text-align: center;
     margin: 0 auto;
     transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid transparent;
   }
-  .slider__item:hover .product-block__title {
+  .product-block:hover .product-block__title {
     border-bottom: 1px solid;
   }
+
   .img-ar > img {
     transition: all 0.3s ease-in-out;
   }
