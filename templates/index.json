@@ -580,12 +580,7 @@
         "testimonial_kACEFR",
         "testimonial_xyqwgd"
       ],
-      "custom_css": [
-        ".slideshow-nav__btn {background: white; color: black; border: 1px solid rgba(181, 181, 181, 1) !important; border-radius: 6px;}",
-        ".slideshow-ctrl {margin-left: 0 !important;}",
-        ".testimonial__star .icon {color: orange;}",
-        ".testimonial__star svg {width: 26px; height: 26px;}"
-      ],
+      "custom_css": [],
       "name": "Testimonials",
       "settings": {
         "title": "Customer reviews",
