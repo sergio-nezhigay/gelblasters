@@ -633,6 +633,19 @@
         "color_scheme": "default"
       }
     },
+    "demo_slider_1": {
+      "type": "blog-slider",
+      "settings": {
+        "title": "Featured slider",
+        "blog": "posts",
+        "enable_carousel": true,
+        "grid": 3,
+        "rows": 1,
+        "color_scheme": "default",
+        "full_width": false,
+        "show_date": true
+      }
+    },
     "featured_blog_EeeUyD": {
       "type": "featured-blog",
       "custom_css": [],
@@ -761,6 +774,7 @@
     "videos_i6Vamg",
     "testimonials_DDWNDh",
     "1617293273c37b524b",
+    "demo_slider_1",
     "featured_blog_EeeUyD",
     "running_icons_FP6pYk",
     "collapsible_tabs_ijfrUg"

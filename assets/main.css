@@ -1682,7 +1682,7 @@ h2,
 .h2 {
   font-size: calc(5 * var(--font-scale) + var(--base-text-size));
 }
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   h2,
   .h2 {
     font-size: 1.2em;
