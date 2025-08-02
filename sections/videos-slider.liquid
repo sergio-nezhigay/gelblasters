@@ -83,7 +83,13 @@
                   >
                   </iframe>
                 {%- elsif video_type == 'mp4' -%}
-                  <video controls preload="metadata">
+                  <video
+                    controls
+                    preload="metadata"
+                    {% if block.settings.thumbnail %}
+                      poster="{{ block.settings.thumbnail | img_url: '400x600' }}"
+                    {% endif %}
+                  >
                     <source src="{{ block.settings.video_url }}" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
