@@ -12229,3 +12229,18 @@ h4.collection-listing {
     transition: border-color 0.2s, background 0.2s;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .product-grid--per-row-small-desktop-2 {
+    --product-columns-desktop: 2;
+  }
+  .product-grid--per-row-small-desktop-3 {
+    --product-columns-desktop: 3;
+  }
+  .product-grid--per-row-small-desktop-4 {
+    --product-columns-desktop: 4;
+  }
+  .product-grid--per-row-small-desktop-5 {
+    --product-columns-desktop: 5;
+  }
+}

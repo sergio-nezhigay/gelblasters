@@ -373,7 +373,14 @@
           {% if collection.products.size == 0 %}
             <h5 class="align-centre fully-spaced-row">{{ 'sections.collection.empty' | t }}</h5>
           {% else %}
-            <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
+            <div
+              class="
+                product-grid
+                product-grid--per-row-{{ section.settings.grid }}
+                product-grid--per-row-small-desktop-{{ section.settings.grid_small_desktop }}
+                product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}
+              "
+            >
               {%- liquid
                 if settings.prod_thumb_shape == 'portrait-23'
                   assign chosen_aspect_ratio = 0.67
@@ -564,6 +571,15 @@
       "max": 5,
       "step": 1,
       "default": 4
+    },
+    {
+      "type": "range",
+      "id": "grid_small_desktop",
+      "label": "Products per row (small desktop)",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3
     },
     {
       "type": "checkbox",
