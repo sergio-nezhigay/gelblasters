@@ -1,0 +1,614 @@
+<style>
+  .video-testimonials-section {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .testimonials-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .testimonials-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .testimonials-header {
+    position: relative;
+  }
+
+  .testimonials-title {
+    display: block;
+  }
+
+  .testimonials-grid {
+    position: relative;
+    width: 100%;
+  }
+
+  .testimonial-video {
+    position: relative;
+    width: 100%;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .video-thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .video-placeholder {
+    display: block;
+  }
+
+  .play-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+<section id="{{ section.id }}" class="video-testimonials-section {{ section.settings.custom_class }}">
+  <div class="testimonials-wrapper">
+    <div class="testimonials-container">
+      <div class="testimonials-header">
+        {% if section.settings.title != blank %}
+          <h2 class="testimonials-title">{{ section.settings.title }}</h2>
+        {% endif %}
+      </div>
+
+      {% if section.blocks.size > 0 %}
+        <div class="testimonials-grid video-testimonials-slider">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'video_item' %}
+                <div class="testimonial-video" {{ block.shopify_attributes }}>
+                  {% if block.settings.video_url != blank %}
+                    <div class="video-container" data-video-id="{{ block.id }}">
+                      <div class="video-thumbnail-wrapper">
+                        {% if block.settings.video_thumbnail != blank %}
+                          <img
+                            src="{{ block.settings.video_thumbnail | image_url }}"
+                            alt="Video thumbnail"
+                            width="100%"
+                            height="500"
+                            class="video-thumbnail"
+                            loading="lazy"
+                          >
+                        {% else %}
+                          <div class="video-placeholder"></div>
+                        {% endif %}
+
+                        <div class="play-button" data-video-url="{{ block.settings.video_url }}">
+                          <svg
+                            width="19"
+                            height="19"
+                            viewBox="0 0 19 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M4.75 2.375L15.8333 9.5L4.75 16.625V2.375Z" fill="#04587c"/>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div class="video-iframe-wrapper" style="display: none;">
+                        <iframe
+                          class="video-iframe"
+                          width="100%"
+                          height="500"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        >
+                        </iframe>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --testimonials-bg-color: {{ section.settings.background_color | default: '#ffffff' }};
+    --testimonials-title-color: {{ section.settings.title_color | default: '#04587c' }};
+    --testimonials-title-size-desktop: {{ section.settings.title_size_desktop | default: 44 }}px;
+    --testimonials-title-size-mobile: {{ section.settings.title_size_mobile | default: 28 }}px;
+    --testimonials-padding-top-desktop: {{ section.settings.padding_top_desktop | default: 80 }}px;
+    --testimonials-padding-bottom-desktop: {{ section.settings.padding_bottom_desktop | default: 80 }}px;
+    --testimonials-padding-top-mobile: {{ section.settings.padding_top_mobile | default: 60 }}px;
+    --testimonials-padding-bottom-mobile: {{ section.settings.padding_bottom_mobile | default: 60 }}px;
+    --testimonials-padding-horizontal-desktop: {{ section.settings.padding_horizontal_desktop | default: 60 }}px;
+    --testimonials-padding-horizontal-mobile: {{ section.settings.padding_horizontal_mobile | default: 20 }}px;
+    --testimonials-max-width: {{ section.settings.max_width | default: '1400px' }};
+    --testimonials-grid-gap: {{ section.settings.grid_gap | default: 24 }}px;
+  }
+
+  #{{ section.id }} {
+    background-color: var(--testimonials-bg-color);
+    padding-top: var(--testimonials-padding-top-desktop);
+    padding-bottom: var(--testimonials-padding-bottom-desktop);
+    position: relative;
+    width: 100%;
+  }
+
+  #{{ section.id }} .testimonials-wrapper {
+    max-width: var(--testimonials-max-width);
+    margin: 0 auto;
+    padding-left: var(--testimonials-padding-horizontal-desktop);
+    padding-right: var(--testimonials-padding-horizontal-desktop);
+  }
+
+  #{{ section.id }} .testimonials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  #{{ section.id }} .testimonials-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #{{ section.id }} .testimonials-title {
+    color: var(--testimonials-title-color);
+    font-size: var(--testimonials-title-size-desktop);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  #{{ section.id }} .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--testimonials-grid-gap);
+    width: 100%;
+  }
+
+  #{{ section.id }} .testimonial-video {
+    position: relative;
+    width: 100%;
+  }
+
+  #{{ section.id }} .video-container {
+    position: relative;
+    width: 302px;
+    height: 500px;
+    border-radius: 0;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #{{ section.id }} .video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  #{{ section.id }} .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #{{ section.id }} .video-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #{{ section.id }} .video-iframe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  #{{ section.id }} .video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #{{ section.id }} .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(3.2px);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+
+  #{{ section.id }} .play-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  #{{ section.id }} .play-button svg {
+    width: 19px;
+    height: 19px;
+    margin-left: 2px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    #{{ section.id }} .testimonials-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  /* Video Testimonials Slick Slider Styles */
+  #{{ section.id }} .video-testimonials-slider .slick-dots {
+    bottom: -50px;
+    text-align: center;
+  }
+
+  #{{ section.id }} .video-testimonials-slider .slick-dots li {
+    margin: 0 5px;
+  }
+
+  #{{ section.id }} .video-testimonials-slider .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(4, 88, 124, 0.3);
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #{{ section.id }} .video-testimonials-slider .slick-dots li.slick-active button {
+    background: #04587c;
+  }
+
+  @media screen and (max-width: 768px) {
+    #{{ section.id }} {
+      padding-top: var(--testimonials-padding-top-mobile);
+      padding-bottom: var(--testimonials-padding-bottom-mobile);
+    }
+
+    #{{ section.id }} .testimonials-wrapper {
+      padding-left: var(--testimonials-padding-horizontal-mobile);
+      padding-right: var(--testimonials-padding-horizontal-mobile);
+    }
+
+    #{{ section.id }} .testimonials-title {
+      font-size: var(--testimonials-title-size-mobile);
+    }
+
+    #{{ section.id }} .video-container {
+      height: calc(100vw * 1.4);
+      width: 100%;
+    }
+
+    #{{ section.id }} .testimonial-video {
+      width: 100%;
+    }
+
+    #{{ section.id }} .testimonials-container {
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #{{ section.id }} .video-container {
+      height: calc(100vw * 1.4);
+    }
+
+    #{{ section.id }} .play-button {
+      width: 48px;
+      height: 48px;
+      border-radius: 24px;
+    }
+
+    #{{ section.id }} .play-button svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const playButtons = document.querySelectorAll('#{{ section.id }} .play-button');
+
+    function getVideoEmbedUrl(url) {
+      // YouTube
+      const youtubeRegex =
+        /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i;
+      const youtubeMatch = url.match(youtubeRegex);
+      if (youtubeMatch) {
+        return `https://www.youtube.com/embed/${youtubeMatch[1]}?autoplay=1&rel=0`;
+      }
+
+      // Vimeo
+      const vimeoRegex = /vimeo\.com\/(?:.*\/)?(\d+)/i;
+      const vimeoMatch = url.match(vimeoRegex);
+      if (vimeoMatch) {
+        return `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=1`;
+      }
+
+      return url;
+    }
+
+    playButtons.forEach((button) => {
+      button.addEventListener('click', function () {
+        const videoUrl = this.dataset.videoUrl;
+        const container = this.closest('.video-container');
+        const thumbnailWrapper = container.querySelector('.video-thumbnail-wrapper');
+        const iframeWrapper = container.querySelector('.video-iframe-wrapper');
+        const iframe = container.querySelector('.video-iframe');
+
+        if (videoUrl && iframe) {
+          const embedUrl = getVideoEmbedUrl(videoUrl);
+          iframe.src = embedUrl;
+
+          thumbnailWrapper.style.display = 'none';
+          iframeWrapper.style.display = 'block';
+        }
+      });
+    });
+
+    // Initialize Slick Slider for mobile
+    function initVideoTestimonialsSlider() {
+      if (window.innerWidth <= 768) {
+        if (!$('.video-testimonials-slider').hasClass('slick-initialized')) {
+          $('.video-testimonials-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            fade: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            rows: 0,
+            adaptiveHeight: true,
+            responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  dots: true,
+                  arrows: false,
+                },
+              },
+            ],
+          });
+        }
+      } else {
+        if ($('.video-testimonials-slider').hasClass('slick-initialized')) {
+          $('.video-testimonials-slider').slick('unslick');
+        }
+      }
+    }
+
+    // Initialize on load
+    initVideoTestimonialsSlider();
+
+    // Re-initialize on resize
+    $(window).on('resize', function () {
+      initVideoTestimonialsSlider();
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Video Testimonials",
+  "tag": "section",
+  "class": "video-testimonials-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Real Results from Real Homes"
+    },
+    {
+      "type": "header",
+      "content": "Title Settings"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#04587c"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Title Size Desktop",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title Size Mobile",
+      "min": 20,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap Between Videos",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "Section Max Width",
+      "default": "1400px",
+      "info": "Enter value with unit (e.g., 1200px, 100%)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Padding Top Desktop",
+      "min": 40,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Padding Bottom Desktop",
+      "min": 40,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding Top Mobile",
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding Bottom Mobile",
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal_desktop",
+      "label": "Padding Horizontal Desktop",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal_mobile",
+      "label": "Padding Horizontal Mobile",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS Class",
+      "info": "Add custom CSS classes for additional styling"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_item",
+      "name": "Video Item",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL",
+          "info": "Link to your video (YouTube, Vimeo, etc.)"
+        },
+        {
+          "type": "image_picker",
+          "id": "video_thumbnail",
+          "label": "Video Thumbnail",
+          "info": "Custom thumbnail image for the video"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Testimonials",
+      "blocks": [
+        {
+          "type": "video_item"
+        },
+        {
+          "type": "video_item"
+        },
+        {
+          "type": "video_item"
+        },
+        {
+          "type": "video_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

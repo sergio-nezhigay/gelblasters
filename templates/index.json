@@ -29,10 +29,7 @@
           }
         }
       },
-      "block_order": [
-        "message_VTcRXy",
-        "message_WzaVGE"
-      ],
+      "block_order": ["message_VTcRXy", "message_WzaVGE"],
       "disabled": true,
       "name": "Store messages",
       "settings": {
@@ -87,11 +84,7 @@
           }
         }
       },
-      "block_order": [
-        "hotspot_rEWgUJ",
-        "hotspot_zHAJq6",
-        "hotspot_jEA3c9"
-      ],
+      "block_order": ["hotspot_rEWgUJ", "hotspot_zHAJq6", "hotspot_jEA3c9"],
       "disabled": true,
       "name": "Hotspots",
       "settings": {
@@ -182,11 +175,7 @@
           }
         }
       },
-      "block_order": [
-        "image_9Wyhwe",
-        "image_E9yfwh",
-        "image_hxX6UJ"
-      ],
+      "block_order": ["image_9Wyhwe", "image_E9yfwh", "image_hxX6UJ"],
       "custom_css": [],
       "settings": {
         "height": "fixed",
@@ -469,6 +458,10 @@
         "full_width": true
       }
     },
+    "video123": {
+      "type": "videos-slider",
+      "blocks": {}
+    },
     "videos_i6Vamg": {
       "type": "videos",
       "blocks": {
@@ -636,7 +629,7 @@
     "demo_slider_1": {
       "type": "blog-slider",
       "settings": {
-        "title": "Featured slider",
+        "title": "Blogs slider",
         "blog": "posts",
         "enable_carousel": true,
         "grid": 3,
@@ -762,6 +755,7 @@
     }
   },
   "order": [
+    "video123",
     "compact_messages_FRrUMU",
     "hotspots_VgJx8w",
     "slideshow_yFaybj",
