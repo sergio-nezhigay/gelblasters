@@ -469,6 +469,88 @@
         "full_width": true
       }
     },
+    "videos_slider1": {
+      "type": "videos-slider",
+      "blocks": {
+        "video_i8F3E3": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "sdfh",
+            "video_description": "<p>zsdrfh</p>",
+            "thumbnail": "shopify://shop_images/gelblaster_skov.png"
+          }
+        },
+        "video_UHGkVL": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": ""
+          }
+        },
+        "video_yfWVRH": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": ""
+          }
+        },
+        "video_jWGdee": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": ""
+          }
+        },
+        "video_xTEXzn": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_i8F3E3",
+        "video_UHGkVL",
+        "video_yfWVRH",
+        "video_jWGdee",
+        "video_xTEXzn"
+      ],
+      "settings": {
+        "title": "Why kids love it",
+        "title_size_desktop": 32,
+        "title_size_mobile": 24,
+        "title_color": "#000000",
+        "max_width": "1200",
+        "custom_classes": "",
+        "enable_carousel": true,
+        "grid": 4,
+        "grid_mobile": 2,
+        "full_width": true,
+        "padding_top_desktop": 50,
+        "padding_bottom_desktop": 50,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "horizontal_padding_desktop": 20,
+        "horizontal_padding_mobile": 15,
+        "background_color": "#f2b580",
+        "video_border_radius": 8,
+        "video_title_size_desktop": 18,
+        "video_title_size_mobile": 16,
+        "video_title_color": "#000000",
+        "video_description_size": 14,
+        "video_description_color": "#666666",
+        "nav_button_bg": "#ffffff",
+        "nav_button_color": "#000000",
+        "nav_button_border": "#cccccc",
+        "nav_button_radius": 6
+      }
+    },
     "videos_i6Vamg": {
       "type": "videos",
       "blocks": {
@@ -668,48 +750,6 @@
       "name": "Running Icons",
       "settings": {}
     },
-    "videos_slider1": {
-      "type": "videos-slider",
-      "blocks": {
-        "video_UHGkVL": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4"
-          }
-        },
-        "video_yfWVRH": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4"
-          }
-        },
-        "video_jWGdee": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4"
-          }
-        },
-        "video_xTEXzn": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "video_UHGkVL",
-        "video_yfWVRH",
-        "video_jWGdee",
-        "video_xTEXzn"
-      ],
-      "settings": {
-        "title": "Featured slider",
-        "enable_carousel": true,
-        "grid": 3,
-        "rows": 1,
-        "full_width": true
-      }
-    },
     "collapsible_tabs_ijfrUg": {
       "type": "collapsible-tabs",
       "blocks": {
@@ -813,13 +853,13 @@
     "ss_feature_1_ETyXQr",
     "collection_list_jRtatE",
     "1480591889144",
+    "videos_slider1",
     "videos_i6Vamg",
     "testimonials_DDWNDh",
     "1617293273c37b524b",
     "demo_slider_1",
     "featured_blog_EeeUyD",
     "running_icons_FP6pYk",
-    "videos_slider1",
     "collapsible_tabs_ijfrUg"
   ]
 }
