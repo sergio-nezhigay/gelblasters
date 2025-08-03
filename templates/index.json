@@ -718,7 +718,7 @@
     "demo_slider_1": {
       "type": "blog-slider",
       "settings": {
-        "title": "Blogs slider",
+        "title": "Blogs posts",
         "blog": "posts",
         "enable_carousel": true,
         "grid": 3,
@@ -730,6 +730,7 @@
     },
     "featured_blog_EeeUyD": {
       "type": "featured-blog",
+      "disabled": true,
       "custom_css": [],
       "name": "Blog posts",
       "settings": {
