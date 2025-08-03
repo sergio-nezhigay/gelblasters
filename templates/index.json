@@ -29,7 +29,10 @@
           }
         }
       },
-      "block_order": ["message_VTcRXy", "message_WzaVGE"],
+      "block_order": [
+        "message_VTcRXy",
+        "message_WzaVGE"
+      ],
       "disabled": true,
       "name": "Store messages",
       "settings": {
@@ -84,7 +87,11 @@
           }
         }
       },
-      "block_order": ["hotspot_rEWgUJ", "hotspot_zHAJq6", "hotspot_jEA3c9"],
+      "block_order": [
+        "hotspot_rEWgUJ",
+        "hotspot_zHAJq6",
+        "hotspot_jEA3c9"
+      ],
       "disabled": true,
       "name": "Hotspots",
       "settings": {
@@ -175,7 +182,11 @@
           }
         }
       },
-      "block_order": ["image_9Wyhwe", "image_E9yfwh", "image_hxX6UJ"],
+      "block_order": [
+        "image_9Wyhwe",
+        "image_E9yfwh",
+        "image_hxX6UJ"
+      ],
       "custom_css": [],
       "settings": {
         "height": "fixed",
@@ -659,8 +670,55 @@
     },
     "videos_slider1": {
       "type": "videos-slider",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "video_tD6MmG": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "thumbnail_image": "shopify://shop_images/gelblaster_skov.png",
+            "video_title": ""
+          }
+        },
+        "video_EwrFGr": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "thumbnail_image": "shopify://shop_images/gelblaster_skov.png",
+            "video_title": ""
+          }
+        },
+        "video_bpYggn": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "thumbnail_image": "shopify://shop_images/gelblaster_skov.png",
+            "video_title": ""
+          }
+        },
+        "video_HwNVkN": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "thumbnail_image": "shopify://shop_images/gelblaster_skov.png",
+            "video_title": ""
+          }
+        },
+        "video_TV7WpW": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "thumbnail_image": "shopify://shop_images/gelblaster_skov.png",
+            "video_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_tD6MmG",
+        "video_EwrFGr",
+        "video_bpYggn",
+        "video_HwNVkN",
+        "video_TV7WpW"
+      ],
       "settings": {
         "title": "Featured slider",
         "enable_carousel": true,
