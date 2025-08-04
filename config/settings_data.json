@@ -93,7 +93,7 @@
     "prod_thumb_text_align": "center",
     "prod_thumb_hover_image": true,
     "prod_thumb_show_subtitle": false,
-    "quickbuy_style": "off",
+    "quickbuy_style": "button",
     "qb_show_app_blocks": true,
     "prod_block_label_loc": "top right",
     "prod_reduction_show": false,

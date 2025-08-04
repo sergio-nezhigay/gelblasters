@@ -1685,7 +1685,15 @@ h2,
 @media (max-width: 767px) {
   h2,
   .h2 {
-    font-size: 1.2em;
+    font-size: 1.5em !important;
+  }
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5 {
+    font-size: 1.1em !important;
   }
 }
 
@@ -1796,16 +1804,15 @@ h6,
   font-weight: 500;
   letter-spacing: var(--btn-letter-spacing);
   text-decoration: underline;
-  text-decoration-color: rgb(var(--link-color) / 0.4);
+  text-decoration-color: rgb(var(--link-color) / 0.2) !important;
   text-transform: var(--btn-text-transform);
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
+  border-bottom: 1px solid transparent !important;
+  transition: text-decoration-color 100ms;
 }
 .small-feature-link:hover {
-  text-decoration-color: rgb(var(--link-color));
-}
-.carousel .view-all .small-feature-link {
-  text-decoration: none;
+  text-decoration-color: rgb(var(--link-color) / 1) !important;
 }
 
 .underline,
@@ -2849,12 +2856,14 @@ main-navigation {
   padding-top: 22px;
   padding-bottom: 22px;
 }
+
 .navigation--left
   .navigation__tier-1-container
   .navigation__tier-1
   > .navigation__item
   > .navigation__link::before {
-  bottom: calc(50% - var(--theme-header-height) / 2 - 0.5px);
+  /*bottom: calc(50% - var(--theme-header-height) / 2 - 0.5px);*/
+  bottom: 17px;
 }
 
 .navigation__item {
@@ -2971,7 +2980,7 @@ main-navigation {
     .navigation__tier-1
     > .navigation__item
     > .navigation__link::after {
-    bottom: -1px;
+    bottom: 17px;
     /*bottom: 16px;*/
   }
   .navigation .navigation__tier-1 {
@@ -12191,7 +12200,7 @@ h4.collection-listing {
 }
 @media screen and (max-width: 767.98px) {
   .jdgm-rev-widg__title {
-    font-size: 19.2px !important;
+    font-size: 24px !important;
   }
 }
 
@@ -12244,12 +12253,14 @@ h4.collection-listing {
   width: fit-content;
   text-align: center;
   margin: 0 auto;
-  transition: all 0.3s ease-in-out;
-  border-bottom: 1px solid transparent;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease-in-out;
 }
+
 .slider__item:hover .product-block__title {
-  border-bottom: 1px solid;
+  text-decoration: underline;
 }
+
 .img-ar > img {
   transition: all 0.3s ease-in-out;
 }

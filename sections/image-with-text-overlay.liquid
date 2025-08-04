@@ -59,7 +59,9 @@
     {%- endfor -%}
   {% endstyle %}
 
-  {%- unless section.settings.full_width -%}<div class="container container--not-mobile fully-spaced-row--medium fully-spaced-row--not-mobile">{%- endunless -%}
+  {%- unless section.settings.full_width -%}
+    <div class="container container--not-mobile fully-spaced-row--medium fully-spaced-row--not-mobile">
+  {%- endunless -%}
 
   {%- liquid
     assign show_overlay_text = false
@@ -84,7 +86,10 @@
       assign wrap_image_with_link = true
     endif
   -%}
-  <div class="height--{{ section.settings.height }} image-overlay image-overlay--bg-{{ section.settings.overlay_style }} {% if section.settings.mobile_overlay_under %}text-overlay-parent--mobile-stack{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+  <div
+    class="height--{{ section.settings.height }} image-overlay image-overlay--bg-{{ section.settings.overlay_style }} {% if section.settings.mobile_overlay_under %}text-overlay-parent--mobile-stack{% endif %}"
+    {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}
+  >
     {%- if wrap_image_with_link -%}
       <a class="image-overlay__image-link" href="{{ section.settings.image_link }}">
     {%- endif -%}
@@ -98,7 +103,7 @@
     {%- else -%}
       {%- liquid
         assign loading = 'lazy'
-        assign fetchpriority = nil
+        assign fetchpriority = null
         if section.location == 'header' or section.location == 'template' and section.index == 1
           assign loading = 'eager'
           assign fetchpriority = 'high'
@@ -106,7 +111,12 @@
       -%}
 
       <div class="height__image image-overlay__image">
-        {%- render 'image-desktop-and-mobile', desktop_image: section.settings.image, mobile_image: section.settings.mobile_image, loading: loading, fetchpriority: fetchpriority -%}
+        {%- render 'image-desktop-and-mobile',
+          desktop_image: section.settings.image,
+          mobile_image: section.settings.mobile_image,
+          loading: loading,
+          fetchpriority: fetchpriority
+        -%}
       </div>
     {%- endif -%}
 
@@ -125,25 +135,53 @@
               {% case block.type %}
                 {% when 'heading' %}
                   {% if block.settings.use_h1 %}
-                    <h1 class="text-overlay__title block-{{ block.id }}" {{ block.shopify_attributes }}>{% render 'multiline-text' with block.settings.title %}</h1>
+                    <h1 class="text-overlay__title block-{{ block.id }}" {{ block.shopify_attributes }}>
+                      {% render 'multiline-text' with block.settings.title %}
+                    </h1>
                   {% else %}
-                    <h2 class="text-overlay__title h1 block-{{ block.id }}" {{ block.shopify_attributes }}>{% render 'multiline-text' with block.settings.title %}</h2>
+                    <h2 class="text-overlay__title h1 block-{{ block.id }}" {{ block.shopify_attributes }}>
+                      {% render 'multiline-text' with block.settings.title %}
+                    </h2>
                   {% endif %}
 
                 {% when 'subheading' %}
-                  <div class="text-overlay__subheading subheading subheading--over lightish-spaced-row-above" {{ block.shopify_attributes }}>{{ block.settings.subheading | escape }}</div>
+                  <div
+                    class="text-overlay__subheading subheading subheading--over lightish-spaced-row-above"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.subheading | escape }}
+                  </div>
 
                 {% when 'text' %}
-                  <div class="text-overlay__rte rte lightly-spaced-row {% if block.settings.enlarge_text %}large-text{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+                  <div
+                    class="text-overlay__rte rte lightly-spaced-row {% if block.settings.enlarge_text %}large-text{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.text }}
+                  </div>
 
                 {% when 'button' %}
-                  <div class="text-overlay__button-row button-row lightish-spaced-row-above" {{ block.shopify_attributes }}>
-                    <a class="text-overlay__button button-row__btn {% if block.settings.button_style != 'link' %}btn btn--{{ block.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}</a>
+                  <div
+                    class="text-overlay__button-row button-row lightish-spaced-row-above"
+                    {{ block.shopify_attributes }}
+                  >
+                    <a
+                      class="text-overlay__button button-row__btn {% if block.settings.button_style != 'link' %}btn btn--{{ block.settings.button_style }}{% else %}small-feature-link{% endif %}"
+                      href="{{ block.settings.button_link }}"
+                    >
+                      {{- block.settings.button_label | escape -}}
+                    </a>
                     {%- assign skip_block_count = 0 -%}
                     {%- for next_block in section.blocks offset: forloop.index -%}
                       {%- if next_block.type == 'button' -%}
                         {%- assign skip_block_count = skip_block_count | plus: 1 -%}
-                        <a class="text-overlay__button button-row__btn {% if next_block.settings.button_style != 'link' %}btn btn--{{ next_block.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ next_block.settings.button_link }}" {{ block.shopify_attributes }}>{{ next_block.settings.button_label | escape }}</a>
+                        <a
+                          class="text-overlay__button button-row__btn {% if next_block.settings.button_style != 'link' %}btn btn--{{ next_block.settings.button_style }}{% else %}small-feature-link{% endif %}"
+                          href="{{ next_block.settings.button_link }}"
+                          {{ block.shopify_attributes }}
+                        >
+                          {{- next_block.settings.button_label | escape -}}
+                        </a>
                       {%- else -%}
                         {%- break -%}
                       {%- endif -%}
@@ -158,7 +196,10 @@
                     }
                   {% endstyle %}
 
-                  <div class="block-id-{{ block.id }} lightly-spaced-row lightish-spaced-row-above countdown-font-{{ block.settings.number_font }} countdown-divider-{{ block.settings.divider_type }}" {{ block.shopify_attributes }}>
+                  <div
+                    class="block-id-{{ block.id }} lightly-spaced-row lightish-spaced-row-above countdown-font-{{ block.settings.number_font }} countdown-divider-{{ block.settings.divider_type }}"
+                    {{ block.shopify_attributes }}
+                  >
                     {% render 'countdown-timer',
                       end_date: block.settings.end_date,
                       end_time: block.settings.end_time,
@@ -168,7 +209,6 @@
                       show_labels: block.settings.show_timer_labels
                     %}
                   </div>
-
               {% endcase %}
             {% endfor %}
           </div>
@@ -184,15 +224,12 @@
   {%- unless section.settings.full_width -%}</div>{%- endunless -%}
 </image-with-text-overlay>
 
-
 {% schema %}
 {
   "name": "Image with text overlay",
   "class": "section-image-with-text-overlay",
   "disabled_on": {
-    "groups": [
-      "aside"
-    ]
+    "groups": ["aside"]
   },
   "settings": [
     {
