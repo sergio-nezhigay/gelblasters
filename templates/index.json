@@ -305,7 +305,7 @@
         "custom_classes": "",
         "enable_carousel": true,
         "grid": 4,
-        "grid_mobile": 2,
+        "grid_mobile": 1,
         "full_width": false,
         "padding_top_desktop": 50,
         "padding_bottom_desktop": 50,

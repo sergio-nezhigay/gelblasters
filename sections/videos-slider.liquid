@@ -203,6 +203,9 @@ class VideoPlayButtonManager {
   }
 
   setupHTML5VideoControls(wrapper, video) {
+    // Hide controls initially
+    video.removeAttribute('controls');
+
     // For HTML5 videos, create a custom play button overlay
     if (wrapper.querySelector('.video-play-button')) {
       return;
@@ -218,28 +221,23 @@ class VideoPlayButtonManager {
       </svg>
     `;
 
-    // Hide the button when video is playing
-    video.addEventListener('play', () => {
+    // Show controls and hide play button when video is played
+    playButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      video.setAttribute('controls', 'controls');
+      video.play();
       playButton.style.display = 'none';
     });
 
-    // Show the button when video is paused
+    // Hide controls and show play button when video is paused or ended
     video.addEventListener('pause', () => {
+      video.removeAttribute('controls');
       playButton.style.display = 'flex';
     });
 
-    // Show the button when video ends
     video.addEventListener('ended', () => {
+      video.removeAttribute('controls');
       playButton.style.display = 'flex';
-    });
-
-    playButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
     });
 
     wrapper.appendChild(playButton);
@@ -522,6 +520,12 @@ document.head.appendChild(styleSheet);
   opacity: 0;
   pointer-events: none;
 }
+
+{% comment %}.collection-slider.carousel[inactive] .slider-nav .slider-nav__btn {
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}{% endcomment %}
 
 @media screen and (max-width: 480px) {
   .section-id-{{ section.id }} .video-play-button svg {
