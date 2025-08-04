@@ -240,56 +240,58 @@
         "full_width": true
       }
     },
-    "videos_slider1": {
+    "video_slider": {
       "type": "videos-slider",
       "blocks": {
-        "video_i8F3E3": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
-            "video_title": "sdfh",
-            "video_description": ""
-          }
-        },
-        "video_UHGkVL": {
+        "video_67cape": {
           "type": "video",
           "settings": {
             "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
             "video_title": "",
-            "video_description": ""
+            "video_description": "",
+            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_34_29_PM.webp"
           }
         },
-        "video_yfWVRH": {
+        "video_PmiMmk": {
           "type": "video",
           "settings": {
             "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
             "video_title": "",
-            "video_description": ""
+            "video_description": "",
+            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_28_17_PM.webp"
           }
         },
-        "video_jWGdee": {
+        "video_p6Xei3": {
           "type": "video",
           "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_url": "",
             "video_title": "",
             "video_description": ""
           }
         },
-        "video_xTEXzn": {
+        "video_cQ4D7J": {
           "type": "video",
           "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_url": "",
+            "video_title": "",
+            "video_description": ""
+          }
+        },
+        "video_7rJ3tr": {
+          "type": "video",
+          "settings": {
+            "video_url": "",
             "video_title": "",
             "video_description": ""
           }
         }
       },
       "block_order": [
-        "video_i8F3E3",
-        "video_UHGkVL",
-        "video_yfWVRH",
-        "video_jWGdee",
-        "video_xTEXzn"
+        "video_67cape",
+        "video_PmiMmk",
+        "video_p6Xei3",
+        "video_cQ4D7J",
+        "video_7rJ3tr"
       ],
       "settings": {
         "title": "Why kids love it",
@@ -301,14 +303,14 @@
         "enable_carousel": true,
         "grid": 4,
         "grid_mobile": 2,
-        "full_width": true,
+        "full_width": false,
         "padding_top_desktop": 50,
         "padding_bottom_desktop": 50,
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 30,
         "horizontal_padding_desktop": 20,
         "horizontal_padding_mobile": 15,
-        "background_color": "#ffffff",
+        "background_color": "#f2b580",
         "video_border_radius": 8,
         "video_title_size_desktop": 18,
         "video_title_size_mobile": 16,
@@ -319,63 +321,6 @@
         "nav_button_color": "#000000",
         "nav_button_border": "#cccccc",
         "nav_button_radius": 6
-      }
-    },
-    "videos_i6Vamg": {
-      "type": "videos",
-      "blocks": {
-        "video_item_nJxEE6": {
-          "type": "video_item",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/556b2c0e5e5742e6bba33a5a3523c856.mp4",
-            "video_thumbnail": "shopify://shop_images/gelblaster_skov.png"
-          }
-        },
-        "video_item_Mcjcif": {
-          "type": "video_item",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/556b2c0e5e5742e6bba33a5a3523c856.mp4",
-            "video_thumbnail": "shopify://shop_images/gelblaster_skov.png"
-          }
-        },
-        "video_item_kkyzVa": {
-          "type": "video_item",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/556b2c0e5e5742e6bba33a5a3523c856.mp4",
-            "video_thumbnail": "shopify://shop_images/gelblaster_skov.png"
-          }
-        },
-        "video_item_443nBM": {
-          "type": "video_item",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/556b2c0e5e5742e6bba33a5a3523c856.mp4",
-            "video_thumbnail": "shopify://shop_images/gelblaster_skov.png"
-          }
-        }
-      },
-      "block_order": [
-        "video_item_nJxEE6",
-        "video_item_Mcjcif",
-        "video_item_kkyzVa",
-        "video_item_443nBM"
-      ],
-      "custom_css": [],
-      "name": "Video Testimonials",
-      "settings": {
-        "title": "Why Kids Love It",
-        "title_color": "#201230",
-        "title_size_desktop": 32,
-        "title_size_mobile": 28,
-        "grid_gap": 24,
-        "background_color": "#f2b580",
-        "max_width": "1400px",
-        "padding_top_desktop": 80,
-        "padding_bottom_desktop": 80,
-        "padding_top_mobile": 60,
-        "padding_bottom_mobile": 60,
-        "padding_horizontal_desktop": 60,
-        "padding_horizontal_mobile": 20,
-        "custom_class": ""
       }
     },
     "testimonials_DDWNDh": {
@@ -575,90 +520,6 @@
       "settings": {
         "title": "BATTLE FAQ"
       }
-    },
-    "videos_slider_qxCGDM": {
-      "type": "videos-slider",
-      "blocks": {
-        "video_WqXJnC": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/e45b6ef5fa474bc8978c39061ef047fd.mp4",
-            "video_title": "",
-            "video_description": ""
-          }
-        },
-        "video_yQdTXU": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/e45b6ef5fa474bc8978c39061ef047fd.mp4",
-            "video_title": "",
-            "video_description": ""
-          }
-        },
-        "video_9jgkRr": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/e45b6ef5fa474bc8978c39061ef047fd.mp4",
-            "video_title": "",
-            "video_description": ""
-          }
-        },
-        "video_Arf9rU": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/e45b6ef5fa474bc8978c39061ef047fd.mp4",
-            "video_title": "",
-            "video_description": "",
-            "thumbnail": "shopify://shop_images/Image_Jul_22_2025_02_34_57_PM_31cf325c-4aeb-438e-b5cf-89677fb80de9.webp"
-          }
-        },
-        "video_n3CwHH": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/e45b6ef5fa474bc8978c39061ef047fd.mp4",
-            "video_title": "",
-            "video_description": "",
-            "thumbnail": "shopify://shop_images/gelblaster_skov.png"
-          }
-        }
-      },
-      "block_order": [
-        "video_WqXJnC",
-        "video_yQdTXU",
-        "video_9jgkRr",
-        "video_Arf9rU",
-        "video_n3CwHH"
-      ],
-      "name": "Portrait Videos Slider",
-      "settings": {
-        "title": "Featured Videos",
-        "title_size_desktop": 32,
-        "title_size_mobile": 24,
-        "title_color": "#000000",
-        "max_width": "1200",
-        "custom_classes": "",
-        "enable_carousel": true,
-        "grid": 4,
-        "grid_mobile": 2,
-        "full_width": false,
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30,
-        "horizontal_padding_desktop": 20,
-        "horizontal_padding_mobile": 15,
-        "background_color": "#ffffff",
-        "video_border_radius": 8,
-        "video_title_size_desktop": 18,
-        "video_title_size_mobile": 16,
-        "video_title_color": "#000000",
-        "video_description_size": 14,
-        "video_description_color": "#666666",
-        "nav_button_bg": "#ffffff",
-        "nav_button_color": "#000000",
-        "nav_button_border": "#cccccc",
-        "nav_button_radius": 6
-      }
     }
   },
   "order": [
@@ -667,13 +528,11 @@
     "running_icons_ready",
     "collection_list_jRtatE",
     "1480591889144",
-    "videos_slider1",
-    "videos_i6Vamg",
+    "video_slider",
     "testimonials_DDWNDh",
     "demo_slider_1",
     "featured_blog_EeeUyD",
     "running_icons_FP6pYk",
-    "collapsible_tabs_ijfrUg",
-    "videos_slider_qxCGDM"
+    "collapsible_tabs_ijfrUg"
   ]
 }
