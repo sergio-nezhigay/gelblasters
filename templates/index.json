@@ -166,11 +166,6 @@
         "content_color": "#000000"
       }
     },
-    "running_icons_ready": {
-      "type": "running-icons",
-      "disabled": true,
-      "settings": {}
-    },
     "collection_list_jRtatE": {
       "type": "collection-list",
       "blocks": {
@@ -240,10 +235,10 @@
         "full_width": true
       }
     },
-    "video_slider": {
+    "videos_slider_3ETFzY": {
       "type": "videos-slider",
       "blocks": {
-        "video_67cape": {
+        "video_bMj86G": {
           "type": "video",
           "settings": {
             "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
@@ -252,7 +247,7 @@
             "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_34_29_PM.webp"
           }
         },
-        "video_PmiMmk": {
+        "video_4yqgc3": {
           "type": "video",
           "settings": {
             "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
@@ -261,7 +256,7 @@
             "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_28_17_PM.webp"
           }
         },
-        "video_p6Xei3": {
+        "video_AMpyYC": {
           "type": "video",
           "settings": {
             "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
@@ -270,16 +265,7 @@
             "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_28_26_PM.webp"
           }
         },
-        "video_cQ4D7J": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
-            "video_title": "",
-            "video_description": "",
-            "thumbnail": "shopify://shop_images/gelblaster_skov.png"
-          }
-        },
-        "video_7rJ3tr": {
+        "video_A43Q39": {
           "type": "video",
           "settings": {
             "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
@@ -287,21 +273,31 @@
             "video_description": "",
             "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_31_44_PM.webp"
           }
+        },
+        "video_DWTkzq": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": "",
+            "thumbnail": "shopify://shop_images/gelblaster_skov.png"
+          }
         }
       },
       "block_order": [
-        "video_67cape",
-        "video_PmiMmk",
-        "video_p6Xei3",
-        "video_cQ4D7J",
-        "video_7rJ3tr"
+        "video_bMj86G",
+        "video_4yqgc3",
+        "video_AMpyYC",
+        "video_A43Q39",
+        "video_DWTkzq"
       ],
+      "name": "Portrait Videos Slider",
       "settings": {
-        "title": "Why kids love it",
+        "title": "Featured Videos",
         "title_size_desktop": 32,
         "title_size_mobile": 24,
         "title_color": "#000000",
-        "max_width": "1200",
+        "max_width": "",
         "custom_classes": "",
         "enable_carousel": true,
         "grid": 4,
@@ -311,8 +307,8 @@
         "padding_bottom_desktop": 50,
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 30,
-        "horizontal_padding_desktop": 20,
-        "horizontal_padding_mobile": 15,
+        "horizontal_padding_desktop": 0,
+        "horizontal_padding_mobile": 0,
         "background_color": "#f2b580",
         "video_border_radius": 0,
         "video_title_size_desktop": 18,
@@ -408,29 +404,6 @@
         "full_width": false,
         "show_date": true
       }
-    },
-    "featured_blog_EeeUyD": {
-      "type": "featured-blog",
-      "disabled": true,
-      "custom_css": [],
-      "name": "Blog posts",
-      "settings": {
-        "title": "Blog posts",
-        "blog": "posts",
-        "post_limit": 3,
-        "show_author": false,
-        "show_date": true,
-        "show_excerpts": true,
-        "crop_ratio": "1.78",
-        "color_scheme": "1",
-        "section_bg_color": "#8ecad6"
-      }
-    },
-    "running_icons_FP6pYk": {
-      "type": "running-icons",
-      "disabled": true,
-      "name": "Running Icons",
-      "settings": {}
     },
     "collapsible_tabs_ijfrUg": {
       "type": "collapsible-tabs",
@@ -528,14 +501,11 @@
   "order": [
     "slideshow_yFaybj",
     "marque_PdAAc8",
-    "running_icons_ready",
     "collection_list_jRtatE",
     "1480591889144",
-    "video_slider",
+    "videos_slider_3ETFzY",
     "testimonials_DDWNDh",
     "demo_slider_1",
-    "featured_blog_EeeUyD",
-    "running_icons_FP6pYk",
     "collapsible_tabs_ijfrUg"
   ]
 }
