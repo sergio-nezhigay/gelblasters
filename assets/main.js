@@ -4394,10 +4394,25 @@ class CarouselSlider extends HTMLElement {
   setButtonStates() {
     this.prevBtn.disabled =
       this.getSlideVisibility(this.slides[0]) && this.slider.scrollLeft === 0;
-    this.nextBtn.disabled = this.getSlideVisibility(
-      this.slides[this.slides.length - 1]
+    this.nextBtn.disabled = isSlideEightyPercentVisible(
+      this.slides[this.slides.length - 1],
+      this.slider
     );
+    //this.nextBtn.disabled = this.getSlideVisibility(
+    //  this.slides[this.slides.length - 1]
+    //);
   }
+}
+
+function isSlideEightyPercentVisible(slide, container) {
+  const slideRect = slide.getBoundingClientRect();
+  const containerRect = container.getBoundingClientRect();
+
+  const visibleLeft = Math.max(slideRect.left, containerRect.left);
+  const visibleRight = Math.min(slideRect.right, containerRect.right);
+  const visibleWidth = Math.max(0, visibleRight - visibleLeft);
+
+  return visibleWidth >= 0.8 * slideRect.width;
 }
 
 customElements.define('carousel-slider', CarouselSlider);
