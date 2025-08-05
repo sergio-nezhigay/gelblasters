@@ -316,6 +316,7 @@
       "label": "Ordrebemærkning"
     },
     "summary": {
+      "subtotal": "Subtotal",
       "checkout": "Betaling",
       "continue_shopping": "Fortsæt shopping"
     },

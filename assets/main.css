@@ -12229,11 +12229,6 @@ h4.collection-listing {
   width: fit-content;
   margin: 0 auto;
 }
-.collection-desc-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
 
 .article-list .article .rte {
   display: -webkit-box;
@@ -12297,4 +12292,19 @@ h4.collection-listing {
 
 h2.majortitle.in-content.h1 {
   font-size: 20px !important;
+}
+
+.collection-desc-row .disclosure__title:before,
+.collection-desc-row .disclosure__title:after {
+  display: none;
+}
+
+.collection-desc-row .disclosure {
+  margin-bottom: 0;
+}
+.collection-description {
+  font-size: 18px;
+}
+.collection-desc-row .disclosure__title {
+  padding-right: 0;
 }

@@ -183,43 +183,36 @@
             {%- endif -%}
 
             {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-              <div class="collection-desc-row">
-                {% if section.settings.show_image_behind_heading == false and collection.image %}
-                  <div style="width:{{ section.settings.collection_image_size }}px; height:{{ section.settings.collection_image_size }}px; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
-                    {%- render 'image',
-                      image: collection.image,
-                      sizes: '{{ section.settings.collection_image_size }}px',
-                      height: '{{ section.settings.collection_image_size }}',
-                      width: '{{ section.settings.collection_image_size }}',
-                      style: 'object-fit:cover;border-radius:4px;'
-                    -%}
-                  </div>
-                {% endif %}
-
-                <div class="collapsible-tabs collection-desc-tabs">
-                  <div class="collapsible-tabs__tab">
-                    <details-disclosure>
-                      <details class="disclosure">
-                        <summary
-                          class="disclosure__title"
-                          aria-expanded="false"
-                          aria-controls="collection-desc-{{ section.id }}"
-                        >
-                          {{ 'sections.collection.more_information' | t }}
-                        </summary>
-                        <div
-                          class="disclosure__panel collapsible-tabs__tab-content"
-                          id="collection-desc-{{ section.id }}"
-                        >
-                          <div class="fine-accordion__content rte cf align-center reading-width">
-                            {{ collection.description }}
+              {% if collection.description != blank %}
+                <div class="collection-description">{{ collection.description }}</div>
+              {% endif %}
+              {% if collection.metafields.custom.full_description != blank %}
+                <div class="collection-desc-row">
+                  <div class="collapsible-tabs collection-desc-tabs">
+                    <div class="collapsible-tabs__tab">
+                      <details-disclosure>
+                        <details class="disclosure">
+                          <summary
+                            class="disclosure__title small-feature-link"
+                            aria-expanded="false"
+                            aria-controls="collection-desc-{{ section.id }}"
+                          >
+                            {{ 'sections.collection.more_information' | t }}...
+                          </summary>
+                          <div
+                            class="disclosure__panel collapsible-tabs__tab-content"
+                            id="collection-desc-{{ section.id }}"
+                          >
+                            <div class="fine-accordion__content rte cf align-center reading-width">
+                              {{ collection.metafields.custom.full_description | metafield_tag }}
+                            </div>
                           </div>
-                        </div>
-                      </details>
-                    </details-disclosure>
+                        </details>
+                      </details-disclosure>
+                    </div>
                   </div>
                 </div>
-              </div>
+              {% endif %}
             {% endif %}
           </div>
         </div>
