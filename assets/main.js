@@ -4392,12 +4392,16 @@ class CarouselSlider extends HTMLElement {
    * Sets the disabled state of the nav buttons.
    */
   setButtonStates() {
-    this.prevBtn.disabled =
-      this.getSlideVisibility(this.slides[0]) && this.slider.scrollLeft === 0;
     this.nextBtn.disabled = isSlideEightyPercentVisible(
       this.slides[this.slides.length - 1],
       this.slider
     );
+    this.prevBtn.disabled = isSlideEightyPercentVisible(
+      this.slides[0],
+      this.slider
+    );
+    //this.prevBtn.disabled =
+    //  this.getSlideVisibility(this.slides[0]) && this.slider.scrollLeft === 0;
     //this.nextBtn.disabled = this.getSlideVisibility(
     //  this.slides[this.slides.length - 1]
     //);
