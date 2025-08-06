@@ -1,0 +1,247 @@
+<div class="section-id-{{ section.id }} elements-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
+  <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %}{% if section.settings.full_width %} container--no-max{% endif %}">
+    {%- if section.settings.enable_carousel -%}
+      <carousel-slider class="carousel block collection-slider">
+    {%- endif -%}
+
+    <div
+      class="hometitle align-center has-paging{% if section.settings.enable_carousel %} slider-nav{% endif %}"
+      {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}
+    >
+      {% if section.settings.enable_carousel %}
+        <button name="prev" class="slider-nav__btn has-ltr-icon">
+          <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
+          {% render 'icon-chevron-left' %}
+        </button>
+      {% endif %}
+      <h2 class="has-paging__title h2 m-0">
+        {% if blog %}
+          <a href="{{ blog.url }}">{{ section.settings.title | escape }}</a>
+        {% else %}
+          {{ section.settings.title | escape }}
+        {% endif %}
+      </h2>
+
+      {% if section.settings.enable_carousel %}
+        <button name="next" class="slider-nav__btn has-ltr-icon">
+          <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
+          {% render 'icon-chevron-right' %}
+        </button>
+      {% endif %}
+    </div>
+
+    <div
+      class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad slider--no-scrollbar{% endif %}"
+      {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}
+    >
+      <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-1{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
+        {%- for block in section.blocks -%}
+          {%- if section.settings.enable_carousel -%}
+            <div class="slider__item">
+          {%- endif -%}
+          {% comment %}add preview image{% endcomment %}
+          <div class="element-block">
+            <div class="slide-image">
+              {% if block.settings.thumbnail %}
+                <img
+                  class="blog-image-img"
+                  src="{{ block.settings.thumbnail | img_url: '2048x2048' }}"
+                  alt="{{ block.settings.video_title | escape }}"
+                >
+              {% endif %}
+            </div>
+          </div>
+          {%- if section.settings.enable_carousel -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- if section.settings.enable_carousel -%}
+      </carousel-slider>
+    {%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+  .test-slider {
+    background-color: #8ecad6;
+  }
+  .test-slider .collection-slider .has-paging .slider-nav__btn {
+    background: white;
+    color: black;
+    border: 1px solid rgba(181, 181, 181, 1) !important;
+    border-radius: 6px;
+  }
+  .test-slider .element-block {
+    margin-bottom: 10px;
+  }
+  .test-slider .rte {
+    color: black;
+  }
+  .test-slider .small-feature-link {
+    color: black;
+    text-decoration-color: unset;
+    font-size: var(--small-feature-link-font-size);
+  }
+  .test-slider .elements-slider-row {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-top: 0;
+  }
+  .test-slider .slide-image {
+    position: relative;
+    width: 100%;
+    padding-top: 140%;
+    overflow: hidden;
+  }
+  .test-slider .blog-image-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: block;
+  }
+  .iconmeta.time {
+    color: black;
+  }
+  .slider-nav__btn {
+    opacity: 0.7;
+  }
+  .slider-nav__btn:hover {
+    opacity: 0.8;
+  }
+  .description {
+    color: black;
+    font-size: 14px;
+    margin-top: 10px;
+    text-overflow: wrap;
+    /*need to wrap text*/
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Test slider",
+  "class": "test-slider",
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["aside"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured slider"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "Enable carousel",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": "Products per row",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "label": "Rows",
+      "info": "Does not apply to carousel layout",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "default",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "id": "full_width",
+      "type": "checkbox",
+      "label": "Full page width",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show date",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL",
+          "info": "YouTube, Vimeo, or MP4 video URL"
+        },
+        {
+          "type": "text",
+          "id": "video_title",
+          "label": "Video Title"
+        },
+        {
+          "type": "richtext",
+          "id": "video_description",
+          "label": "Video Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "thumbnail",
+          "label": "Custom Thumbnail",
+          "info": "Optional fallback image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured slider",
+      "settings": {
+        "title": "Featured slider"
+      }
+    }
+  ]
+}
+{% endschema %}
