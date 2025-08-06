@@ -10191,6 +10191,15 @@ html:has(.drawer[open]) > body {
 .product-block .image-cont .btn.quickbuy-toggle {
   display: none;
 }
+.filter-container .product-block .image-cont .btn.quickbuy-toggle {
+  display: none !important;
+}
+.related-collection.collection-listing
+  .product-block
+  .image-cont
+  .btn.quickbuy-toggle {
+  display: none !important;
+}
 @media (min-width: 768px) {
   .product-block .image-cont .btn.quickbuy-toggle {
     display: block;
@@ -12137,7 +12146,7 @@ h1 {
 }
 .product-block__detail {
   font-size: 18px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .price__default {
   display: flex;
