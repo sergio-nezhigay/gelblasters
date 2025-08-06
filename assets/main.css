@@ -12312,6 +12312,12 @@ h2.majortitle.in-content.h1 {
 @media screen and (max-width: 767.98px) {
   .collection-description {
     font-size: 14px;
+    display: -webkit-box;
+    line-clamp: 7;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

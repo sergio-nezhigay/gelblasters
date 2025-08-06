@@ -188,7 +188,8 @@
       "grid_layout": "Grid",
       "list_layout": "List",
       "view_all_related_collections": "View all...",
-      "more_information": "More information"
+      "more_information": "More information",
+      "read_less": "Read less"
     },
     "countdown": {
       "days_short": "Day",

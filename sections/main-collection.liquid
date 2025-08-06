@@ -183,35 +183,11 @@
             {%- endif -%}
 
             {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-              {% if collection.description != blank %}
-                <div class="collection-description">{{ collection.description }}</div>
-              {% endif %}
+              <div class="collection-description">{{ collection.description }}</div>
               {% if collection.metafields.custom.full_description != blank %}
-                <div class="collection-desc-row">
-                  <div class="collapsible-tabs collection-desc-tabs">
-                    <div class="collapsible-tabs__tab">
-                      <details-disclosure>
-                        <details class="disclosure">
-                          <summary
-                            class="disclosure__title small-feature-link"
-                            aria-expanded="false"
-                            aria-controls="collection-desc-{{ section.id }}"
-                          >
-                            {{ 'sections.collection.more_information' | t }}...
-                          </summary>
-                          <div
-                            class="disclosure__panel collapsible-tabs__tab-content"
-                            id="collection-desc-{{ section.id }}"
-                          >
-                            <div class="fine-accordion__content rte cf align-center reading-width">
-                              {{ collection.metafields.custom.full_description | metafield_tag }}
-                            </div>
-                          </div>
-                        </details>
-                      </details-disclosure>
-                    </div>
-                  </div>
-                </div>
+                <button id="show-more-details" class="small-feature-link">
+                  {{ 'sections.collection.more_information' | t }}
+                </button>
               {% endif %}
             {% endif %}
           </div>
@@ -419,9 +395,50 @@
       {% render 'pagination-control', paginate: paginate %}
     </div>
   {% endpaginate %}
+  {% if collection.metafields.custom.full_description != blank and section.settings.coll_desc_pos == 'above' %}
+    <div id="full-description-block" class="collection-desc-row" style="display:none;">
+      <div class="collapsible-tabs collection-desc-tabs">
+        <div class="collapsible-tabs__tab">
+          <div class="fine-accordion__content rte cf align-center reading-width">
+            {{ collection.metafields.custom.full_description | metafield_tag }}
+          </div>
 
-
+          <button id="hide-more-details" class="small-feature-link">
+            {{ 'sections.collection.read_less' | t }}
+          </button>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 </div>
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnShow = document.getElementById('show-more-details');
+    const btnHide = document.getElementById('hide-more-details');
+    const block = document.getElementById('full-description-block');
+    if (btnShow && block) {
+      btnShow.addEventListener('click', function (e) {
+        e.preventDefault();
+        block.style.display = 'block';
+        btnShow.style.display = 'none';
+        const yOffset = -200;
+        const y = block.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    }
+    if (btnHide && block && btnShow) {
+      btnHide.addEventListener('click', function (e) {
+        e.preventDefault();
+        block.style.display = 'none';
+        btnShow.style.display = 'inline-block';
+        const yOffset = -200;
+        const y = btnShow.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    }
+  });
+{% endjavascript %}
 
 {% stylesheet %}
   .collection-listing .product-block {
@@ -448,6 +465,11 @@
   }
   .product-block:hover .img-ar > img {
     transform: scale(1.05);
+  }
+  #hide-more-details {
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
   }
 {% endstylesheet %}
 
