@@ -9398,7 +9398,6 @@ html:has(.modal[open]) > body {
 
 .slider__item {
   scroll-snap-align: start;
-  outline: 1px dotted red;
 }
 
 @media (--sm-down) {

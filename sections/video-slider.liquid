@@ -97,63 +97,54 @@
 </div>
 
 {% stylesheet %}
-  .test-slider {
+  .video-slider {
     background-color: #8ecad6;
   }
-  .test-slider .collection-slider .has-paging .slider-nav__btn {
+  .video-slider .collection-slider .has-paging .slider-nav__btn {
     background: white;
     color: black;
     border: 1px solid rgba(181, 181, 181, 1) !important;
-    border-radius: 6px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Enhanced navigation button hover */
-  .test-slider .collection-slider .has-paging .slider-nav__btn:hover {
+  .video-slider .collection-slider .has-paging .slider-nav__btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-color: rgba(150, 150, 150, 1) !important;
   }
 
-  .test-slider .element-block {
+  .video-slider .element-block {
     margin-bottom: 10px;
   }
-  .test-slider .rte {
+  .video-slider .rte {
     color: black;
   }
-  .test-slider .small-feature-link {
+  .video-slider .small-feature-link {
     color: black;
     text-decoration-color: unset;
     font-size: var(--small-feature-link-font-size);
   }
-  .test-slider .elements-slider-row {
+  .video-slider .elements-slider-row {
     padding-bottom: 50px;
     padding-top: 50px;
     margin-top: 0;
   }
 
-  /* Enhanced card hover effects */
-  .test-slider .hover-card {
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 8px;
+  .video-slider .hover-card {
     overflow: hidden;
     position: relative;
   }
 
-  .test-slider .hover-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .test-slider .slide-image {
+  .video-slider .slide-image {
     position: relative;
     width: 100%;
     padding-top: 140%;
     overflow: hidden;
-    border-radius: 8px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   }
 
-  .test-slider .image-img {
+  .video-slider .image-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -165,12 +156,18 @@
   }
 
   /* Subtle image zoom on hover */
-  .test-slider .hover-card:hover .image-img {
+  .video-slider .hover-card:hover .slide-image img.image-img {
     transform: scale(1.05);
   }
 
+  /* Remove zoom from video and iframe */
+  .video-slider .hover-card:hover .slide-image video.image-img,
+  .video-slider .hover-card:hover .slide-image iframe.image-img {
+    transform: none;
+  }
+
   /* Enhanced overlay effect */
-  .test-slider .hover-overlay {
+  .video-slider .hover-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -188,7 +185,7 @@
     z-index: 1;
   }
 
-  .test-slider .hover-card:hover .hover-overlay {
+  .video-slider .hover-card:hover .hover-overlay {
     opacity: 1;
   }
 
@@ -227,7 +224,7 @@
   }
 
   /* Enhanced play icon */
-  .test-slider .play-icon {
+  .video-slider .play-icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -243,7 +240,7 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .test-slider .play-icon-bg {
+  .video-slider .play-icon-bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -253,56 +250,47 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .test-slider .hover-card:hover .play-icon {
+  .video-slider .hover-card:hover .play-icon {
     transform: translate(-50%, -50%) scale(1.15);
   }
 
-  .test-slider .hover-card:hover .play-icon-bg {
+  .video-slider .hover-card:hover .play-icon-bg {
     background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
-  .test-slider .play-icon svg {
+  .video-slider .play-icon svg {
     position: relative;
     z-index: 1;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .test-slider .hover-card:hover .play-icon svg {
+  .video-slider .hover-card:hover .play-icon svg {
     transform: translateX(2px);
   }
 
-  .test-slider .slide-image video:playing + .play-icon {
+  .video-slider .slide-image video:playing + .play-icon {
     display: none;
   }
-  .test-slider .slide-image video:focus + .play-icon {
+  .video-slider .slide-image video:focus + .play-icon {
     display: none;
-  }
-
-  /* Add subtle shadow to cards */
-  .test-slider .hover-card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .test-slider .hover-card:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   }
 
   /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
-    .test-slider .hover-card,
-    .test-slider .image-img,
-    .test-slider .play-icon,
-    .test-slider .hover-overlay,
-    .test-slider .slider-nav__btn {
+    .video-slider .hover-card,
+    .video-slider .image-img,
+    .video-slider .play-icon,
+    .video-slider .hover-overlay,
+    .video-slider .slider-nav__btn {
       transition: none;
     }
 
-    .test-slider .hover-card:hover {
+    .video-slider .hover-card:hover {
       transform: none;
     }
 
-    .test-slider .hover-card:hover .image-img {
+    .video-slider .hover-card:hover .image-img {
       transform: none;
     }
   }
@@ -310,8 +298,8 @@
 
 {% schema %}
 {
-  "name": "Test slider",
-  "class": "test-slider",
+  "name": "Video slider",
+  "class": "video-slider",
   "disabled_on": {
     "templates": ["password"],
     "groups": ["aside"]
@@ -413,9 +401,9 @@
   ],
   "presets": [
     {
-      "name": "Featured slider",
+      "name": "Featured video slider",
       "settings": {
-        "title": "Featured slider"
+        "title": "Featured video slider"
       }
     }
   ]
