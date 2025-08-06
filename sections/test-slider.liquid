@@ -15,11 +15,7 @@
         </button>
       {% endif %}
       <h2 class="has-paging__title h2 m-0">
-        {% if blog %}
-          <a href="{{ blog.url }}">{{ section.settings.title | escape }}</a>
-        {% else %}
-          {{ section.settings.title | escape }}
-        {% endif %}
+        {{ section.settings.title | escape }}
       </h2>
 
       {% if section.settings.enable_carousel %}
@@ -42,12 +38,45 @@
           {% comment %}add preview image{% endcomment %}
           <div class="element-block">
             <div class="slide-image">
-              {% if block.settings.thumbnail %}
+              {% if block.settings.video_url %}
+                {% assign video_url = block.settings.video_url %}
+                <iframe
+                  class="image-img"
+                  src="https://player.vimeo.com/video/{{ video_url | split: '/' | last }}"
+                  title="{{ block.settings.video_title | escape }}"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                ></iframe>
+                <video
+                  class="image-img"
+                  src="{{ video_url }}"
+                  {% if block.settings.thumbnail %}
+                    poster="{{ block.settings.thumbnail | img_url: '2048x2048' }}"
+                  {% endif %}
+                  controls
+                ></video>
+                <span class="play-icon">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.5)"/>
+                    <polygon points="20,16 34,24 20,32" fill="#fff"/>
+                  </svg>
+                </span>
+
+              {% elsif block.settings.thumbnail %}
                 <img
-                  class="blog-image-img"
-                  src="{{ block.settings.thumbnail | img_url: '2048x2048' }}"
+                  class="image-img"
+                  src="{{ block.settings.thumbnail | image_url: width:800 }}"
                   alt="{{ block.settings.video_title | escape }}"
+                  width="800"
+                  height="800"
                 >
+                <span class="play-icon">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.5)"/>
+                    <polygon points="20,16 34,24 20,32" fill="#fff"/>
+                  </svg>
+                </span>
               {% endif %}
             </div>
           </div>
@@ -96,14 +125,13 @@
     padding-top: 140%;
     overflow: hidden;
   }
-  .test-slider .blog-image-img {
+  .test-slider .image-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     display: block;
   }
   .iconmeta.time {
@@ -115,15 +143,35 @@
   .slider-nav__btn:hover {
     opacity: 0.8;
   }
-  .description {
-    color: black;
-    font-size: 14px;
-    margin-top: 10px;
-    text-overflow: wrap;
-    /*need to wrap text*/
-    overflow-wrap: break-word;
-    word-break: break-word;
-    word-wrap: break-word;
+
+  .test-slider .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .test-slider .slide-image:hover .play-icon {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  .test-slider .play-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .test-slider .slide-image video:playing + .play-icon {
+    display: none;
+  }
+  .test-slider .slide-image video:focus + .play-icon {
+    display: none;
   }
 {% endstylesheet %}
 
@@ -141,11 +189,6 @@
       "id": "title",
       "label": "Heading",
       "default": "Featured slider"
-    },
-    {
-      "type": "blog",
-      "id": "blog",
-      "label": "Blog"
     },
     {
       "type": "checkbox",
