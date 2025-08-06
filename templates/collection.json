@@ -20,6 +20,7 @@
         "coll_desc_pos": "above",
         "coll_num_per_page_int": 24,
         "grid": 4,
+        "grid_small_desktop": 3,
         "show_vendor": false,
         "show_total": false,
         "enable_filtering": true,

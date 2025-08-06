@@ -99,6 +99,61 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "menu_promotion_large_BGxgGa": {
+          "type": "menu-promotion-large",
+          "settings": {
+            "dropdown_link_title": "sdfgh",
+            "desktop_image": "shopify://shop_images/file_0000000027406246946e0d9cc16879b7.png",
+            "mobile_image": "shopify://shop_images/file_0000000027406246946e0d9cc16879b7.png",
+            "enable_fade": true,
+            "image_position": "right",
+            "subheading": "Tell your story",
+            "title": "Wide menu promotion",
+            "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>",
+            "button_1_label": "Shop this",
+            "button_1_link": "",
+            "button_1_style": "secondary",
+            "button_2_label": "Shop all",
+            "button_2_link": "",
+            "button_2_style": "primary",
+            "text_alignment": "center",
+            "show_countdown": false,
+            "countdown_position": "under-heading",
+            "end_date": "",
+            "end_time": "",
+            "end_text": "",
+            "hide_on_end": false,
+            "number_size": 40,
+            "number_font": "base",
+            "divider_type": "colon",
+            "show_timer_labels": true
+          }
+        },
+        "menu_promotion_small_NE4LP8": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "asdg",
+            "image": "shopify://shop_images/20250803_135816.png",
+            "title": "srg",
+            "link_url": "#"
+          }
+        },
+        "menu_promotion_small_fkWHBB": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "test",
+            "image": "shopify://shop_images/20250803_134849.png",
+            "title": "zsr",
+            "link_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "menu_promotion_large_BGxgGa",
+        "menu_promotion_small_NE4LP8",
+        "menu_promotion_small_fkWHBB"
+      ],
       "settings": {
         "logo": "shopify://shop_images/logo.webp",
         "logo_img_width_int": 160,
@@ -115,7 +170,7 @@
         "menu_linklist_mobile": "",
         "mobile_expand_with_entire_link": true,
         "enable_mobile_promo_carousel": true,
-        "enable_nav_mob_products": false,
+        "enable_nav_mob_products": true,
         "nav_mob_products_title": "Best Sellers",
         "nav_mob_products_collection": "elektriske-vandpistoler",
         "enable_search": true,

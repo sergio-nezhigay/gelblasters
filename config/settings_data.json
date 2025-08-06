@@ -94,7 +94,7 @@
     "prod_thumb_hover_image": true,
     "prod_thumb_show_subtitle": false,
     "quickbuy_style": "button",
-    "qb_show_app_blocks": true,
+    "qb_show_app_blocks": false,
     "prod_block_label_loc": "top right",
     "prod_reduction_show": false,
     "prod_reduction_type": "percent",

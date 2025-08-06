@@ -12163,11 +12163,15 @@ h1 {
 }
 
 .product-block__title {
-  font-size: 22px;
+  font-size: 18px;
 }
 @media screen and (max-width: 767.98px) {
   .product-block__title {
     font-size: 18px;
+  }
+  .product-block__detail {
+    margin-top: 20px;
+    margin-bottom: 20px !important;
   }
 }
 
@@ -12303,8 +12307,18 @@ h2.majortitle.in-content.h1 {
   margin-bottom: 0;
 }
 .collection-description {
-  font-size: 18px;
+  font-size: 16px;
 }
+@media screen and (max-width: 767.98px) {
+  .collection-description {
+    font-size: 14px;
+  }
+}
+
 .collection-desc-row .disclosure__title {
   padding-right: 0;
+}
+.quickbuy-container.use-color-scheme {
+  background-color: white;
+  z-index: 10000;
 }

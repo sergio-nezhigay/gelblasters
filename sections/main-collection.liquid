@@ -420,14 +420,7 @@
     </div>
   {% endpaginate %}
 
-  {% if collection.description != blank and section.settings.coll_desc_pos == 'below' %}
-    <div
-      class="container container--reading-width fully-spaced-row"
-      {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}
-    >
-      <div class="rte cf">{{ collection.description }}</div>
-    </div>
-  {% endif %}
+
 </div>
 
 {% stylesheet %}
