@@ -10211,7 +10211,7 @@ html:has(.drawer[open]) > body {
     background: rgb(var(--btn-alt-bg-color));
     color: rgb(var(--btn-alt-text-color));
   }
-  .product-block .image-cont:hover .btn.quickbuy-toggle {
+  .product-block:hover .btn.quickbuy-toggle {
     visibility: visible;
     opacity: 1;
   }
