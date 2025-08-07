@@ -10191,9 +10191,9 @@ html:has(.drawer[open]) > body {
 .product-block .image-cont .btn.quickbuy-toggle {
   display: none;
 }
-.filter-container .product-block .image-cont .btn.quickbuy-toggle {
+/*.filter-container .product-block .image-cont .btn.quickbuy-toggle {
   display: none !important;
-}
+}*/
 .related-collection.collection-listing
   .product-block
   .image-cont
