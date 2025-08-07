@@ -35,27 +35,41 @@
           {%- if section.settings.enable_carousel -%}
             <div class="slider__item">
           {%- endif -%}
-          {% comment %}add preview image{% endcomment %}
+
           <div class="element-block hover-card">
             <div class="slide-image">
               {% if block.settings.video_url %}
                 {% assign video_url = block.settings.video_url %}
-                <iframe
-                  class="image-img"
-                  src="https://player.vimeo.com/video/{{ video_url | split: '/' | last }}"
-                  title="{{ block.settings.video_title | escape }}"
-                  frameborder="0"
-                  allow="autoplay; encrypted-media"
-                  allowfullscreen
-                ></iframe>
-                <video
-                  class="image-img"
-                  src="{{ video_url }}"
-                  {% if block.settings.thumbnail %}
-                    poster="{{ block.settings.thumbnail | img_url: '2048x2048' }}"
-                  {% endif %}
-                  controls
-                ></video>
+
+                {% if video_url contains 'vimeo.com' %}
+                  <iframe
+                    class="media-embed"
+                    src="https://player.vimeo.com/video/{{ video_url | split: '/' | last }}"
+                    title="{{ block.settings.video_title | escape }}"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                  ></iframe>
+                {% elsif video_url contains 'youtube.com' or video_url contains 'youtu.be' %}
+                  <iframe
+                    class="media-embed"
+                    src="https://www.youtube.com/embed/{% if video_url contains 'youtu.be/' %}{{ video_url | split: '/' | last }}{% else %}{{ video_url | split: 'v=' | last | split: '&' | first }}{% endif %}"
+                    title="{{ block.settings.video_title | escape }}"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                  ></iframe>
+                {% else %}
+                  <video
+                    class="media-embed"
+                    src="{{ video_url }}"
+                    {% if block.settings.thumbnail %}
+                      poster="{{ block.settings.thumbnail | image_url: width:400 }}"
+                    {% endif %}
+                    controls
+                  ></video>
+                {% endif %}
+
                 <div class="play-icon">
                   <div class="play-icon-bg"></div>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -65,7 +79,7 @@
 
               {% elsif block.settings.thumbnail %}
                 <img
-                  class="image-img"
+                  class="media-embed"
                   src="{{ block.settings.thumbnail | image_url: width:800 }}"
                   alt="{{ block.settings.video_title | escape }}"
                   width="800"
@@ -78,9 +92,6 @@
                   </svg>
                 </div>
               {% endif %}
-
-              <!-- Subtle overlay for enhanced hover effect -->
-              <div class="hover-overlay"></div>
             </div>
           </div>
           {%- if section.settings.enable_carousel -%}
@@ -100,31 +111,11 @@
   .video-slider {
     background-color: #8ecad6;
   }
-  .video-slider .collection-slider .has-paging .slider-nav__btn {
-    background: white;
-    color: black;
-    border: 1px solid rgba(181, 181, 181, 1) !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* Enhanced navigation button hover */
-  .video-slider .collection-slider .has-paging .slider-nav__btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-color: rgba(150, 150, 150, 1) !important;
-  }
 
   .video-slider .element-block {
     margin-bottom: 10px;
   }
-  .video-slider .rte {
-    color: black;
-  }
-  .video-slider .small-feature-link {
-    color: black;
-    text-decoration-color: unset;
-    font-size: var(--small-feature-link-font-size);
-  }
+
   .video-slider .elements-slider-row {
     padding-bottom: 50px;
     padding-top: 50px;
@@ -144,7 +135,7 @@
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   }
 
-  .video-slider .image-img {
+  .video-slider .media-embed {
     position: absolute;
     top: 0;
     left: 0;
@@ -155,75 +146,15 @@
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Subtle image zoom on hover */
-  .video-slider .hover-card:hover .slide-image img.image-img {
+  .video-slider .hover-card:hover .slide-image img.media-embed {
     transform: scale(1.05);
   }
 
-  /* Remove zoom from video and iframe */
-  .video-slider .hover-card:hover .slide-image video.image-img,
-  .video-slider .hover-card:hover .slide-image iframe.image-img {
+  .video-slider .hover-card:hover .slide-image video.media-embed,
+  .video-slider .hover-card:hover .slide-image iframe.media-embed {
     transform: none;
   }
 
-  /* Enhanced overlay effect */
-  .video-slider .hover-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 50%,
-      rgba(0, 0, 0, 0.05) 100%
-    );
-    opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .video-slider .hover-card:hover .hover-overlay {
-    opacity: 1;
-  }
-
-  .iconmeta.time {
-    color: black;
-  }
-
-  /* Enhanced navigation buttons */
-  .slider-nav__btn {
-    opacity: 0.7;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .slider-nav__btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, transparent 70%);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-  }
-
-  .slider-nav__btn:hover {
-    opacity: 1;
-  }
-
-  .slider-nav__btn:hover::before {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* Enhanced play icon */
   .video-slider .play-icon {
     position: absolute;
     top: 50%;
@@ -269,29 +200,14 @@
     transform: translateX(2px);
   }
 
-  .video-slider .slide-image video:playing + .play-icon {
-    display: none;
-  }
+  .video-slider .slide-image video:playing + .play-icon,
   .video-slider .slide-image video:focus + .play-icon {
     display: none;
   }
 
-  /* Reduce motion for users who prefer it */
-  @media (prefers-reduced-motion: reduce) {
-    .video-slider .hover-card,
-    .video-slider .image-img,
-    .video-slider .play-icon,
-    .video-slider .hover-overlay,
-    .video-slider .slider-nav__btn {
-      transition: none;
-    }
-
-    .video-slider .hover-card:hover {
-      transform: none;
-    }
-
-    .video-slider .hover-card:hover .image-img {
-      transform: none;
+  @media (max-width: 767px) {
+    .play-icon {
+      display: none !important;
     }
   }
 {% endstylesheet %}
@@ -361,12 +277,6 @@
       "type": "checkbox",
       "label": "Full page width",
       "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_date",
-      "label": "Show date",
-      "default": true
     }
   ],
   "blocks": [
@@ -384,11 +294,6 @@
           "type": "text",
           "id": "video_title",
           "label": "Video Title"
-        },
-        {
-          "type": "richtext",
-          "id": "video_description",
-          "label": "Video Description"
         },
         {
           "type": "image_picker",

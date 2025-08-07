@@ -1752,9 +1752,7 @@ h6,
   margin: 0 0 30px;
   line-height: 1em;
 }
-.hometitle .slider-nav__btn {
-  color: rgb(var(--heading-color));
-}
+
 @media (max-width: 1299.98px) {
   .hometitle {
     margin-bottom: 20px;
@@ -11017,18 +11015,6 @@ ul.inline li {
   }
 }
 
-.collection-slider .has-paging .slider-nav__btn {
-  display: inline-block;
-  margin: -10px 20px;
-  padding: 10px;
-  font-size: 80%;
-  line-height: 1em;
-  vertical-align: middle;
-}
-.collection-slider .has-paging .slider-nav__btn[disabled] {
-  opacity: 0.25;
-}
-
 .has-paging__title {
   display: inline-block;
   vertical-align: middle;
@@ -12336,4 +12322,26 @@ h2.majortitle.in-content.h1 {
 .quickbuy-container.use-color-scheme {
   background-color: white;
   z-index: 10000;
+}
+
+.slider-nav__btn {
+  background: white;
+  color: black;
+  border: 1px solid #d5d3d3;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.7 !important;
+  position: relative;
+  overflow: hidden;
+  margin: -10px 20px;
+  padding: 10px;
+  pointer-events: auto;
+}
+.slider-nav__btn:hover {
+  opacity: 0.9 !important;
+  border: 1px solid #555454;
+}
+.slider-nav__btn[disabled] {
+  opacity: 0.2 !important;
+  pointer-events: none;
 }
