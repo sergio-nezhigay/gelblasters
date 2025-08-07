@@ -9,73 +9,6 @@
  */
 {
   "sections": {
-    "video_slider": {
-      "type": "video-slider",
-      "blocks": {
-        "video_3NpPcr": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
-            "video_title": "",
-            "video_description": "",
-            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_34_29_PM.webp"
-          }
-        },
-        "video_6Y8YDL": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
-            "video_title": "",
-            "video_description": "",
-            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_28_17_PM.webp"
-          }
-        },
-        "video_pRAKTF": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
-            "video_title": "",
-            "video_description": "",
-            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_28_26_PM.webp"
-          }
-        },
-        "video_EVeVPP": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
-            "video_title": "",
-            "video_description": "",
-            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_28_26_PM.webp"
-          }
-        },
-        "video_yG9Agd": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
-            "video_title": "",
-            "video_description": "",
-            "thumbnail": "shopify://shop_images/gelblaster_skov.png"
-          }
-        }
-      },
-      "block_order": [
-        "video_3NpPcr",
-        "video_6Y8YDL",
-        "video_pRAKTF",
-        "video_EVeVPP",
-        "video_yG9Agd"
-      ],
-      "settings": {
-        "title": "Featured slider",
-        "blog": "",
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "full_width": false,
-        "show_date": false
-      }
-    },
     "slideshow_yFaybj": {
       "type": "slideshow",
       "blocks": {
@@ -144,7 +77,11 @@
           }
         }
       },
-      "block_order": ["image_9Wyhwe", "image_E9yfwh", "image_hxX6UJ"],
+      "block_order": [
+        "image_9Wyhwe",
+        "image_E9yfwh",
+        "image_hxX6UJ"
+      ],
       "custom_css": [],
       "settings": {
         "height": "fixed",
@@ -298,7 +235,72 @@
         "full_width": true
       }
     },
-
+    "video_slider": {
+      "type": "video-slider",
+      "blocks": {
+        "video_3NpPcr": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": "",
+            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_34_29_PM.webp"
+          }
+        },
+        "video_6Y8YDL": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": "",
+            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_28_17_PM.webp"
+          }
+        },
+        "video_pRAKTF": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": "",
+            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_28_26_PM.webp"
+          }
+        },
+        "video_EVeVPP": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": "",
+            "thumbnail": "shopify://shop_images/ChatGPT_Image_Aug_3_2025_12_31_44_PM.webp"
+          }
+        },
+        "video_yG9Agd": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/7cfe4ff5eb514d28a22a57827405fc22.mp4",
+            "video_title": "",
+            "video_description": "",
+            "thumbnail": "shopify://shop_images/gelblaster_skov.png"
+          }
+        }
+      },
+      "block_order": [
+        "video_3NpPcr",
+        "video_6Y8YDL",
+        "video_pRAKTF",
+        "video_EVeVPP",
+        "video_yG9Agd"
+      ],
+      "settings": {
+        "title": "Gameplay-videoer",
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "full_width": false,
+        "show_date": false
+      }
+    },
     "testimonials_DDWNDh": {
       "type": "testimonials",
       "blocks": {
