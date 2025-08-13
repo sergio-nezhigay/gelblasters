@@ -1,0 +1,1253 @@
+<style>
+  #section-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+    padding: {{ section.settings.padding_vertical_mobile }}px {{ section.settings.padding_horizontal_mobile }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    border-radius: {{ section.settings.border_radius }}px;
+    overflow: hidden;
+  }
+  
+  #section-{{ section.id }} .blog-posts-container {
+    margin: 0 auto;
+  }
+
+  #section-{{ section.id }} .blog-top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #section-{{ section.id }} .blog-title {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    font-size: {{ section.settings.title_size_mobile }}px; 
+    line-height: 130%;
+    color: {{ section.settings.title_color }};
+    font-weight: 700;
+  }
+
+  #section-{{ section.id }} .blog-tabs {
+    display: flex;
+    align-items: center;
+    gap: 18px;    
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+  }
+
+  #section-{{ section.id }} .blog-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  #section-{{ section.id }} .blog-tab {
+    margin: 0;
+    position: relative;
+    font-size: {{ section.settings.tab_size_mobile }}px; 
+    line-height: 130%;
+    color: {{ section.settings.tab_color }};
+    cursor: pointer;
+    transition: all 0.25s ease 0s;
+    font-weight: 700;
+    min-width: max-content;
+  }
+
+  #section-{{ section.id }} .blog-tab.active {
+    color: {{ section.settings.tab_active_color }};
+    transition: all 0.25s ease 0s;
+  }
+
+  #section-{{ section.id }} .blog-tab::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: {{ section.settings.tab_underline_color }};
+    transition: all 0.25s ease 0s;
+  }
+
+  #section-{{ section.id }} .blog-tab.active::after {
+    width: 100%;
+  }
+
+  #section-{{ section.id }} .blog-blog {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 0px;
+    margin-top: 20px;
+  }
+
+  #section-{{ section.id }} .blog-blog.active {
+    display: grid;
+  }
+
+  #section-{{ section.id }} .blog-empty-content {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.1);
+    color: {{ section.settings.title_color }};
+    border-radius: 8px;
+  }
+  
+  #section-{{ section.id }} .blog-big-article {
+    display: flex;
+    flex-direction: column; 
+    padding: 24px 0px;
+    border-top: 1px solid {{ section.settings.article_border_color }};
+    border-bottom: 0px;
+    gap: 20px;
+    grid-column-end: initial;
+  }
+  
+  #section-{{ section.id }} .blog-article {
+    display: flex;
+    flex-direction: column; 
+    padding: 24px 0px;   
+    border-top: 1px solid {{ section.settings.article_border_color }};
+    border-bottom: 0px;
+    gap: 20px;
+  }
+
+  #section-{{ section.id }} .blog-article:last-child {
+    border-bottom: 1px solid {{ section.settings.article_border_color }};
+  }
+
+  #section-{{ section.id }} .blog-article-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 0;
+    gap: 12px;
+  }
+
+  #section-{{ section.id }} .blog-article-title-wrap {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #section-{{ section.id }} .blog-article-link {
+    text-decoration: none;
+    display: block;
+  }
+
+  #section-{{ section.id }} .blog-article-image-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  #section-{{ section.id }} .blog-article-title,
+  #section-{{ section.id }} .blog-article-tag {
+    margin: 0;
+    font-size: {{ section.settings.article_title_size_mobile }}px; 
+    line-height: 130%;
+    color: {{ section.settings.article_title_color }};
+    font-weight: 700;
+    transition: all 0.5s ease 0s;
+  }
+
+  #section-{{ section.id }} .blog-article-tag {
+    color: {{ section.settings.article_tag_color }};
+    transition: all 0.25s ease 0s;
+  }
+
+  #section-{{ section.id }} .blog-article-text {
+    margin: 0;
+    font-size: {{ section.settings.article_text_size_mobile }}px; 
+    line-height: 150%;
+    color: {{ section.settings.article_text_color }};
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+  }
+
+  #section-{{ section.id }} .blog-article-image {
+    position: relative; 
+    overflow: hidden;
+    border-radius: {{ section.settings.article_image_border_radius }}px;
+    width: 100%;
+    padding-top: calc(100% / (var(--aspect-ratio))); 
+  }
+
+  #section-{{ section.id }} .blog-article-image img,
+  #section-{{ section.id }} .blog-article-image svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: all 0.5s ease 0s;
+  }
+
+  #section-{{ section.id }} .blog-article-image svg {
+    background-color: #CECECE;
+  }
+
+  #section-{{ section.id }} .blog-right-articles-wrapper {
+    grid-column-end: initial;
+  }
+
+  #section-{{ section.id }} .blog-right-articles {
+    display: none;
+    grid-template-columns: 1fr;    
+  }
+
+  #section-{{ section.id }} .blog-right-articles.active {
+    display: grid;
+  }
+
+  #section-{{ section.id }} .blog-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: fit-content;
+    margin: 0;
+    margin-top: 24px;
+    font-size: {{ section.settings.button_text_size }}px;
+    color: {{ section.settings.button_text_color }};
+    line-height: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 100px;
+    transition: all 0.25s ease 0s;
+    background-color: {{ section.settings.button_bg_color }};
+    border: 1px solid {{ section.settings.button_border_color }};
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  #section-{{ section.id }} .blog-button-inner {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #section-{{ section.id }} .blog-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  #section-{{ section.id }} .blog-button svg path {
+    fill: {{ section.settings.button_text_color }};
+    transition: all 0.25s ease 0s;
+  }
+
+  @media(min-width: 1024px) {
+    #section-{{ section.id }} {
+      padding: {{ section.settings.padding_vertical_desktop }}px {{ section.settings.padding_horizontal_desktop }}px;
+    }
+    
+    #section-{{ section.id }} .blog-top {
+      flex-direction: row;
+    }
+
+    #section-{{ section.id }} .blog-title {
+      max-width: 40%;
+      font-size: {{ section.settings.title_size_desktop }}px; 
+    }
+
+    #section-{{ section.id }} .blog-tabs {
+      gap: 24px;    
+      overflow-x: visible;
+      width: auto;
+    }
+
+    #section-{{ section.id }} .blog-tab {
+      font-size: {{ section.settings.tab_size_desktop }}px; 
+    }
+
+    #section-{{ section.id }} .blog-tab:hover {
+      color: {{ section.settings.tab_active_color }};
+      transition: all 0.25s ease 0s;
+    }
+
+    #section-{{ section.id }} .blog-tab:hover::after {
+      width: 100%;
+      transition: all 0.25s ease 0s;
+    }
+
+    #section-{{ section.id }} .blog-blog {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 80px;
+      margin-top: 40px;
+    }
+
+    #section-{{ section.id }} .blog-big-article {
+      flex-direction: row; 
+      justify-content: space-between;
+      align-items: flex-start;
+      border-top: 1px solid {{ section.settings.article_border_color }};
+      border-bottom: 1px solid {{ section.settings.article_border_color }};
+      padding: 24px 0px;
+      grid-column-end: span 3;
+      gap: 30px;
+    }
+
+    #section-{{ section.id }} .blog-article {
+      flex-direction: row; 
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 24px 0px;
+      gap: 30px;
+    }
+
+    #section-{{ section.id }} .blog-article-title,
+    #section-{{ section.id }} .blog-article-tag {
+      font-size: {{ section.settings.article_title_size_desktop }}px; 
+    }
+
+    #section-{{ section.id }} .blog-article-tag:hover {
+      color: {{ section.settings.article_title_color }};
+      transition: all 0.25s ease 0s;
+    }
+
+    #section-{{ section.id }} .blog-article-text {
+      font-size: {{ section.settings.article_text_size_desktop }}px; 
+      opacity: 0;
+      transform: translateY(-10%);
+    }    
+
+    #section-{{ section.id }} .blog-big-article:hover .blog-article-text {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: all 0.5s ease 0s;
+    }
+    
+    #section-{{ section.id }} .blog-article:hover .blog-article-text {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: all 0.5s ease 0s;
+    }
+    
+    #section-{{ section.id }} .blog-article-title-wrap:hover {
+      transform: skew(-10deg);
+      transition: all 0.5s ease 0s;
+    }
+
+    #section-{{ section.id }} .blog-right-articles-wrapper {
+      grid-column-end: span 2;
+    }
+
+    #section-{{ section.id }} .blog-article:not(:last-child) {
+      border-top: 1px solid {{ section.settings.article_border_color }};
+    }
+
+    #section-{{ section.id }} .blog-article:last-child {
+      border-top: 1px solid {{ section.settings.article_border_color }};
+      border-bottom: 1px solid {{ section.settings.article_border_color }};
+    }
+
+    #section-{{ section.id }} .blog-big-article:hover .blog-article-image img,
+    #section-{{ section.id }} .blog-big-article:hover .blog-article-image svg {
+      transition: all 0.5s ease 0s;
+      transform: scale(1.1);
+    }
+
+    #section-{{ section.id }} .blog-article:hover .blog-article-image img,
+    #section-{{ section.id }} .blog-article:hover .blog-article-image svg {
+      transition: all 0.5s ease 0s;
+      transform: scale(1.1);
+    }
+
+    #section-{{ section.id }} .blog-article-content {
+      width: 60%; 
+    }
+
+    #section-{{ section.id }} .blog-article-image-link {
+      width: 40%; 
+    }
+
+    #section-{{ section.id }} .blog-button {
+      margin-top: 60px;
+      padding: 12px 28px;
+      font-size: {{ section.settings.button_text_size }}px;
+    }
+    
+    #section-{{ section.id }} .blog-button:hover {
+      color: {{ section.settings.button_text_hover_color }};
+      background-color: {{ section.settings.button_bg_hover_color }};
+      border-color: {{ section.settings.button_border_hover_color }};
+      transition: all 0.25s ease 0s;
+    }
+
+    #section-{{ section.id }} .blog-button:hover svg path {
+      fill: {{ section.settings.button_text_hover_color }};
+      transition: all 0.25s ease 0s;
+    }
+  }
+  </style>
+  <!-- Fixed mobile styles and hover effects -->
+<style>
+  /* Remove all hover effects for blog-article-title */
+  #section-{{ section.id }} .blog-article-title {
+    cursor: pointer;
+    transition: none !important;
+  }
+  
+  /* Remove hover effects from title wrapper */
+  #section-{{ section.id }} .blog-article-title-wrap:hover {
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  /* Add pointer cursor to the link */
+  #section-{{ section.id }} .blog-article-link {
+    cursor: pointer;
+  }
+  
+  /* Mobile styles - properly resize images without hiding them */
+  @media (max-width: 1023px) {
+    /* Make images smaller on mobile but keep them visible */
+    #section-{{ section.id }} .blog-article-image {
+      width: 120px !important;
+      height: auto;
+      min-width: 120px;
+    }
+    
+    #section-{{ section.id }} .blog-article-image-link {
+      width: 120px !important;
+      min-width: 120px;
+      flex-shrink: 0;
+    }
+    
+    /* Ensure proper flex layout on mobile */
+    #section-{{ section.id }} .blog-article,
+    #section-{{ section.id }} .blog-big-article {
+      flex-direction: row;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    
+    #section-{{ section.id }} .blog-article-content {
+      flex: 1;
+      width: calc(100% - 135px); /* Account for image width + gap */
+    }
+    
+    /* Fix the padding-top for aspect ratio to work properly */
+    #section-{{ section.id }} .blog-article-image {
+      padding-top: 120px !important; /* Fixed height for mobile */
+    }
+  }
+  
+  /* Desktop styles - remove hover effects */
+  @media (min-width: 1024px) {
+    #section-{{ section.id }} .blog-article-title-wrap:hover {
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+/* Мобільні стилі для tab-link */
+#section-{{ section.id }} .blog-tab-link {
+  margin: 0;
+  position: relative;
+  font-size: {{ section.settings.tab_size_mobile }}px; 
+  line-height: 130%;
+  color: {{ section.settings.tab_color }};
+  cursor: pointer;
+  transition: all 0.25s ease 0s;
+  font-weight: 700;
+  min-width: max-content;
+  text-decoration: none;
+  display: block; /* Важливо для правильного вирівнювання */
+}
+
+#section-{{ section.id }} .blog-tab-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: {{ section.settings.tab_underline_color }};
+  transition: all 0.25s ease 0s;
+}
+
+/* Вставити у @media(min-width: 1024px) */
+#section-{{ section.id }} .blog-tab-link {
+  font-size: {{ section.settings.tab_size_desktop }}px;
+}
+
+#section-{{ section.id }} .blog-tab-link:hover {
+  color: {{ section.settings.tab_active_color }};
+  transition: all 0.25s ease 0s;
+}
+
+#section-{{ section.id }} .blog-tab-link:hover::after {
+  width: 100%;
+  transition: all 0.25s ease 0s;
+}
+</style>
+<section id="section-{{ section.id }}" class="blog-posts-wrapper {{ section.settings.custom_class }}" style="background-color:{{ section.settings.background_color }};">
+  <div class="blog-posts-container" style="max-width: {{ section.settings.section_max_width }}px;">
+    <div class="blog-top">
+  {% if section.settings.title != blank %}
+    <h2 class="blog-title">{{ section.settings.title }}</h2>
+  {% endif %}
+  
+  <div class="blog-tabs">
+    {% for block in section.blocks %}
+      {% if block.type == 'tab' %}
+        <p class="blog-tab {% if forloop.first and section.blocks[0].type == 'tab' %}active{% endif %}" id="tab_{{ block.id }}">{{ block.settings.tab_title }}</p>
+      {% elsif block.type == 'tab_link' %}
+        <a href="{{ block.settings.tab_url }}" class="blog-tab-link">{{ block.settings.tab_title }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>       
+</div>
+    <div class="blog-blogs">
+      {% for tab_block in section.blocks %}
+        {% if tab_block.type == 'tab' %}
+          {% assign tab_id = tab_block.id %}
+          {% assign found_content = false %}
+          
+          {% for content_block in section.blocks %}
+            {% if content_block.type == 'tab_content' and content_block.settings.tab_id == tab_id %}
+              {% assign found_content = true %}
+              
+              <div class="blog-blog {% if forloop.first or forloop.index == 1 %}active{% endif %}" data-id="tab_{{ tab_id }}">
+                <div class="blog-big-article">
+                  <div class="blog-article-content">
+                    <div class="blog-article-title-wrap">
+                      {% if content_block.settings.main_article_title != blank %}
+                        <a href="{{ content_block.settings.main_article_url | default: '#' }}" class="blog-article-link">
+                          <span>
+                            <span class="blog-article-title">
+                              <span>{{ content_block.settings.main_article_title }}</span>      
+                              {% if content_block.settings.main_article_tag != blank %}
+                                <span>
+                                  <span class="blog-article-tag">{{ content_block.settings.main_article_tag }}</span>                   
+                                </span>                         
+                              {% endif %}                
+                            </span>    
+                          </span>
+                        </a>                                                        
+                      {% endif %}                 
+                    </div>
+                    {% if content_block.settings.main_article_text != blank %}
+                      <div class="blog-article-text">{{ content_block.settings.main_article_text }}</div>
+                    {% endif %}
+                  </div>
+                  <a href="{{ content_block.settings.main_article_url | default: '#' }}" class="blog-article-image-link">
+                    {% assign main_aspect_ratio = section.settings.article_image_aspect_ratio | default: "1/1" %}
+                    {% if main_aspect_ratio contains "/" %}
+                      {% assign main_ratio_parts = main_aspect_ratio | split: "/" %}
+                      {% assign main_ratio_width = main_ratio_parts[0] | plus: 0 %}
+                      {% assign main_ratio_height = main_ratio_parts[1] | plus: 0 %}
+                    {% else %}
+                      {% assign main_ratio_width = main_aspect_ratio | plus: 0 %}
+                      {% assign main_ratio_height = 1 %}
+                    {% endif %}
+                    
+                    <div class="blog-article-image blog-article-main-image" 
+                         data-aspect-ratio="{{ main_ratio_width }}/{{ main_ratio_height }}"
+                         style="--aspect-ratio: {{ main_ratio_width }}/{{ main_ratio_height }};">
+                      {% if content_block.settings.main_article_image != blank %}
+                        <img src="{{ content_block.settings.main_article_image | img_url: 'master' }}" 
+                             alt="{{ content_block.settings.main_article_title }}" 
+                             loading="lazy">
+                      {% else %}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 525.5 525.5"><path d="M324.5 212.7H203c-1.6 0-2.8 1.3-2.8 2.8V308c0 1.6 1.3 2.8 2.8 2.8h121.6c1.6 0 2.8-1.3 2.8-2.8v-92.5c0-1.6-1.3-2.8-2.9-2.8zm1.1 95.3c0 .6-.5 1.1-1.1 1.1H203c-.6 0-1.1-.5-1.1-1.1v-92.5c0-.6.5-1.1 1.1-1.1h121.6c.6 0 1.1.5 1.1 1.1V308z"></path><path d="M210.4 299.5H240v.1s.1 0 .2-.1h75.2v-76.2h-105v76.2zm1.8-7.2l20-20c1.6-1.6 3.8-2.5 6.1-2.5s4.5.9 6.1 2.5l1.5 1.5 16.8 16.8c-12.9 3.3-20.7 6.3-22.8 7.2h-27.7v-5.5zm101.5-10.1c-20.1 1.7-36.7 4.8-49.1 7.9l-16.9-16.9 26.3-26.3c1.6-1.6 3.8-2.5 6.1-2.5s4.5.9 6.1 2.5l27.5 27.5v7.8zm-68.9 15.5c9.7-3.5 33.9-10.9 68.9-13.8v13.8h-68.9zm68.9-72.7v46.8l-26.2-26.2c-1.9-1.9-4.5-3-7.3-3s-5.4 1.1-7.3 3l-26.3 26.3-.9-.9c-1.9-1.9-4.5-3-7.3-3s-5.4 1.1-7.3 3l-18.8 18.8V225h101.4z"></path><path d="M232.8 254c4.6 0 8.3-3.7 8.3-8.3s-3.7-8.3-8.3-8.3-8.3 3.7-8.3 8.3 3.7 8.3 8.3 8.3zm0-14.9c3.6 0 6.6 2.9 6.6 6.6s-2.9 6.6-6.6 6.6-6.6-2.9-6.6-6.6 3-6.6 6.6-6.6z"></path></svg>
+                      {% endif %}
+                    </div>
+                  </a>
+                </div>
+                <div class="blog-right-articles-wrapper">
+                  <div class="blog-right-articles active" data-id="tab_{{ tab_id }}">
+                    {% for i in (1..3) %}
+                      {% assign article_title = 'article_title_' | append: i %}
+                      {% assign article_tag = 'article_tag_' | append: i %}
+                      {% assign article_text = 'article_text_' | append: i %}
+                      {% assign article_image = 'article_image_' | append: i %}
+                      {% assign article_image_aspect_ratio = 'article_image_aspect_ratio_' | append: i %}
+                      {% assign article_url = 'article_url_' | append: i %}
+                      
+                      {% if content_block.settings[article_title] != blank %}
+                        <div class="blog-article">
+                          <div class="blog-article-content">
+                            <div class="blog-article-title-wrap">
+                              <a href="{{ content_block.settings[article_url] | default: '#' }}" class="blog-article-link">
+                                <span>
+                                  <span class="blog-article-title">
+                                    <span>{{ content_block.settings[article_title] }}</span>
+                                    {% if content_block.settings[article_tag] != blank %}
+                                      <span>
+                                        <span class="blog-article-tag">{{ content_block.settings[article_tag] }}</span>
+                                      </span>                                  
+                                    {% endif %}
+                                  </span>
+                                </span>
+                              </a>                             
+                            </div>
+                            {% if content_block.settings[article_text] != blank %}
+                              <div class="blog-article-text">{{ content_block.settings[article_text] }}</div>                          
+                            {% endif %}
+                          </div>
+                          <a href="{{ content_block.settings[article_url] | default: '#' }}" class="blog-article-image-link">
+                            {% assign article_aspect_ratio = content_block.settings[article_image_aspect_ratio] | default: section.settings.article_image_aspect_ratio | default: "1/1" %}
+                            {% if article_aspect_ratio contains "/" %}
+                              {% assign ratio_parts = article_aspect_ratio | split: "/" %}
+                              {% assign ratio_width = ratio_parts[0] | plus: 0 %}
+                              {% assign ratio_height = ratio_parts[1] | plus: 0 %}
+                            {% else %}
+                              {% assign ratio_width = article_aspect_ratio | plus: 0 %}
+                              {% assign ratio_height = 1 %}
+                            {% endif %}
+                            
+                            <div class="blog-article-image blog-article-article-image" 
+                                 data-aspect-ratio="{{ ratio_width }}/{{ ratio_height }}"
+                                 style="--aspect-ratio: {{ ratio_width }}/{{ ratio_height }};">
+                              {% if content_block.settings[article_image] != blank %}
+                                <img src="{{ content_block.settings[article_image] | img_url: 'master' }}" 
+                                     alt="{{ content_block.settings[article_title] }}" 
+                                     loading="lazy">
+                              {% else %}
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 525.5 525.5"><path d="M324.5 212.7H203c-1.6 0-2.8 1.3-2.8 2.8V308c0 1.6 1.3 2.8 2.8 2.8h121.6c1.6 0 2.8-1.3 2.8-2.8v-92.5c0-1.6-1.3-2.8-2.9-2.8zm1.1 95.3c0 .6-.5 1.1-1.1 1.1H203c-.6 0-1.1-.5-1.1-1.1v-92.5c0-.6.5-1.1 1.1-1.1h121.6c.6 0 1.1.5 1.1 1.1V308z"></path><path d="M210.4 299.5H240v.1s.1 0 .2-.1h75.2v-76.2h-105v76.2zm1.8-7.2l20-20c1.6-1.6 3.8-2.5 6.1-2.5s4.5.9 6.1 2.5l1.5 1.5 16.8 16.8c-12.9 3.3-20.7 6.3-22.8 7.2h-27.7v-5.5zm101.5-10.1c-20.1 1.7-36.7 4.8-49.1 7.9l-16.9-16.9 26.3-26.3c1.6-1.6 3.8-2.5 6.1-2.5s4.5.9 6.1 2.5l27.5 27.5v7.8zm-68.9 15.5c9.7-3.5 33.9-10.9 68.9-13.8v13.8h-68.9zm68.9-72.7v46.8l-26.2-26.2c-1.9-1.9-4.5-3-7.3-3s-5.4 1.1-7.3 3l-26.3 26.3-.9-.9c-1.9-1.9-4.5-3-7.3-3s-5.4 1.1-7.3 3l-18.8 18.8V225h101.4z"></path><path d="M232.8 254c4.6 0 8.3-3.7 8.3-8.3s-3.7-8.3-8.3-8.3-8.3 3.7-8.3 8.3 3.7 8.3 8.3 8.3zm0-14.9c3.6 0 6.6 2.9 6.6 6.6s-2.9 6.6-6.6 6.6-6.6-2.9-6.6-6.6 3-6.6 6.6-6.6z"></path></svg>
+                              {% endif %}
+                            </div>
+                          </a>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+          
+          {% unless found_content %}
+            <div class="blog-blog {% if forloop.first %}active{% endif %}" data-id="tab_{{ tab_id }}">
+              <p class="blog-empty-content">No content found for this tab. Add a "Tab Content" block and set tab_id: {{ tab_id }}</p>
+            </div>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% if section.settings.button_text != blank and section.settings.button_url != blank %}
+      <a href="{{ section.settings.button_url }}" class="blog-button">
+        <p class="blog-button-inner">
+        {{ section.settings.button_text }}
+        {% if section.settings.button_icon %}
+          <svg width="14" height="14" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5625 5H8.4375" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.625 2.1875L8.4375 5.00001L5.625 7.81251" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        {% endif %}
+        </p>
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+              
+<script>
+  function initBlogPosts{{ section.id | replace: '-', '_' }}() {
+    const sectionId = '{{ section.id }}';
+    const tabs = document.querySelectorAll(`#section-${sectionId} .blog-tab`);
+    const blogs = document.querySelectorAll(`#section-${sectionId} .blog-blog`);
+    const rightArticles = document.querySelectorAll(`#section-${sectionId} .blog-right-articles`);
+    const images = document.querySelectorAll(`#section-${sectionId} .blog-article-image`);
+    images.forEach(image => {
+      const aspectRatio = image.getAttribute('data-aspect-ratio');
+      if (aspectRatio) {
+        image.style.setProperty('--aspect-ratio', aspectRatio);
+      }
+    });
+    
+    if (blogs.length > 0) {
+      blogs[0].classList.add('active');
+    }
+    
+    if (rightArticles.length > 0) {
+      rightArticles[0].classList.add('active');
+    }
+
+    if(tabs.length > 0) {
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(tab => tab.classList.remove('active'));
+          blogs.forEach(blog => blog.classList.remove('active'));
+          rightArticles.forEach(articles => articles.classList.remove('active'));
+
+          tab.classList.add('active');
+          
+          const tabId = tab.id;
+          blogs.forEach(blog => {
+            if(blog.getAttribute('data-id') === tabId) {
+              blog.classList.add('active');
+            }
+          });
+          
+          rightArticles.forEach(articles => {
+            if(articles.getAttribute('data-id') === tabId) {
+              articles.classList.add('active');
+            }
+          });
+        });
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initBlogPosts{{ section.id | replace: '-', '_' }});
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:unload', initBlogPosts{{ section.id | replace: '-', '_' }});
+    document.addEventListener('shopify:section:load', initBlogPosts{{ section.id | replace: '-', '_' }});
+  }
+</script>
+
+  {% schema %}
+{
+  "name": "Blog Posts Grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Blog posts"
+    },
+    {
+      "type": "text",
+      "id": "section_max_width",
+      "label": "Section Max Width (px)",
+      "default": "1200"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#262613"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#F6F5F3"
+    },
+    {
+      "type": "color",
+      "id": "tab_color",
+      "label": "Tab Color",
+      "default": "#adaca5"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_color",
+      "label": "Active Tab Color",
+      "default": "#F6F5F3"
+    },
+    {
+      "type": "color",
+      "id": "tab_underline_color",
+      "label": "Tab Underline Color",
+      "default": "#8e8e83"
+    },
+    {
+      "type": "color",
+      "id": "article_border_color",
+      "label": "Article Border Color",
+      "default": "#8e8e83"
+    },
+    {
+      "type": "color",
+      "id": "article_title_color",
+      "label": "Article Title Color",
+      "default": "#F6F5F3"
+    },
+    {
+      "type": "color",
+      "id": "article_tag_color",
+      "label": "Article Tag Color",
+      "default": "#adaca5"
+    },
+    {
+      "type": "color",
+      "id": "article_text_color",
+      "label": "Article Text Color",
+      "default": "#F6F5F3"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical_mobile",
+      "label": "Vertical Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical_desktop",
+      "label": "Vertical Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal_mobile",
+      "label": "Horizontal Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal_desktop",
+      "label": "Horizontal Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom Margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border Radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Font Sizes"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title Size (Mobile)",
+      "min": 16,
+      "max": 64,
+      "step": 2,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Title Size (Desktop)",
+      "min": 16,
+      "max": 64,
+      "step": 2,
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "tab_size_mobile",
+      "label": "Tab Size (Mobile)",
+      "min": 12,
+      "max": 36,
+      "step": 2,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "tab_size_desktop",
+      "label": "Tab Size (Desktop)",
+      "min": 12,
+      "max": 36,
+      "step": 2,
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "article_title_size_mobile",
+      "label": "Article Title Size (Mobile)",
+      "min": 12,
+      "max": 36,
+      "step": 2,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "article_title_size_desktop",
+      "label": "Article Title Size (Desktop)",
+      "min": 12,
+      "max": 36,
+      "step": 2,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "article_text_size_mobile",
+      "label": "Article Text Size (Mobile)",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "article_text_size_desktop",
+      "label": "Article Text Size (Desktop)",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "text",
+      "id": "article_image_aspect_ratio",
+      "label": "Main Article Image Aspect Ratio",
+      "info": "Example: 16/9, 4/3, 1/1, 9.6/13",
+      "default": "9.6/13"
+    },
+    {
+      "type": "range",
+      "id": "article_image_border_radius",
+      "label": "Image Border Radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Read more"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_icon",
+      "label": "Show Button Icon",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "label": "Button Text Size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_text_hover_color",
+      "label": "Button Text Hover Color",
+      "default": "#262613"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#262613"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover_color",
+      "label": "Button Background Hover Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button Border Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_border_hover_color",
+      "label": "Button Border Hover Color",
+      "default": "#262613"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "CSS Classes",
+      "info": "Add custom classes to this section"
+    }
+  ],
+  "blocks": [
+    {
+  "type": "tab_link",
+  "name": "Tab Link",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tab_title",
+      "label": "Tab Title",
+      "default": "Link"
+    },
+    {
+      "type": "url",
+      "id": "tab_url",
+      "label": "Tab URL",
+      "info": "Where this tab should link to"
+    }
+  ]
+},
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "New"
+        }
+      ]
+    },
+    {
+      "type": "tab_content",
+      "name": "Tab Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_id",
+          "label": "Tab ID",
+          "info": "Must match the ID of the tab this content belongs to"
+        },
+        {
+          "type": "header",
+          "content": "Main Article"
+        },
+        {
+          "type": "text",
+          "id": "main_article_title",
+          "label": "Title",
+          "default": "Blog post"
+        },
+        {
+          "type": "text",
+          "id": "main_article_tag",
+          "label": "Tag",
+          "default": "tag"
+        },
+        {
+          "type": "richtext",
+          "id": "main_article_text",
+          "label": "Text",
+          "default": "<p>Brief description of your article for readers</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_article_image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "main_article_url",
+          "label": "Article URL",
+          "info": "URL to the blog post page"
+        },
+        {
+          "type": "header",
+          "content": "Article 1"
+        },
+        {
+          "type": "text",
+          "id": "article_title_1",
+          "label": "Title",
+          "default": "Blog post"
+        },
+        {
+          "type": "text",
+          "id": "article_tag_1",
+          "label": "Tag",
+          "default": "tag"
+        },
+        {
+          "type": "richtext",
+          "id": "article_text_1",
+          "label": "Text",
+          "default": "<p>Brief description of your article for readers</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "article_image_1",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "article_image_aspect_ratio_1",
+          "label": "Image Aspect Ratio",
+          "info": "Example: 16/9, 4/3, 1/1, 9.6/13",
+          "default": "9.6/13"
+        },
+        {
+          "type": "url",
+          "id": "article_url_1",
+          "label": "Article URL",
+          "info": "URL to the blog post page"
+        },
+        {
+          "type": "header",
+          "content": "Article 2"
+        },
+        {
+          "type": "text",
+          "id": "article_title_2",
+          "label": "Title",
+          "default": "Blog post"
+        },
+        {
+          "type": "text",
+          "id": "article_tag_2",
+          "label": "Tag",
+          "default": "tag"
+        },
+        {
+          "type": "richtext",
+          "id": "article_text_2",
+          "label": "Text",
+          "default": "<p>Brief description of your article for readers</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "article_image_2",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "article_image_aspect_ratio_2",
+          "label": "Image Aspect Ratio",
+          "info": "Example: 16/9, 4/3, 1/1, 9.6/13",
+          "default": "9.6/13"
+        },
+        {
+          "type": "url",
+          "id": "article_url_2",
+          "label": "Article URL",
+          "info": "URL to the blog post page"
+        },
+        {
+          "type": "header",
+          "content": "Article 3"
+        },
+        {
+          "type": "text",
+          "id": "article_title_3",
+          "label": "Title",
+          "default": "Blog post"
+        },
+        {
+          "type": "text",
+          "id": "article_tag_3",
+          "label": "Tag",
+          "default": "tag"
+        },
+        {
+          "type": "richtext",
+          "id": "article_text_3",
+          "label": "Text",
+          "default": "<p>Brief description of your article for readers</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "article_image_3",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "article_image_aspect_ratio_3",
+          "label": "Image Aspect Ratio",
+          "info": "Example: 16/9, 4/3, 1/1, 9.6/13",
+          "default": "9.6/13"
+        },
+        {
+          "type": "url",
+          "id": "article_url_3",
+          "label": "Article URL",
+          "info": "URL to the blog post page"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Posts Grid",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "New"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Trending"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Editor's picks"
+          }
+        },
+        {
+          "type": "tab_content",
+          "settings": {
+            "tab_id": "tab_1",
+            "main_article_title": "Main Article Title",
+            "main_article_tag": "tag",
+            "main_article_text": "<p>Brief description of your article for readers</p>",
+            "article_title_1": "Article Title 1",
+            "article_tag_1": "tag",
+            "article_text_1": "<p>Brief description of your article for readers</p>",
+            "article_title_2": "Article Title 2",
+            "article_tag_2": "tag",
+            "article_text_2": "<p>Brief description of your article for readers</p>",
+            "article_title_3": "Article Title 3",
+            "article_tag_3": "tag",
+            "article_text_3": "<p>Brief description of your article for readers</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

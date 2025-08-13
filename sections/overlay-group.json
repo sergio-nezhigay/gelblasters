@@ -72,8 +72,9 @@
         "21558aaf-7983-4c39-a2d9-5e803d85df82": {
           "type": "image",
           "settings": {
-            "image_position_desktop": "right",
-            "image_position_mobile": "top"
+            "image": "shopify://shop_images/logo_448a2889-9c94-4391-9a11-a929f91fce6e.webp",
+            "image_position_desktop": "top",
+            "image_position_mobile": "hidden"
           }
         },
         "b8e4317d-d3d2-4b4c-818a-cd6ee79463b2": {
